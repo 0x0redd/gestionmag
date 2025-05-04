@@ -75,6 +75,18 @@ project :
      internal_properties : HgAAAB4AAAA0EhwYp5yUl6T/4iRGEb533K8rg0g7rumrEUnxgJh8bECeemNLsGz+ETehH+cZ4dchIQ==
      physical_name : .\FEN_StocK_location.wdw
      type : 2
+   -
+     name : WIN_Inscription
+     identifier : 0x48178f580122300f
+     internal_properties : HgAAAB4AAAB716PnxIGpsrEMYI3fI9xldRJI6OPuU62uY/eYc5UBL8lbkh4FxES33kS+Ovr2gnZe5g==
+     physical_name : .\WIN_Inscription.wdw
+     type : 2
+   -
+     name : FEN_connexion
+     identifier : 0x48178e0c00b12143
+     internal_properties : HgAAAB4AAACX4c1ZWifHhBVOjs6GoLHkbt2IZEL1ap0Z3ShKbcFK3NX1V7og7lLdnuolUn2dGoGS
+     physical_name : .\FEN_connexion.wdw
+     type : 2
   other_elements : []
   array_of_analysis :
    -
