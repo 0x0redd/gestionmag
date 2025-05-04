@@ -30,19 +30,19 @@ project :
    -
      name : FEN_Fiche_people
      identifier : 0x4816bfae01163c86
-     internal_properties : HgAAAB4AAAD9X+uncE3l6I4UZq44alm6IrCS8K/O9b28HvRLlVskL5qYsv8NXefUCohDfKdD/Od4
+     internal_properties : HgAAAB4AAABn409TUA0lxpVfyqGfP+pKcS6E5G9isOR2oT5oo2WpvzGj4es4iWVismhSrnZqFopy8g==
      physical_name : .\FEN_Fiche_people.wdw
      type : 2
    -
      name : MDLC_Ruban
      identifier : 0x481739230154af43
-     internal_properties : HgAAAB4AAACC+Pouncpifd5Fsw2AFjxKxknFFb98O4Ous+HN2yriJuow19iPcsFQp50H8bEvyz2Hjw==
+     internal_properties : HgAAAB4AAABPy6f7SHU9bn3I1qxn9fXzf1g6OoEsE6muM5bY30nNE/nHfqGwEWLzGgD6xk6CfnJa2g==
      physical_name : .\MDLC_Ruban.wdt
      type : 20
    -
      name : FEN_Onglet
      identifier : 0x48173923015caf63
-     internal_properties : HgAAAB4AAACzj+s/DHkxakn04lhj+fEXawQ2tp2Yyhe2uRwkk5X5z2WbiqW0FW7/Fgz2wkK+ui6Wng==
+     internal_properties : HgAAAB4AAADasIKGJWJKVRaty4UIlkRyzuGtXYrFm32ihj+3bqriNsoAZ1gH+knYP+Xf2VmXY1W/Rw==
      physical_name : .\FEN_Onglet.wdw
      type : 2
    -
@@ -60,7 +60,7 @@ project :
    -
      name : FEN_Fiche_items
      identifier : 0x481739cb0303407d
-     internal_properties : HgAAAB4AAABIxrBsWwAoMzCLrQOwi5+icGcvx/B7wSxD79Kvaq7mOsoEmRf7ACs6XcM9u3t1DYNN1Q==
+     internal_properties : HgAAAB4AAADPSyd7yPW97v1IVlRpFDZJi5jWnjk8co6OO7j2sXefcYO9wn6CueJzmoB6Rs4C/vLaWg==
      physical_name : .\FEN_Fiche_items.wdw
      type : 2
    -
@@ -76,16 +76,16 @@ project :
      physical_name : .\FEN_StocK_location.wdw
      type : 2
    -
-     name : WIN_Inscription
-     identifier : 0x48178f580122300f
-     internal_properties : HgAAAB4AAAB716PnxIGpsrEMYI3fI9xldRJI6OPuU62uY/eYc5UBL8lbkh4FxES33kS+Ovr2gnZe5g==
-     physical_name : .\WIN_Inscription.wdw
-     type : 2
-   -
      name : FEN_connexion
      identifier : 0x48178e0c00b12143
      internal_properties : HgAAAB4AAACX4c1ZWifHhBVOjs6GoLHkbt2IZEL1ap0Z3ShKbcFK3NX1V7og7lLdnuolUn2dGoGS
      physical_name : .\FEN_connexion.wdw
+     type : 2
+   -
+     name : WIN_ajout_utilisateur
+     identifier : 0x48178f580122300f
+     internal_properties : HgAAAB4AAAB716PnxIGpsrEMYI3fI9xldRJI6OPuU62uY/eYc5UBL8lbkh4FxES33kS+Ovr2gnZe5g==
+     physical_name : .\WIN_ajout_utilisateur.wdw
      type : 2
   other_elements : []
   array_of_analysis :
