@@ -100,11 +100,17 @@ project :
      physical_name : .\FEN_Fiche_supplier.wdw
      type : 2
    -
-     name : FEN_Fiche_items1
-     identifier : 0x481911d802fa3b64
-     internal_properties : HgAAAB4AAABDP7vv3ImhuhmW1lnsD8EUrRyk7MWqimpC7oaLgpYEHOTM+kGmHPwZZtzGMvLuin5Gzg==
-     physical_name : .\FEN_Fiche_items1.wdw
-     type : 2
+     name : REQ_ID_PAR_NOM
+     identifier : 0x481928e303c93ca6
+     internal_properties : HgAAAB4AAAC4luA8C7D4IyBNaJPGl2+/cnEJUfr3B5midqV7vPyYYJhKeDSUb/R0jbMtiwvFvTOdpQ==
+     physical_name : .\REQ_ID_PAR_NOM.WDR
+     type : 5
+   -
+     name : REQ_Articles_select
+     identifier : 0x4819264d03b22314
+     internal_properties : HgAAAB4AAAAacMLG5aIKFdZ/hI+0PsirCF8HT/gVrfxKhMlltuKybpaYXDd+hSgif6UfmRnXoxX/Bw==
+     physical_name : .\REQ_Articles_select.WDR
+     type : 5
   other_elements : []
   array_of_analysis :
    -

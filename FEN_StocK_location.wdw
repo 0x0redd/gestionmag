@@ -189,7 +189,7 @@ window :
          // Fonction qui se déclenche lorsque l'utilisateur saisit la quantité
          PROCÉDURE CalculerTotal()
          qte				est un entier	= Val(Quantitée)	// Récupérer la quantité saisie
-         price			est un entier	= prix_article		// Prix de l'article
+         price			est un entier	= prix_produit	// Prix de l'article
          total_achat_cal	est un entier	= qte * price		// Calcul du total
          
          // Afficher le total dans un libellé ou champ spécifique
@@ -327,10 +327,10 @@ window :
     identifier : 0x281751cc2e060281
     internal_properties : HgAAAB4AAACCnC91UP4JkY9sLVavShTDkv+hQOjA1103DY7t4q8eNmqc6tG4rV6AxEzeKvGB+Q9EN/TpYjN33UP/Fm/8L9ktrxtrfyikNg4YS/B+qijsJuQo623E/LyciULwBnaCDtFdHBU3P8wTNBVdjBr8CziMHvrorLBzLMx7bbUpbjAY+vO52+/ScDK5zz4Gi5HLlaHRA9auL8qy8gT0qYOHnePmE1j6ulXalBoeOvSUrljQJGGM3inqIUzAPMXcP7y0xgX7PQ/czLaGQb3bs1zH7XcNZw+MYAt4xdSrxA+eQYz5p3P1An+szkGzOZNMa5DwUUMDuTy5Lbxaagzpnmjb3DgVhepSb9mu/yQOf0i/DF9mcMESFO8+3CFBL5FABH42WuJt/X2fvtaTXHnIbuRiuE8SEt/xTIrphCa9FxBAalE8TYaZA8itBDJLzdeN04QHHB/jBTAb4oo0wzxqm8RI7NdrJ46gT0mZURstjSiifM5SQ0cjHOQ6I4a2+4NHZOyRkLjwmBEnp69jPG/UC2epmONTyR+D9ktxP4QJVqKOsFEEbF1Fr7iweXzsea6Dc4xGGEouJktBGJ3/JwMN/3pR+nsNCeQ1DCUdDQdOQU9dxbaTQjGnx3gZc1DX/oO7RtCuILYdEaF3+7BodjbBA+E+dDIezQNmQrCJ0a8nJ7rTr8uldhRQIubOa6MT50OxSeTA7io+XQrEi7UYCPZFw5NARAUSNSrO9POR01T7/F5GYDu9OcY4wWJcBGSvCBLcUuVBwN2CHXJJ1kZFwwZUIJ/aBvJ0fs0+/7UtxoZp8QV9zCHc50aZcGf7q9ZXWIHVAmVBnM4u+3N7D6Lr9GgxSiPr9M9VMH9jbsROHuQy0tKPjYak5KqMVS9vy464JKBAC7nh3x2EFwdkSANTjm02MMIQkFXf9FYuo6djTZfh36qR6X9lFDslEFU+14zMmP6fn3PDWOGtpwIwO2HnIzCec53+v16nt3M=
     properties :
-     x : 507
-     y : -27
-     width : 434
-     height : 253
+     x : 601
+     y : 24
+     width : 301
+     height : 160
     type : 8
     code_elements :
      type_code : 8
@@ -403,7 +403,7 @@ window :
      width : 262
      height : 30
     dropdown :
-     internal_properties : HgAAAB4AAADov0hnClaUlN5ENicGqyVj2XlWMHfL0FrWoxxIuRYIMUcZ83e/1RyqZedemjUzH2AqkTSe0hsi1Oy/Tybz2HWbGWAQFwul8qGYZyN5RVtoml3YmAE3/fTzMium74JcNoJiPfkx+SEPUng0iDfK3igsEvHJzvg2vr2l6Knlo5XwlwrJeASO0i7UQjdd5pXzheiv9AsuSJVi+1RAgCxNRrVLvajH6ZGYKhvPilXNgQWZDw2e14CSIUrnh5kMiqmwfwekEL15jgjqKVpvZCasIByG6XSyXDFb9//AhPbrff/0NDF/D5rGiKN6jOjM+WWkizxIYRK7C6vy3BcVZuxPhlhCUmZ0aBiuC2kw3FySnZnDaPtor78+aHyzy1fQcAJYSASkPkONBBS466pUhKifpd0HFKeIw2XO6mPAa8BXNpkhPibyfx50inF3ffieqICmSCyqzfQfsgCdJ2s9RHSHiyhHQ5YO8LC9CPdqQYDQDXj0Yn4dINgVaCl5R8OqP+OWUOttlFgNtiTpAzXTr0REnMWgFYU/g7XfjcBviL3U/0eCMNde3tSubP2SpfQwFHyH9xx3whVmsdVoyRN8jk3tz+1r4xt12ZSpVZFLl0HJcWJzPq0SSKUhUM8fOTEDsEglRONPO3Eb/LFkOmVnIpRS6fmQ0km7mCw9bBGD3n2E8UMZsU49vfLuXQJ+isTqx9U7NQjt5Kzk3xfKpUYiFzyqGUVzASNY00ac38J+AoO7zZ+dP5CMrlvsWS+wPuSwOrB6u5Jl6xObXJueBZasXvdh4TJU+q0s7ldGbyF/QlUJdxtLLQ44JFli7Yuz6xp8Sh14IaarP/idArWJ6nvummUqszAwdjgaVU2Tr+nE91B+9z8codCG/9JIcZJhPk9oR5FMIYs8/6U1xIkjfPmTLypxQjPJJMzwLRIytVllHt+yhNgdbmKKMC9AEYBsmslBPodvas2AcBBKZgI9q+ULmI+XVRIU8WtaxjLmmDrHbNSP
+     internal_properties : HgAAAB4AAADSGQYBOyncyDBdej32Iy8NwxN8yNUhjBoQIRy+DdrK86XvhZvF/+Rek2n6DJWTISrsG+7SxOUiKEZ1B1jz6Gfln6Yez7Gn4kEWyZMjBdPWEONGbuFlIyhPsNVy+YJsLGDgu2stK8P/Qn62uK1OQqKGsM+3xvIMKjGbWh2f91FCMcRD8hgY3M4YnIU9aB0zW+4N0k2qKvc61+IqHM7FHt81FxJdMa+OPhd9RJH3JUFvTS/4vfjgK3KHaQdkSPWUkWEKZsdNHLpKyRjJlEgwDFKM63YwfAvF91Mm5jY1mVsyegflbeq0OtvWChL4a/WUqaoeJ6AbDW3ayNlz6iYXpjJ8PDiebJ5g8+F+JqiAhYnNIkHmtb8QAiQ3uQFU7pIIhoI+ePVBsrpk/6xSnIr7QacRagWWe1fgUpfW5TQ1Vsl/hJxogWLidMGvY1qmqnTaKm7UVz4z3G6JT527WLK3k/btZfhILHqPuI/489Rm7dCW3AzDMpTvun7cZIAHiMoPz2RUL10G4eky6iY8RJ2bBWA9ULyMLDDkdgukfYax0oTNvTLtMw1Z8VYNLkWpkfc8Rq0GLao/1DJJCChpN3rQ7NRMwg5q2qdW7jioBAJm9B86B2RVpeZMpahW5i5cTQOa12jCqsqog2q5sXqs6/HVdmh5HTwE/RNWoSQUL8JVgCQsTs1EXld9zof1CwVvMEQ8KH1A0zl1KsQbBHvPTOUxYuCIJDpN/EFZkHVXA4zQ+ER0WAtvI+xHPhiL25kt+3ez9ld4xvBM70hPtMdtj5wstvXhGTStQ1YHRFQs1+qiDvR22s1j0SK1UgQKJNu5O3RhLPtuCk3WxfI6bfw/Hy6ZNLex6ZNjkmz0jNRxJA2/lhDT2hs5xJszBrt4B0hVUJhVDDiLIl6Su5I4E0Ls3As4m2aGk5dNtkXHznD2d7RD6/EIU1mZKSxv2tXDr95W137ogd4zqz3zER+OWtYsicwq0p1hnNKUdE4kWVghNi51
      type : 7
     type : 14
     code_elements :
@@ -419,21 +419,27 @@ window :
       -
         code : |1+
          
-         article_id = COMBO_Article.Valeur  // Récupérer l'ID de l'article sélectionné
+         nomArticle est une chaîne = COMBO_Article..Valeur
          
-         // Rechercher l'article correspondant dans la base de données ou la liste
-         HLitPremier(items)
-         TANTQUE PAS HEnDehors()
-         	SI items.id = article_id ALORS
-         		article_nom					= items.name  // Nom de l'article
-         		prix_article				= items.cost_price  // Prix de l'article
+         REQ_ID_PAR_NOM.ParamNom = nomArticle
          
-         		// Afficher les informations dans les libellés
-         		Produit_name	= article_nom
-         		prix_produit	= prix_article
+         SI HExécuteRequête(REQ_ID_PAR_NOM) ALORS
+         	SI HLitPremier(REQ_ID_PAR_NOM) ALORS
+         		idArticle	est un entier	= REQ_ID_PAR_NOM.id
+         		prixArticle	est un réel		= REQ_ID_PAR_NOM.cost_price
+         
+         		// Affichage dans le libellé
+         		prix_produit = prixArticle
+         		Produit_name = nomArticle
+         	SINON
+         		Info("Aucun article trouvé")
          	FIN
-         	HLitSuivant(items)
+         SINON
+         	Info("Erreur de requête")
          FIN
+         
+         Quantitée = ""
+         total_achat = ""
         type : 33
       -
         type : 17
@@ -453,42 +459,22 @@ window :
   type_code : 1
   p_codes :
    -
-     code : |1+
+     code : |1-
       PROCÉDURE MaFenêtre()
-      // Variables globales pour stocker les informations sélectionnées
-      article_id		est un entier
-      article_nom		est une chaîne
-      prix_article	est un entier
-      HLitPremier(stock_location)
-      
-      // Partie 1 : Remplir la liste déroulante des stocks et stocker l'ID sélectionné
-      HLitPremier(stock_location)
-      TANTQUE PAS HEnDehors()
-      	COMBO_Stock.Ajoute(stock_location.location_name)
-      	// Stocker l'ID de chaque stock dans une variable globale ou une liste si nécessaire
-      	// exemple: COMBO_Stock.Items_ID_Ajoute(stock_location.id)
-      	HLitSuivant(stock_location)
+   -
+     code : |1+
+      SI PAS HExécuteRequête(REQ_Articles_select) ALORS
+      	Info("Erreur lors de l'exécution de la requête")
+      	RETOUR
       FIN
       
-      // Partie 2 : Remplir la liste déroulante des fournisseurs
-      HLitPremier(supplier)
-      TANTQUE PAS HEnDehors()
-      	SI HLitRecherche(people, id, supplier.person_id) ALORS
-      		sNomComplet est une chaîne = people.first_name + " " + people.last_name
-      		COMBO_Fournisseur.Ajoute(sNomComplet)
-      	FIN
-      	HLitSuivant(supplier)
+      HLitPremier(REQ_Articles_select)
+      TANTQUE PAS HEnDehors(REQ_Articles_select)
+      	// Ajout de l'article : texte visible + valeur mémorisée (l'ID)
+      	COMBO_Article.Ajoute(REQ_Articles_select.name)
+      	HLitSuivant(REQ_Articles_select)
       FIN
-      
-      // Partie 3 : Remplir la liste déroulante des articles et stocker l'ID sélectionné
-      HLitPremier(items)
-      TANTQUE PAS HEnDehors()
-      	COMBO_Article.Ajoute(items.name)
-      	// Stocker l'ID de chaque article dans une variable globale ou une liste
-      	// exemple: COMBO_Article.Items_ID_Ajoute(items.id)
-      	HLitSuivant(items)
-      FIN
-      
+     type : 34
    -
      type : 180
      enabled : false
