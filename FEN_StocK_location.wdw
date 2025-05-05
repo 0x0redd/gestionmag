@@ -464,16 +464,40 @@ window :
    -
      code : |1+
       SI PAS HExécuteRequête(REQ_Articles_select) ALORS
-      	Info("Erreur lors de l'exécution de la requête")
+      	Erreur("Erreur lors de la requête des articles")
       	RETOUR
       FIN
       
       HLitPremier(REQ_Articles_select)
       TANTQUE PAS HEnDehors(REQ_Articles_select)
-      	// Ajout de l'article : texte visible + valeur mémorisée (l'ID)
+      	// Ajoute le nom affiché
       	COMBO_Article.Ajoute(REQ_Articles_select.name)
       	HLitSuivant(REQ_Articles_select)
       FIN
+      
+      SI PAS HExécuteRequête(REQ_Fournisseur_nomComplet) ALORS
+      	Erreur("Erreur lors de la requête des fournisseurs")
+      	RETOUR
+      FIN
+      
+      HLitPremier(REQ_Fournisseur_nomComplet)
+      TANTQUE PAS HEnDehors(REQ_Fournisseur_nomComplet)
+      	COMBO_Fournisseur.Ajoute(REQ_Fournisseur_nomComplet.full_name)
+      	HLitSuivant(REQ_Fournisseur_nomComplet)
+      FIN
+      
+      SI PAS HExécuteRequête(REQ_select_stocklocation) ALORS
+      	Erreur("Erreur lors de la requête des lieux de stockage")
+      	RETOUR
+      FIN
+      
+      HLitPremier(REQ_select_stocklocation)
+      TANTQUE PAS HEnDehors(REQ_select_stocklocation)
+      	COMBO_Stock.Ajoute(REQ_select_stocklocation.location_name)
+      	HLitSuivant(REQ_select_stocklocation)
+      FIN
+      
+      
      type : 34
    -
      type : 180
