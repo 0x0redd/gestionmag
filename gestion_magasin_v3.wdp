@@ -93,6 +93,18 @@ project :
      internal_properties : HgAAAB4AAAB716PnxIGpsrEMgzDlLAdUZWBsjEkcPqeipldbqJB6vgLO5IW1DFu33kS+Ovr2gnZe5g==
      physical_name : .\FEN_Liste_user.wdw
      type : 2
+   -
+     name : FEN_Fiche_supplier
+     identifier : 0x481904210195a6b7
+     internal_properties : HgAAAB4AAABHw6/zMG1FZnXCxbodjOCzW9qC2vtoynFK5BftPPyeaoKy60tf4u8FEgjyzlaKdmpS0g==
+     physical_name : .\FEN_Fiche_supplier.wdw
+     type : 2
+   -
+     name : FEN_Fiche_items1
+     identifier : 0x481911d802fa3b64
+     internal_properties : HgAAAB4AAABDP7vv3ImhuhmW1lnsD8EUrRyk7MWqimpC7oaLgpYEHOTM+kGmHPwZZtzGMvLuin5Gzg==
+     physical_name : .\FEN_Fiche_items1.wdw
+     type : 2
   other_elements : []
   array_of_analysis :
    -
