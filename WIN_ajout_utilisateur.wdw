@@ -20,7 +20,7 @@ window :
   -
     name : EDT_Nom
     identifier : 0x2817af7e07cf02ea
-    internal_properties : HgAAAB4AAACeA4n2/8+jyPRSSjn0LV6qBupxPocYNt6PZr5V+raaZ/Wcu3bC1k3QaqcydGT+GdCoNQOLuF52V+psLcGORCebOWVOBi0Pzf+Pbr7EYxRHG7tkVctwGdGB3+vfYHOyVnkEmExtQaskG545i6seF4wqmjuSVeD1rvCZfW1Cdu835HmyKBY5XXIATHUyylZqjrLY7VIm41gExbEhglN6Ns0EIWh3dOap1BPKUgXcOKRAF11442UUdi4z7Q/1RUPKf4xj42bDA+bH/QLHe4cAvwCOuuL2nOhEoH67kf54vkY/JSIHgRBZnxvuxV1SfZOQgKwO/rVcrxqpWynzK9wC6yHm4185I4QBDc5JNeOuD3+lBvDLMw/vEBPuiXc7pnms+IR73bG4dQkEtQgtBN3+tZJTsT61N+ZSK9qgpWmLhPXBEXM4R4abwShiVsVQfNFMsP4Dokk8wNxZ5r/VV3DMvyPnkULxTXm55i/PUuPbTPuE5fah3FWm+53lFo4r9S1qhVtOekSh0qAyoBR7UNi8dMS44vMr9BJpnhyK6ZWWwhCJvrWPpbxWuRd1d5L1eluOoxGP3jSqpykoY523nhYdC99U4NbFvgI3gieH74cQ21e4i57rx+dFXVm8tgGwM+ZATTdgeALdtN2yMw/XWFD0pwIMP/Gk3GKE4LOJR80pT4MuE1+psgfWOKqKuHjCXX5zinIjc1PS8TuQ7knnAKW4GFE2NILaEB6E+Tnx+rZD7ID5yRTCJgA07wJj61OqMA3gWadkniY+eeVQ+rOaRlHaxXzCEs8BNU+I5DQJ8EA1Nbc/Lj5jKZZkSPCYFuPj+NvBIe01TP4qBJvmwC6y4r+lxdJo9i8WBNROacgThlnj+EmJRyHJIzN65fDleaEmvDpuZ4N0nVvsx/nd0gQG0KAzlEYAflK6F7or8yFvR7c5tneSpV4nONpK9Jgj2lnFRHESdZE7dO7MlG6HgEjO3m/Bdfl4wH+cWWiNbVNpQHUPvNePXVMiFzgyP4Nljz8x5ESZFtr/fid1lRew6S+HbcSUeuFUr9agOwAleawPtytrjaecHCnc5NhWHYk2kKrZvH5mR5jqo8xtchJxA4LablW9xzT8iwOjrW5ycbYAvS5MWCIkixgLowCgXd5B+GUdkXEOkJp/Go79B5l/Ef02NNCjnxXwuXvAdMKDfs9+vAeH8MvdWze6jkQY5ZJlQw9C6Nhba/GBepRpIMoY8f0jb6K0t3cQPZiaqSoN5BTgy+vBsHO/1wpoFqn0QC1Qfq4YaY/UYYI=
+    internal_properties : HgAAAB4AAADfpDbUwjHH8FgHpE1EFaUWPo8jCZXLJsC4AA5xZAj4dVsXspnmJNhnJEJiwtYy+zgPS1hEZBRnUzZ8f4BwhzhHRULtG3PQLbVbN/Dy//nwMA78ugwvsSgJ9UOYhEyBe+GGPpT7rPwc5kupDxk9IJagSF4M3tmbfEUFXWlmed++8fOoH8l0Ew7C4AJS8Lw1aY2K+YtDJ7OYoBxoi/BPhg/+nztfsVi50aW3gWd8qDOY6QlOJmcUlCENBejc5APxzUCZehv5+gB8OJPqYTiw7IqWDnAMokXCa2LBlaXh9npUsMhjYJkG3hYvF+thAFTdLxZB/cW5OlwDzuE9yG+HRtjkZTH2KOrLvWQovR2Lk1aPpY+SES/HRhS7HoLYGtAVn4FJ8zkvlksnXTrp0iMUSGeg0Taj1bLqPCJikWdkkozTpd4BQiXN+3ghEX47+HOQ7tjPytM0UPUSmNawyS0nVa71o94tgt0b9XlwIwnm477+kauGsnZVm2idObjBY2b+wlBMKpOc8datopyFnKXeztG9dLH2qu5FmksJKIQuTlEsTtv/tEa9cnKIgnkY5WZEixYLNVTCJMpIcXgtGe8M1FeJVfqWgHTkciyIxd0UUEh64c4oobbcRxXCUqjneHLtUdFB7Ac7gXwQcOecjSQoZeFGSu3ukwHnoIFk9LxqKXIpcaRhyPOYwBVfyR/1vUSIKwSqcYsHEHYa7mSKFYS8izZi/f81ACiszT+HWv5Bl6M2ZwHV123c4OJtsr5DeFuKbWDz1PxBComm+OoM/0ttqpRHEfb3fhUcI7aBSOxqKj4VL3x6+Pldum0d6rYTaSBKoXbVLvBkTlxT4fyi1wHKMyTQvODJFutpBeLMUiLsofi3O3onbXT33sKgfI9SARKiA+FCaN9kbJwJXaAc+JKx4fwdM/tspv/8ijY7Uh7r1ECXdULBnYpcLQOVgVHch+7A95U/MkJ8mxD0s1+PV9JJ48R1J3pB4r61hgA4+/JG16Z9r6kbVj20N11DN9OVHAGyepDTbOXDyBK6y4VZBK77Vgn+rJ+DhH5J3AHw9Bakw3epjzUUFp1hXV+u8INliohrDz8F7ZSKmlFFyDdQUNu1Ag5n37OuaQ85DSDDhRPDX1Flns/Tl3Y2CziElhpY5niWOQDYzHr33oWaMSsXNhBEn8+pLDzZHIVIgwI9b24jRJz3WYRttFEKZfCGuwPwCO+I3lQBV8HQonKH6PbkGdKFPTbTFnOtJRVsDPtPZuH3GZ5hDixvoY+3iVvjgqH5ilLITnPkv+XbeFxuvuc+93UwY7GgCSWdLSPUC9k3nHRntHF5/sDF4lqjZ51Y7g8UartAJwbkWO/yqKceqoKJpQlplIBxz+bbpm2hDYUejkDPssmxMm/GBj0LfiB1t0wIeSZc0g0WzagWojZUo0JKhJtIdAlY6sxpkR5hdyTfV/4taj3XDww4wLO1wMbwrxJ/hVJ70gieDvVIe3wWiCrJDGLMGEhzkglE9J80YAt8/Lrs31otHbO9CTI2Ni5X09nxJidgvOJ9sde9C/RrgcnrSLxFYrc6DkLcdVzsshXpeeHv1DjB6HBzxQHWs4TGQC9lg4LGrLNrJn7E48rTeCG7lbXyrhnfeXvsHg2pcgKkyhkq3uUMGez0C1WpcP5X4XKF8qIhATjVpsgA6N8VfPHVrYbGhaerPTrQASnDArP0w26LXHNsJi3xlmHGCIgK23njYdbUC7mZD2E1Iq5ZHQ1Dw5tw+4ggwYu6pS+OVTA+LEz0L2fPsTCx9XJosNZX
     properties :
      x : 59
      y : 16
@@ -132,7 +132,7 @@ window :
   -
     name : EDT_Adresse
     identifier : 0x2817af7e07d302fa
-    internal_properties : HgAAAB4AAABRM8aiLyVPmu45h3bHcz9EvTuts75pnqVvprXcBZ2XCqskEs9jazNUwA6bhSXkwC5afW8vq4q8aB+Il4GxFIIa+liRoiOIHgiaeHHGYMrIc+WJiyHcKHQdC6g/8jG4znTtsJSuGoo+zHQarmxFDPHnqNuHIQQV3jKDoQ3I55gqnQXV2uMiNAZOuv5jDlgQJX2g+52dLB6gS8Iu7Z2oXEvJjBVJr6ocz5U7ttZnkXnjlMlXxmCHsxjgEJ+1ADYXAUxoWG02R9unVnZK7T/3Vq9/h2ddm8G5MFQYgBCzIa7KQgJAGmRANsfJSjlERFjcDjQ/qqj4rQoC36UDzVgfnuGOxdoJYdFVVHW9EAGB9pbNmBzIlOSoYhDPurbhrVX5vQdo2veds/tVx9PHTb9c/lm3ZQNO8iPtJ6+Unk3CC1QvvH4uiwOu3HjTdv/6sW02nuAu8e9rmbQ06RJqwiSUr6CD74XqNU6o7XHAVDmX1vl6AX216Vkwx5C7i7ms/5IXmHJI8TM5T+XVMKWpm61kOI2vQCJTiqO/D0N36y4VNQ5IepxDxGjDgGF0bfvQyFvzMfiRXevIkU1WGgFQ+3npBfXn9aAOlf7yWcaS0KVqCqJdyxKkUlbeNWyEe2FpDX/rW44GfGJRRyTugKZpALwe+Z1w6utaSrPVLAIaLZE52Y3PrfhTwBVX6S4tneqWTZLbX3reqyeispAArejJiPl+lj5k+27KjCHPswZ04Lh1PqI6qXciTI6ZZID+9J9ClFtOHOUH/t4qbjpovxy+9s1c57VE59fFla6fON/yhiYT803M4E/jobJd/bDDIZXHwHGfmnuKVL4GGy5+SX20aP3pFW1631XukOuZc+0MCDXL7jeER0pXWZHN+Mji+m0iVDo6eN3t63MolPJHScfwwLwTCC0MA+wqWzcIYaguLV1n4p8VNzNfPuCniTiiuTGL4iXSkIc8pqziEX97mT9koHHdtdoIl6tIid3+3x7YYBHvpDtOg7wEFYYzuKVKGgcF5M4rpajqoPnfbtwWYggd1x6s9rzE2no0c08w02XqHfFBsferCpTiPMTFWLH/C8S5oPAgojYBX3bvMZ0zQKsixBtVkztCZls3Pb9XOY/PJQRCeK4xiV1FsSZqGRsFhAQd7yNA1Ly4yFLa972qUnagDHT/UttD5SZSn+4JtYJxMztYyIEEOio3qW+VihLqO//Avvu9/zY/q2Lwdrz00gO+tFYnPK0h3rfONE8723AfKxzlEE425ct4sg+ZZ1mTHQ6ECmaOYABEwA==
+    internal_properties : HgAAAB4AAAAFniZlP57fZWJu3j6pepFjxKBAZaVSS2Siaw4ChOoha5h2bxc0Ttfqv10MnJJJDTcKmW/4Wmj3tV37I13v3PgVJb/dZSdoELt0q05CoEc6a+PtmOCH3+ivG0oGcc92nFia8UlSUU0fCRx123siMSPO7gcactmF063MJlbCC1qKmse/BlqPHjlNaI6N6McHvaV9uuTedmbdxNr1hlAhgoP9GAv4hGugjRN6tg1djvBfg7gMLwHiFMSJcVLf1LbDVw8+SaZ1r/fBLjEJMyZmN85cxBwjorBfIhiNDlzVC3XmudGPRAkH6G3FnWb3YQc/3WA0QEXlt27k4IvNc9IIQl6GueOf9uQjxyaY4le95F9HsZA1cd4qAdXBmGBcAJTDtAIj+kkdwqc8Hy/RTZ9z4SQmv47ipZQmG2kLZmsFbz6RMYEvasrSX2gvPq2hOVDB6TMiVpMa970TcQ+ysl0VYYbtUookbltnLT8lG2N1mqroAxNgoDX8+fUnm33rugj9Oj7eLdmMvpNeZBdBhsvp+/rIxKBPBnc1aa4XcwJtZ1JOCGZZr0IMMkPaxDGG6MDASo8s0ACG1u/QDI1KOwQ12MsoQZGCACfL38A0DBPqEC8URwARZ7urNFP0cnAEYY7jdrfiFJ9X5PxgkJOVdtdwDGEa8WTJYpJH2iBT3Y97ucv+oSSss2hcbJYc0cwentQc5Pl5vv5PvNXSbwO6CBi+aOoPMTWlXAbJtAP6K8YkNxi2XGyjfyOPRUBhQFAGeG6efi/ActIbN1ElhIILTQaC5TA3NpBTY8mwnIaxI3Jy43JR1pKYHdz+6bc3+e95qLl7ZpE8M74wuEZlgnNj41+YYKSWs/BezDWRh4isM1FKa0P+4qYv3h9Ypdkbqd9f7cQJ8q8emINUHco8Hzrag92xHn1nt3t8wiTunebztrUqrqtqNwodY8g7TfDj6VUDNogvxBG/jsQmOKg5iUvPejnlAmczieCrzHHpaxQQr2UNIz8ms7/FipUxjYgfH68Uo5MVgxIN0qMhGwYDY2ePi10/++C6uKehok2Xd69KSpsRc8r+2x9K5Dv8zaRGEPcYVeZaMAF1eR6U13t0uv2yg2rXG1+F6Vkgc+LdfC7VgwIW5epiDDVdycjLoYvKIPD9X8yZ3NIWhko7+aVnfw0d78lgkvzRUiZFVG6OyopDSRsIRp+cMeTBcqd3x6uAmR191cHbj1afgZ0g/zBeTEIU6IFpIDEFpEXrg15g/R1FcCwidxsszJDPm9nQnVKZukX89Yq96X3GRW0n85ajplE0TmCmStzeO/vXhzzIpoH3MKuOgIL06DhRek7UO2qG9nMbiXeZLvJgONsyxxF1sqzPvqpnYRVb6aShnBbrYhcqLmEglu5WKh+6lAMWniVtcySjSOonpytw+7BKQWJXxUgkexaAK1ZMFOLTg8PN5tSL5838ZEQMTTqarum4lnH64yJSDP7Ibwy8EAf6INJDsn6xh9nWW42fuDuARKwAOQFcMBs9zX8uh5dFncp5MiXt79FKr4v3/XIDI93DUnr062lveS05Y7CgXgYY1ZGyz/Xx3QRy4v1i+NjfORErFwVEmu2AYh6V+bEBmMS6nFhqTM89+ICCPbTLoc+sUrLNgd5ypJDwnxFGCya5oPy/nST4hqC5Q4BgFy1zGh3L5V9m5TrZ2uOWXAS/FbXkuZYFhX24x25ZAq716uutf4N4oSYFEcTaTJcLMq5Ww8X7gFc+IDn+AWCRfIG7fyl+jwJts5TYwC9R/wC6Qm/0voGq0Q==
     properties :
      x : 59
      y : 168
@@ -291,8 +291,8 @@ window :
          // Récupération des champs saisis
          sNom			est une chaîne	= EDT_Nom
          sPrenom			est une chaîne	= EDT_Prenom
-         //sEmail			est une chaîne	= EDT_Email
-         sEmail est une chaîne = "test@example.com" // TEMPORAIRE, à la place de EDT_Email
+         //sEmail			est une chaîne	= EDT\_Email
+         sEmail est une chaîne = "[test@example.com](mailto:test@example.com)" // TEMPORAIRE, à la place de EDT\_Email
          
          sTel			est une chaîne	= EDT_Telephone
          sVille			est une chaîne	= EDT_Ville
@@ -308,14 +308,14 @@ window :
          FIN
          
          // Vérifier que le rôle est sélectionné
-         SI COMBO_Role..Valeur = "" ALORS
+         SI COMBO\_Role..Valeur = "" ALORS
          	Info("Veuillez sélectionner un rôle.")
          	RETOUR
          FIN
          
-         // Récupérer l'ID du rôle sélectionné (attention : COMBO_Role..Valeur est de type chaîne)
-         nRoleID est un entier = Val(COMBO_Role..Valeur)
-         Info("Valeur du rôle sélectionné : " + COMBO_Role..Valeur)
+         // Récupérer l'ID du rôle sélectionné (attention : COMBO\_Role..Valeur est de type chaîne)
+         nRoleID est un entier = Val(COMBO\_Role..Valeur)
+         Info("Valeur du rôle sélectionné : " + COMBO\_Role..Valeur)
          
          // Vérifier si l’email existe déjà dans users
          SI HLitRecherche(users, email, sEmail) ALORS
@@ -324,35 +324,35 @@ window :
          FIN
          
          // Hachage sécurisé du mot de passe (SHA-256 → hexadécimal)
-         HashBuffer	est un Buffer	= HashChaîne(HA_SHA_256, sPasswordSaisi)
+         HashBuffer	est un Buffer	= HashChaîne(HA\_SHA\_256, sPasswordSaisi)
          sPassword	est une chaîne	= BufferVersHexa(HashBuffer)
          
          // Insertion dans la table people
          HReset(people)
-         people.first_name		= sPrenom
-         people.last_name		= sNom
-         people.email			= sEmail
-         people.phone_number		= sTel
-         people.city				= sVille
-         people.country			= sPays
-         people.address_1		= sAdresse
-         people.gender			= sGender
-         people.created_at		= DateHeureSys()
+         people.first\_name			= sPrenom
+         people.last\_name			= sNom
+         people.email				= sEmail
+         people.phone\_number		= sTel
+         people.city					= sVille
+         people.country				= sPays
+         people.address\_1			= sAdresse
+         people.gender				= sGender
+         people.created\_at			= DateHeureSys()
          
          SI HAjoute(people) = Faux ALORS
          	Erreur("Erreur lors de l’ajout dans people : " + HErreurInfo())
          	RETOUR
          FIN
          
-         nID_Person est un entier = people.id
+         nID\_Person est un entier = people.id
          
          // Insertion dans la table users
          HReset(users)
-         users.name			= sPrenom + " " + sNom
-         users.email			= sEmail
-         users.password		= sPassword
-         users.created_at	= DateHeureSys()
-         users.person_id		= nID_Person
+         users.name				= sPrenom + " " + sNom
+         users.email				= sEmail
+         users.password			= sPassword
+         users.created\_at		= DateHeureSys()
+         users.person\_id		= nID\_Person
          
          SI HAjoute(users) = Faux ALORS
          	Erreur("Erreur lors de l’ajout dans users : " + HErreurInfo())
@@ -361,19 +361,19 @@ window :
          
          nUserID est un entier = users.id
          
-         // Insertion dans la table role_user
-         HReset(role_user)
-         role_user.user_id	= nUserID
-         role_user.role_id	= nRoleID
+         // Insertion dans la table role\_user
+         HReset(role\_user)
+         role\_user.user\_id	= nUserID
+         role\_user.role\_id	= nRoleID
          
-         SI HAjoute(role_user) = Faux ALORS
+         SI HAjoute(role\_user) = Faux ALORS
          	Erreur("Erreur lors de l’association de l’utilisateur au rôle : " + HErreurInfo())
          	RETOUR
          FIN
          
          // Succès
          Info("Inscription réussie.")
-         Ouvre(FEN_connexion)
+         Ouvre(FEN\_connexion)                                                                                                                                       comment rendre ce code dans requete dinsertion et execute quand click sur connexion
         type : 18
       -
         type : 161
@@ -403,7 +403,7 @@ window :
   -
     name : COMBO_Role
     identifier : 0x2817b9870caaf7e6
-    internal_properties : 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
+    internal_properties : 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
     properties :
      x : 80
      y : 358
