@@ -93,6 +93,42 @@ project :
      internal_properties : HgAAAB4AAAB716PnxIGpsrEMgzDlLAdUZWBsjEkcPqeipldbqJB6vgLO5IW1DFu33kS+Ovr2gnZe5g==
      physical_name : .\FEN_Liste_user.wdw
      type : 2
+   -
+     name : FEN_Fiche_supplier
+     identifier : 0x481904210195a6b7
+     internal_properties : HgAAAB4AAABHw6/zMG1FZnXCxbodjOCzW9qC2vtoynFK5BftPPyeaoKy60tf4u8FEgjyzlaKdmpS0g==
+     physical_name : .\FEN_Fiche_supplier.wdw
+     type : 2
+   -
+     name : REQ_select_stocklocation
+     identifier : 0x4819312004286c75
+     internal_properties : HgAAAB4AAADGTC5yse7G6cpDY3IfBi1A6t+5CcAVD1iu82uOaQ+Fe3FNyBQXNYuGk4lzTdUL9+nTUw==
+     physical_name : .\REQ_select_stocklocation.WDR
+     type : 5
+   -
+     name : REQ_Fournisseur_nomComplet
+     identifier : 0x48192efe03fd166c
+     internal_properties : HgAAAB4AAAAPC2e7iDV9rr0aF58LOPqmRyqWfkvggCWKlEcnkuY0zDikxtAu1cm92kC6Bo5CPrIaGg==
+     physical_name : .\REQ_Fournisseur_nomComplet.WDR
+     type : 5
+   -
+     name : REQ_ID_PAR_NOM
+     identifier : 0x481928e303c93ca6
+     internal_properties : HgAAAB4AAAC4luA8C7D4IyBNaJPGl2+/cnEJUfr3B5midqV7vPyYYJhKeDSUb/R0jbMtiwvFvTOdpQ==
+     physical_name : .\REQ_ID_PAR_NOM.WDR
+     type : 5
+   -
+     name : REQ_Articles_select
+     identifier : 0x4819264d03b22314
+     internal_properties : HgAAAB4AAAAacMLG5aIKFdZ/hI+0PsirCF8HT/gVrfxKhMlltuKybpaYXDd+hSgif6UfmRnXoxX/Bw==
+     physical_name : .\REQ_Articles_select.WDR
+     type : 5
+   -
+     name : FEN_Modifier_Utilisateur
+     identifier : 0x481a381502c5f876
+     internal_properties : HgAAAB4AAACRbcnd6pefUBO96eZkIgCII3BelqH/p31/oL9x2V83yTu14wWxETTkPOLcJOzknAz0fA==
+     physical_name : .\FEN_Modifier_Utilisateur.wdw
+     type : 2
   other_elements : []
   array_of_analysis :
    -

@@ -94,33 +94,33 @@ window :
          
         type : 14
       -
-        code : |1-
+        code : |1+
          // Récupération des données saisies
-         sEmail		est une chaîne	= EDT_Email
-         sMotDePasse	est une chaîne	= EDT_MotDePasse
+         sEmail			est une chaîne	= EDT_Email
+         sMotDePasse		est une chaîne	= EDT_MotDePasse
          
          // Hachage du mot de passe avec SHA-256 (en buffer)
-         HashBuffer	est un Buffer	= HashChaîne(HA_SHA_256, sMotDePasse)
+         HashBuffer		est un Buffer	= HashChaîne(HA_SHA_256, sMotDePasse)
          
          // Conversion du buffer en chaîne hexadécimale (format de stockage en base de données)
-         HashHexa	est une chaîne	= BufferVersHexa(HashBuffer)
+         HashHexa		est une chaîne	= BufferVersHexa(HashBuffer)
          
          // Recherche de l'utilisateur dans la base avec l'e-mail
          SI HLitRecherche(users, email, sEmail) = Faux ALORS
-         	Info("Utilisateur introuvable")
+         	Info("Utilisateur introuvable.")
          	RETOUR
          FIN
          
          // Comparaison du mot de passe haché avec celui en base
          SI users.password <> HashHexa ALORS
-         	Info("Mot de passe incorrect")
+         	Info("Mot de passe incorrect.")
          	RETOUR
          FIN
          
-         Info("Connexion réussie")
-         // Ouvre la fenêtre principale ici
-         
-         Ouvre(WIN_ajout_utilisateur)
+         // Connexion réussie, ouvrir la fenêtre du tableau de bord
+         Info("Connexion réussie.")
+         Ouvre(FEN_connexion) // Remplace FEN_Liste_user par FEN_Dashboard
+         Ferme()  // Ferme la fenêtre de connexion
         type : 18
       -
         type : 161
