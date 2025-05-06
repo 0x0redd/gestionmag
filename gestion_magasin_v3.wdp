@@ -30,19 +30,19 @@ project :
    -
      name : FEN_Fiche_people
      identifier : 0x4816bfae01163c86
-     internal_properties : HgAAAB4AAAD9X+uncE3l6I4UZq44alm6IrCS8K/O9b28HvRLlVskL5qYsv8NXefUCohDfKdD/Od4
+     internal_properties : HgAAAB4AAABLx7NXVBEZwoEb5v1LiwbOzZoQ0Hso5l2024De31m9U6UfZVfMPRGO7lROqmpmEoZO1g==
      physical_name : .\FEN_Fiche_people.wdw
      type : 2
    -
      name : MDLC_Ruban
      identifier : 0x481739230154af43
-     internal_properties : HgAAAB4AAACC+Pouncpifd5Fsw2AFjxKxknFFb98O4Ous+HN2yriJuow19iPcsFQp50H8bEvyz2Hjw==
+     internal_properties : HgAAAB4AAADsasTQ75ScTxyH+dfqaF5Y8FM/J5zxBwCI3p/3DDzQEPQ66TYtnPcGad/ZJ+/hmQ/5eQ==
      physical_name : .\MDLC_Ruban.wdt
      type : 20
    -
      name : FEN_Onglet
      identifier : 0x48173923015caf63
-     internal_properties : HgAAAB4AAACzj+s/DHkxakn04lhj+fEXawQ2tp2Yyhe2uRwkk5X5z2WbiqW0FW7/Fgz2wkK+ui6Wng==
+     internal_properties : HgAAAB4AAAAHA2+zcC2FprUwLmSvNR27h5Ciwgl+23isVWwq7yltQ/k3LgFoWaq70kiyDpZKNqoSEg==
      physical_name : .\FEN_Onglet.wdw
      type : 2
    -
@@ -54,19 +54,19 @@ project :
    -
      name : FEN_Ajout_stock
      identifier : 0x4817524c075df837
-     internal_properties : HgAAAB4AAACd+fWpFkPr9Efe2adVvvrnH3haGqHMjDK1XNJ4P+kt89knMsaUq6HdMBaAeDioUECIiA==
+     internal_properties : HgAAAB4AAABO1Kb6SXY+cXLJ4E6s5ROItJfje0Bl6rmgHAMT4EhMjHC+WS89wrr0GwH7xU2Df3Fb2w==
      physical_name : .\FEN_Ajout_stock.wdw
      type : 2
    -
      name : FEN_Fiche_items
      identifier : 0x481739cb0303407d
-     internal_properties : HgAAAB4AAABIxrBsWwAoMzCLrQOwi5+icGcvx/B7wSxD79Kvaq7mOsoEmRf7ACs6XcM9u3t1DYNN1Q==
+     internal_properties : HgAAAB4AAAAdeXUplsNrdMdeQKIXMhwz4f60NB8cScp8oTwak5X5z2GTKJhkn8xdsJYA+Lgo0MAICA==
      physical_name : .\FEN_Fiche_items.wdw
      type : 2
    -
      name : FEN_Popup_Combo_Selection_Multiple
      identifier : 0x48174042062f801d
-     internal_properties : HgAAAB4AAAAIBnAsm8Boc3DL1G4pJY8KLL0ro4bUPUNG4Idz0S9ta1WdnORarHb6HQP9+7s1zcMNFQ==
+     internal_properties : HgAAAB4AAADiWNrO/aoCHT5lWvCjryGw5veNxeBFDrFMzY7AX8nLxQ/XRkrgJuxwh70nkRHPqx3nbw==
      physical_name : .\FEN_Popup_Combo_Selection_Multiple.wdw
      type : 2
    -
@@ -78,27 +78,39 @@ project :
    -
      name : FEN_connexion
      identifier : 0x48178e0c00b12143
-     internal_properties : HgAAAB4AAACX4c1ZWifHhBVOjs6GoLHkbt2IZEL1ap0Z3ShKbcFK3NX1V7og7lLdnuolUn2dGoGS
+     internal_properties : HgAAAB4AAABr51O3dDF5oqH8H8W8IL/nc2we3uWiD6xMzYzCR8HdK8kHXsPzFXfnDjSuCopGMqZu9g==
      physical_name : .\FEN_connexion.wdw
      type : 2
    -
      name : WIN_ajout_utilisateur
      identifier : 0x48178f580122300f
-     internal_properties : HgAAAB4AAAB716PnxIGpsrEMYI3fI9xldRJI6OPuU62uY/eYc5UBL8lbkh4FxES33kS+Ovr2gnZe5g==
+     internal_properties : HgAAAB4AAAAacMLG5aIKFdZtwWJ8eDMwiM9XT4gFQr1IRhl9HvqaRv4Q30HgIacYf6UfmRnXoxX/Bw==
      physical_name : .\WIN_ajout_utilisateur.wdw
      type : 2
    -
      name : FEN_Liste_user
      identifier : 0x4817b237013d69b8
-     internal_properties : HgAAAB4AAAB716PnxIGpsrEMgzDlLAdUZWBsjEkcPqeipldbqJB6vgLO5IW1DFu33kS+Ovr2gnZe5g==
+     internal_properties : HgAAAB4AAABXM7/jwL319kXAl6Rp0OvQ6fTg8M3iQ+CwGE0JHAyGSo5SYBkhmO/LIhiCfgb6hnpCwg==
      physical_name : .\FEN_Liste_user.wdw
      type : 2
    -
      name : FEN_Fiche_supplier
      identifier : 0x481904210195a6b7
-     internal_properties : HgAAAB4AAABHw6/zMG1FZnXCxbodjOCzW9qC2vtoynFK5BftPPyeaoKy60tf4u8FEgjyzlaKdmpS0g==
+     internal_properties : HgAAAB4AAADiWNrO/aoCHT53SoMW1Tv6CqsxKZSZUj18AVLEy03PGdMDtHIm2+Z6h70nkRHPqx3nbw==
      physical_name : .\FEN_Fiche_supplier.wdw
      type : 2
+   -
+     name : REQ_fournisseur_id
+     identifier : 0x481958630640c848
+     internal_properties : HgAAAB4AAACB/fktmsdvAMMs5/7U4Yr4QX4kdE/ENetSStq+XznlEy3Hp6GcosFTrJIM9Lw0zDyEjA==
+     physical_name : .\REQ_fournisseur_id.WDR
+     type : 5
+   -
+     name : REQ_stock_id
+     identifier : 0x4819588106423c40
+     internal_properties : HgAAAB4AAADMSiRwz/S87/wJRH1tjG2TnPPrMwzJBFmO/7+Z8paGckqkXGDdIaCwyX95R88B+e/ZWQ==
+     physical_name : .\REQ_stock_id.WDR
+     type : 5
    -
      name : REQ_select_stocklocation
      identifier : 0x4819312004286c75

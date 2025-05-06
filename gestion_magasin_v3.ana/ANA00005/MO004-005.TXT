@@ -1,0 +1,3 @@
+//MO004-005.TXT ANA00004 TO ANA00005
+receivings_items		TAR	444	nouvelle taille enregistrement : 444
+receivings_items	serialnumber	RUB-		la rubrique serialnumber est supprimée
