@@ -542,20 +542,16 @@ window :
      type_code : 4
      p_codes :
       -
-        code : |1+
-         // Version 1
-         // Description 
-         // Bouton en validation
+        code : |1-
          
         type : 14
       -
         code : |1+
-         // 1. Récupérer les valeurs directement mémorisées
-         nItemID		est un entier	= COMBO_Article			// ID de l'article (valeur mémorisée)
-         nLocationID	est un entier	= COMBO_Stock			// ID du stock sélectionné
-         nSupplierID	est un entier	= COMBO_Fournisseur		// ID du fournisseur
+         // 1. Récupérer les valeurs des combos
+         nItemID		est un entier	= COMBO_Article
+         nLocationID	est un entier	= COMBO_Stock
+         nSupplierID	est un entier	= COMBO_Fournisseur
          
-         // 2. Vérifier si des éléments ont été sélectionnés
          SI nItemID = 0 ALORS
          	Erreur("Veuillez sélectionner un article.")
          	RETOUR
@@ -569,68 +565,56 @@ window :
          	RETOUR
          FIN
          
-         // 3. Lire les informations de l’article à partir de son ID
+         // 2. Lire les infos de l’article
          SI HLitRecherche(items, id, nItemID) ALORS
-         	// Affichage dans les libellés
-         	prix_produit	= items.cost_price
-         	Produit_name	= items.name
+         	prix_produit	est un réel		= items.cost_price
+         	Produit_name	est une chaîne	= items.name
          SINON
          	Erreur("Article introuvable.")
          	RETOUR
          FIN
          
-         // 4. Récupération des autres champs saisis
-         nQuantite	est un entier	= Val(Quantitée)
-         sDate		est une chaîne	= DateVersChaîne(DateSys(), "AAAA-MM-JJ HH:MM:SS")
+         // 3. Récupération des champs saisis
+         nQuantite est un entier = Val(Quantitée)
+         SI nQuantite <= 0 ALORS
+         	Erreur("Veuillez saisir une quantité valide.")
+         	RETOUR
+         FIN
          
-         // 5. Insertion dans item_quantities
+         sDate est une chaîne = DateVersChaîne(DateSys(), "AAAA-MM-JJ HH:MM:SS")
+         
+         // 4. Ajout dans item_quantities
          REQ_Ajout_ItemQuantities.pItem_id		= nItemID
          REQ_Ajout_ItemQuantities.pLocation_id	= nLocationID
          REQ_Ajout_ItemQuantities.pQuantity		= nQuantite
          REQ_Ajout_ItemQuantities.pCreated_at	= sDate
          
          SI HExécuteRequête(REQ_Ajout_ItemQuantities) = Faux ALORS
-         	Erreur("Échec de l'ajout dans item_quantities : " + HErreurInfo())
+         	Erreur("Erreur item_quantities : " + HErreurInfo())
          	RETOUR
          FIN
          
-         // 6. Calcul et affichage total
-         qte		est un entier	= Val(Quantitée)
-         price	est un réel		= prix_produit
-         total_achat_cal	= qte * price
-         Total_paiement	= total_achat_cal
+         // 5. Calcul du total
+         price			est un réel	= prix_produit
+         total_achat_cal	est un réel	= nQuantite * price
+         Total_paiement	est un réel	= total_achat_cal
          
-         Info("Quantité insérée avec succès.")
-         
-         // 7. Préparer et insérer dans receivings
-         sDateSysteme	est une chaîne	= DateSys()
-         sCommentaire	est une chaîne	= EDT_Commentaire
-         sReference		est une chaîne	= reference
-         sTypeReception	est une chaîne	= selecteur..Valeur
-         sStockDest		est une chaîne	= COMBO_Stock..Libellé
-         sStockSource	est une chaîne	= ""
-         
-         SI sTypeReception = "réquisition" ALORS
-         	sStockSource = COMBO_Stock..Libellé
-         FIN
-         
-         REQ_Ajout_Receiving.receiving_time			= sDateSysteme
+         // 6. Insertion dans receivings
+         REQ_Ajout_Receiving.receiving_time			= DateSys()
          REQ_Ajout_Receiving.supplier_id				= nSupplierID
          REQ_Ajout_Receiving.user_id					= 1
-         REQ_Ajout_Receiving.comment					= sCommentaire
-         REQ_Ajout_Receiving.reference				= sReference
-         REQ_Ajout_Receiving.receiving_type			= sTypeReception
-         REQ_Ajout_Receiving.stock_source			= sStockSource
-         REQ_Ajout_Receiving.stock_destination		= sStockDest
+         REQ_Ajout_Receiving.comment					= EDT_Commentaire
+         REQ_Ajout_Receiving.reference				= reference
+         REQ_Ajout_Receiving.receiving_type			= selecteur..Valeur
+         REQ_Ajout_Receiving.stock_source			= "null"
+         REQ_Ajout_Receiving.stock_destination		= COMBO_Stock..Libellé
          REQ_Ajout_Receiving.receivingpayment_statut	= "non défini"
-         REQ_Ajout_Receiving.created_at				= sDateSysteme
+         REQ_Ajout_Receiving.created_at				= sDate
          
          SI HExécuteRequête(REQ_Ajout_Receiving) = Faux ALORS
-         	Erreur("Erreur lors de l'insertion dans receivings : " + HErreurInfo())
+         	Erreur("Erreur receivings : " + HErreurInfo())
          	RETOUR
          FIN
-         
-         Info("Insertion réussie dans la table receivings.")
         type : 18
       -
         type : 161
@@ -949,4 +933,4 @@ embedded_elements :
  elements :
   -
     name : FEN_StocK_location_1$Requête
-    internal_properties : HgAAAB4AAACJ+cNzOV1PWJFXuQJ0Z+CVAWx4HK2RMC73fXVtFhJyaTMGbSWCdsJTWDqEZ1ThrNLSwDOGf5A0KAh4FIBgWGg5Re1Tl684s91+1V3SEXLnzRguGKnj4jO3U2pdRVCQPDSkDkPEiFVqojDTA2fHN3+L1R6Gr1BWtEmD/DgRiaJrBCsf+wHJWFIOH0EzBuh0y/YrYNCn+QOJwIvpyVpERUeuRQ/UsfRI4HI+tAk+mrkINzVQBSS7qS2OWao61qWHE2PoZkG2PBGzEuGvXM/Ubq8TW7nwMrp78rrcy7vtKbZGzlluo7MuaaHMHYfHgaeyaDsOvuHoBGP6xwDEwsP5OBm2hnkh5R6QtCnnmQXYwo/JLMaB2TFz0P58mQGHvvUyKDyQjl3MJL4e3xk3JmDrPcGXZthiugn9YHMAu4mY2sjxReO6/hsgCVU5399kqpJpWQOVx1m8gw1mu71P0yyhVE+J3ZuZ2sl6OqtBBfmfM70twFFpWwTC+37EbCiEtJYt95dTtwx3vNHEgnJyrc9OtMgAiCDfdbShTDD/ZonVq4jXOFIyV+3Bcu3VwJPrX1FEZ8THHcskiGY7v7y7wbh8odkhSnoPcL1LQvjILI8k6ZAXy063xQP5+mNq+PwEO05bnQ3GZgmG1yR59Lv/gRan9XX/Bj/kA9PZ26KEmDss8mhEGRCA2Kq9dnwqEcmxrz9wtsiBG1BdWHzvdwL9nqsA3kagZX574H7KJbISuUyVCU4522Y5so4to0TwbruusWIemReagp5YhDYa9jL97I8srGhcWzQKOIzCJdwbpPxwQ+ID+3pYD3RrjgrxTSHHnGo+//r33roq3mTLxvfbaib6/9gGdKKquO7q2PAXZ6ctqTVzlUH7YAvbbXZX1FJkq4kBzukfvh5Wj9NBSkg9OSkCrAkt66K7+AnQ/26CTgsPRfGZubzaYtzsI7fxM/HhZ0Hrxnq4iYe3uXagWQd5xGG6cEMZzSn5FB+1xH61vNb4GtE98TxKjAqg01g6iVZqfpAb2X55KD3hyLfjrICw6aPgCYS4fVbtwYAfZShJ3xsesDqh4wtcdmtlb2sbtxq3sNRl7Vb19gAFc4uVY4aDlQumuDkrQSbevahuWhWNsytw4Jm+sPdNnkGh0GAD3LRStiFaYCpmLdF/z0u8iBFD3eqlAC3Gha0JX9rsWyM0xCIBnByGg+PVMmS8IdFHj2OS32/LpSFarCEqkD9xTdbV+jiW5Yrs+/0DrpmXxMevvyCCBJyq+OfpisRL13P1erkW/htlVtve1X8P5Cyojo1p543UhBzJbCsacT599AE0XEdkXcaJS0sQCWyKwT8UmXJzDIR8ziMQfmT0Zy8CkG3jRehGnq9Sxdr/QvWuj257Lt6vRO9DkLqtcWy5iZcvyV/vKkSsXNRmumSsROW9Z7mVmcf79gszJ7fUzFCpeXYuG3eG2WfMvhvyMMzYaJYWnK7MqDkZtDDsKFVhV3HQ7X5rqsoetkvoj3zeyrkb1ZxJBSW1SfpybLwDzqmlnT0IEOeCzKB9MBf5I7g5BY8sPQYcnNfea6nuqU/nCzFh8z5pXoskjCkqFOQsfFbIWvoJSRHUuAwQPpONglcgKhaDvwMDDHwGQ0bLGEYjRR3he9M/DQex4MGgQBbsWGZcQHKAuK2xS0/OopgDoEd8xkrzk3sfr4g1AZ34kPK2G/oIrGgjdoo8GlwMuku6HY7A8nQvKIL5SQI1wgQmiMVe2XXWf6j5nu2nWpwekOf0K7WHwF6OcLVWhpOBwEgk2D1SIuV7jiimBeNrMwZFD+Mliwn/t0pPNc7/kU9P8HI42KDbVYKcRON1i3a5Ut6eRmp+ZEl1Y/Zb7g6myz0FEi07pA2yKCpqllI+/qLfbQt8BLQfI8tMReALCTdttmugiaVNtZtdzAhequVRszb1JZ4HtyGdp2MG9H2p9iiI2LMUH6ehIuaolmRjDWMnIlb1kbpiEWj+ABS/LoZGa8QRCbkFMbPB5kLxV8jg2bWZ8DhfwVnZf7q0A9P1RHwGqKhBbsRNeBCm5EAlD4dmbB8Ju985Heo9LtHpIaxG+SvVYbn8GBttJjqGDDGEGPAs8Ni2IWfhcv/1mqEJR0TMj/4YuRm9bfFUK4Pe4dMDLFo7FrlbhFFq5ou3YMEtv1x6AownOaQrAncOBlhmyA2l/H2nrjc+dCw80CgZjAUhf98ainLdiymgfJtBJfQ61zbVlLxVEnB9ebwZbsW6b6Fl6mS+ZnCDsvtdeHMir2Vq1kOK57+/3gmtXJQAwQc3SBUMFoTUT446PG9AM2PZhP0BYcqcYc+xCAzbeEDXsbNgia3EBz1HXY4wZoP6BlBpGCx5smM3iIZnbjbSVvCXI+cA0usZjPDW70MtSBv0q/iGeopuRq5Rr1Ptc6VFpV3oFOwSBvLeBopmUwH5qYUta1Ai5yyYmA==
+    internal_properties : HgAAAB4AAACO+MAIPGBy7fR6jHU/WqXSwrcxxeCkc3sCiEDYob3XtsS5Fv61adWMl2Xf3pNY7ZN7d5y/wmvfxRezozPzAw1mnqio1Gp7bu5NqFTJGHHkzhktGari4TK8WoHwZLd35e3t1bhh6zAVN4cmVtZmzuRcOo3b1C+dawZCuxPoMHnQ3bCGbCogB+n3hrgaaYNnLOMEQ9G45D6UPYbk2ElLtPTfEr6pZl8TG0fNd8xxrXTFZP6TxuX6aGzPmOl1jez2QIy5lVInRyT2XzwKOyr3CSCYTFyZK03eXQ/jnj5gvCkrS9rhJDSp9CRRkCqq9HqlXZATkUoB43qhVJNTezcTCrXqurNNKWDiIuszwxF8FKEx7KpbLYUtGrRK/TvrSme8sHRMQG0g6nwELV1rBqK9UekFtkCacIPB4qN8/V04WHZZNU8Myl/qu9MLfz1Msqh/2WP1BY3I5Z8E/Wnhl+CTTqdxdXGBYiP0GLnZiyGv4Yu1uDnHI2xcRYxu1M7YVFQbH9/b9SDjNnPS/ArIFbcUepQcpKqTid6LUhr/DEEV4c6LdBp4c9lr/EtDnB2ncyP+Q9hXQ5tkNmStHdAVFbTWuwFBMojT5DflKOZMls+I83LHU3ZFCeeDVIE46Kpkx1gFsQmWhNH+4Za/htc5GWb1QwWnZj0889l/LfykThf4fDLkyZRaAPJneHoMWTfVJ4VefghN7bzhPqpJBW73lkvmhN6oAYCPnNTYb4i+6+yZ04idD6ojDkqDOV7ygvWyWdBkrSOGnJpseiw8oM7X4G/ackicn1YKcMKw105bwuhAgdgrgzJWz0SRBFzzdT+fRLgk6/7PVM4ODDIVXHNtXtIM8XQigKyKkIwI4oLTWc/5sxd/0cVN2JMpkyCxzHgMux+fUj1DWCYOVWnLkFBT6aWMNiXpbwQ7wCOCLbwirLMzz8OxMSzocuQykelDYz8t1w9Z6rZ0u+Mjv5TSI6vTOFHYhqdVrW/FUNHvejxxdr6oqA9pnUwQmP5CFf5Y/YCqKlLdEfaFKh1Z3pV17nwiicsOD3QwLWTBbfqhG5rFKTt60tTZ48fG+u9jXV1pw0T7DBY/Pf5JWOxhra3r7W4pEZPMRgVHAYRa4WYMXJs9OdewVjcSnNu3RnkfTsph7FrakoPMqAJCN6nPacUSEiE5WU7Paj1WNTuFazz2yUl8OlZ1Rp7qvy/H8lxCTyspJ/EWhw3JEZVOG07t3eKOBBew3xOr4BfHEGTYWf4qgVK8jlkJFVtrP7g8W3OstlQ861SrYbDA/xrvwIj2HSPhcT7ERHDhl3mMaRoPHIMoqZCN7yy/4lGConyj+nt7mCjfPtnMs+0TP6olJeF37GJfUyYuEtMbqRhxyjGcJSoxTO3k2TNK2WrIW6fcJrduJCxKNvbI0T3DxWOXFS3DPexG6qaM+qYMFexi8OqFm4F4Sk33VjTBHiKJCchB/f+V80sVcf29/wIwGUPVm8ZwUADh8PMCE6EHzbxvJIvTNT5eottu3HZsIgFvlzGqKzwCOCIfTaabo5mUGR6SXiFABo7NrLMrrcanonL1kvJAorrglFkebez7/fjTY1VHZY2B6YswPuD9j8VHAwYCeVwrF2HYCiTOoV8rLlumsZlEtL7IFE6snIhwQXDpL6ef6VVVl3vbyZCerqSp09fY7xSvm73Q6gi26FdW4CoDUQ2/kmMvtSt4NdPze8sZnZwV5jUpUVV++dVOdIeg00Pjz4IRBgBb7rH8i/ikXR1tkRJNMs5mgb030xIpo2Y+W5HPKdyzgaZqnxszuKim/K2adrhgWISkLp8WphWIGMieiYXJt7ESnkVZuwQU9D36eb/BH4FXS6L0SBV0lUe9POwS4aK2ObCvW/vdu22DmYfCchJ5hzGSIM7t0FWedspSiWyz+jTONKxcyTcP8b6YbL0WiJ8WsCgGIhB1ZdRyHYU7ed7NVniQk11d3TWK5rrUVXdgKhEjmMH1lXMwfacljEO6XGpU6voqRfc4ID9pIPZoPZ/MVLZMDCEJwgiwPXMLm4mEc1++DxlpLTsCquQ5Fbbi7uAoPtFWme7wAnsHCCzcfljZy2BgM52n715fbWup02EZwsaCWShIKTCY8C3z5lfznHTSWswpftZhZFCAr9m0kTzWGc71aw4KMxSSJMeRG6c6xCmQ5VRtoaMxBUKQi45W3eaPJXOFm+dYS0ZiPp5bTb2QWF5rQd6E+MdvDOGg4WuEwcEuiM0oedC1dK5o6WWhQVuon9YyTxqZFv7DbSrzTiYWd2IUxX8/gEbwAUxX4/O7pieTm8ATxvZsKVqkxK/jKAaKISv8GyfOuLRhiKzFBjxGXo83b4r9GWMe1W+8d6byM2uMAcNhIQuyyEyrqTzIMy8XqIp2E9Y/ZgWLRUGnAeEcVLhAwHAQ8CglSafZT70hwU+jHtbMfKjAmIUd4imXnw==
