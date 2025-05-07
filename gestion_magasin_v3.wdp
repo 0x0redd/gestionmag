@@ -153,6 +153,12 @@ project :
      internal_properties : HgAAAB4AAADqYNI29bL6JSZAxxcryZpKxrc9ZcB+m0x2IQpNo/WfAcMj6El1gyRzj7UviQnHsyXvdw==
      physical_name : .\REQ_Ajout_ItemQuantities.WDR
      type : 5
+   -
+     name : WIN_modifier_utilisateur
+     identifier : 0x481b56af01218184
+     internal_properties : HgAAAB4AAAA3Ex8DoJ2VlqX0A/QhfOu8qfSgMA1gYV+ysmhnvGwmKi4ybIWpEF/vAjiiHuYa5toiIg==
+     physical_name : .\WIN_modifier_utilisateur.wdw
+     type : 2
   other_elements : []
   array_of_analysis :
    -

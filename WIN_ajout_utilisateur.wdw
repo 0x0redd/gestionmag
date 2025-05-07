@@ -289,17 +289,25 @@ window :
          	RETOUR
          FIN
          
-         // Hachage du mot de passe
-         HashBuffer	est un Buffer	= HashChaîne(HA_SHA_256, EDT_Password)
-         HashHexa	est une chaîne	= BufferVersHexa(HashBuffer)
+         // 🔍 Vérification mot de passe
+         SI EDT_Password = "" ALORS
+         	Info("Veuillez saisir un mot de passe.")
+         	RETOUR
+         FIN
+         
+         // 🔍 Affichage pour test (à retirer ensuite)
+         Info("Mot de passe saisi : " + EDT_Password)
+         
+         
          
          // Insertion dans la table users
          HReset(users)
          users.name			= EDT_Prenom + " " + EDT_Nom
          users.email			= SAI_Email
-         users.password		= HashHexa
+         users.password      = EDT_Password
          users.created_at	= DateSys()
          users.person_id		= people.id
+         
          
          SI HAjoute(users) = Faux ALORS
          	Info("Erreur lors de l’ajout dans la table users.")
