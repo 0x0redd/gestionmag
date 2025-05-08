@@ -30,19 +30,19 @@ project :
    -
      name : FEN_Fiche_people
      identifier : 0x4816bfae01163c86
-     internal_properties : HgAAAB4AAAAS6EpebdpSDS6UD2YsdDF9nNM7MxxbVraK9GFHdrLabl5QFibz1qgnd60X4aFfG413/w==
+     internal_properties : HgAAAB4AAAC0kpyYJxwUFyR+7cB+ngvrbk2lTYbeiyWyMgXO/DxQ4NDCgEzZKAaFkbchn2eZYVehoQ==
      physical_name : .\FEN_Fiche_people.wdw
      type : 2
    -
      name : MDLC_Ruban
      identifier : 0x481739230154af43
-     internal_properties : HgAAAB4AAAB3019DYN1VVmWgnvTfva07VzCC0um4SxlOq7Q0R/Gla1GfRmn4yRorQvji3qZaJppi4g==
+     internal_properties : HgAAAB4AAAAZdcHF4l/X2PsiFG6hNx+ZsZL8/Nvz0FR24bATFQOLTbN5qPduU6CxxHpkXCTcpBT8BA==
      physical_name : .\MDLC_Ruban.wdt
      type : 20
    -
      name : FEN_Onglet
      identifier : 0x48173923015caf63
-     internal_properties : HgAAAB4AAACxjek9Crf/MDOKrOYpt6dBuSpEJKPixSt2xZ4ChYOLXZNJOHfm2yg5XMI8hAzEvCyUnA==
+     internal_properties : HgAAAB4AAAB716PnxIGpsrEMKmBbASnfQ9x+jkXdSo6uw9LxW90xh71z0u18Taa33kS+Ovr2gnZe5g==
      physical_name : .\FEN_Onglet.wdw
      type : 2
    -
@@ -54,19 +54,19 @@ project :
    -
      name : FEN_Ajout_stock
      identifier : 0x4817524c075df837
-     internal_properties : HgAAAB4AAAB41qD8S3A4Y2C7lpBmd6UGPqEtzQpZvECK1A3TppL6PoJI06XLfHAqTfPty0uFfXNd5Q==
+     internal_properties : HgAAAB4AAAAiGBoOverC3f4lLAqY8T+sUDOfR3wk6X9SuplqLBxwsBTafQtR9vawx31nUdEP690nLw==
      physical_name : .\FEN_Ajout_stock.wdw
      type : 2
    -
      name : FEN_Fiche_items
      identifier : 0x481739cb0303407d
-     internal_properties : HgAAAB4AAACPi+c7CLX9Lj2IlhSpVHYJy1gW3vlAAx12SRbKcbffMcN9Ar5C+SIzWsA6hg7CvjKamg==
+     internal_properties : HgAAAB4AAACJhfGVEk/niKsSBObbpoCfdWIo2PN7sJBOj8LJd7HlO80HlCzQa5Ch9CqUbDSsVESMlA==
      physical_name : .\FEN_Fiche_items.wdw
      type : 2
    -
      name : FEN_Popup_Combo_Selection_Multiple
      identifier : 0x48174042062f801d
-     internal_properties : HgAAAB4AAADBvTltWgcvwIMaYxkESIAXyVjACLFQDtKiFi+xTvoYkHi4p+lHv4OJ7FJMtHx0DPzETA==
+     internal_properties : HgAAAB4AAADudMba6ZaeURKpPlTXc+XsqjuhKQR0nQeuYyyfc6X38dsbAg4sklDUO+HbJe3jnxH7ew==
      physical_name : .\FEN_Popup_Combo_Selection_Multiple.wdw
      type : 2
    -
@@ -78,25 +78,25 @@ project :
    -
      name : FEN_connexion
      identifier : 0x48178e0c00b12143
-     internal_properties : HgAAAB4AAADeRDbq2YauQQKZPGYdgd6GEhURwQ5FB9GiFi2rbqrqNvIofyKSthYEa9HLNf3zjwHLSw==
+     internal_properties : HgAAAB4AAAAvKwcbqNVdDt1oyxFo7Hu7X9hqCsGBTgKOezJZI+Ux/z3zsn83ySMTeqAa5q4i3tI6Og==
      physical_name : .\FEN_connexion.wdw
      type : 2
    -
      name : WIN_ajout_utilisateur
      identifier : 0x48178f580122300f
-     internal_properties : HgAAAB4AAAAlIQ0RrstjfM92rk8ZZRYTZySi+kVUVvJOi7ZiyS/vGdNtvGTDBoJ1mI4I8LAg2MgwMA==
+     internal_properties : HgAAAB4AAADzTyt/zLnxKgm0+AWn20Q9vdrgMBuLsNlW7eYli20p1xEj6rZ9TMw/Vsw2ggL++u7WXg==
      physical_name : .\WIN_ajout_utilisateur.wdw
      type : 2
    -
      name : FEN_Liste_user
      identifier : 0x4817b237013d69b8
-     internal_properties : HgAAAB4AAABGzK7yMW5GaUrxWGmu5S6TDAkLU2IJx/lWDWp+v2kj5Sv3nVzs1SL8EwnzzVWLd2lT0w==
+     internal_properties : HgAAAB4AAAC4luA8C7D4IyB7NvvYd7AJtht1ZVwEtYyus8bNzXsR1z2BF9J6R5BqjbMtiwvFvTOdpQ==
      physical_name : .\FEN_Liste_user.wdw
      type : 2
    -
      name : FEN_Fiche_supplier
      identifier : 0x481904210195a6b7
-     internal_properties : HgAAAB4AAADhXdnN+qcPICNMs5QPpsqJvTxEnCU00l5SavM1er5cpFyUxWE11N1zjLIslBzUrBzkbA==
+     internal_properties : HgAAAB4AAACzj+s/DHkxaknG2b5hgOSvX95mft9PGJWqkO/cIBj6xn62509b7vMJFgz2wkK+ui6Wng==
      physical_name : .\FEN_Fiche_supplier.wdw
      type : 2
    -
@@ -150,7 +150,7 @@ project :
    -
      name : WIN_modifier_utilisateur
      identifier : 0x481b56af01218184
-     internal_properties : HgAAAB4AAADwTih0s+jA2/g3WqN4a9itvuOtzfRj4ZOOFyTExXMZHyUpW5aaZ6i2xXtlU9MN9evVXQ==
+     internal_properties : HgAAAB4AAAADf3uvHEnh+lmoZ8jVEF84LWgktIHpGfiyUkNIQOiipqq26BkF/EPTJhyGcjKuSr4GDg==
      physical_name : .\WIN_modifier_utilisateur.wdw
      type : 2
    -
@@ -176,6 +176,18 @@ project :
      identifier : 0x481b9a2c0221c950
      internal_properties : HgAAAB4AAABGzK7yMW5GaUrFWPY3IXYrJFHzGyo5OZN2JfhaUyX30X+j6WC8RkYAEwnzzVWLd2lT0w==
      physical_name : .\REQ_Ajout_ItemQuantities.WDR
+     type : 5
+   -
+     name : REQ_Insert_Payment_Type
+     identifier : 0x481cc1ed0077151c
+     internal_properties : HgAAAB4AAABIxrBsWwAoMzCQT4dN96ipNnl1JRI6CvyON418HmqiBsowiI3pH+4/XcM9u3t1DYNN1Q==
+     physical_name : .\REQ_Insert_Payment_Type.WDR
+     type : 5
+   -
+     name : REQ_select_receiving
+     identifier : 0x481cc3280156e162
+     internal_properties : HgAAAB4AAACQbsjU04iguxhoqTJy0twHzkMdHST06JKqYOIhie8tmxn1TZSxSMAXZdvFM/PtlQv1fQ==
+     physical_name : .\REQ_select_receiving.WDR
      type : 5
   other_elements : []
   array_of_analysis :
