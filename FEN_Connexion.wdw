@@ -111,8 +111,31 @@ window :
          	RETOUR
          FIN
          
-         // Connexion réussie
-         Ouvre(FEN_Liste_user)
+         // Récupération du rôle de l'utilisateur
+         SI HLitRecherche(role_user, user_id, users.id) = Faux ALORS
+         	Info("Aucun rôle attribué à cet utilisateur.")
+         	RETOUR
+         FIN
+         
+         SI HLitRecherche(roles, id, role_user.role_id) = Faux ALORS
+         	Info("Rôle introuvable.")
+         	RETOUR
+         FIN
+         
+         // Redirection selon l'ID du rôle
+         SELON role_user.role_id
+         	CAS 1
+         		Ouvre(FEN_SuperAdmin)
+         	CAS 2
+         		Ouvre(FEN_Responsable)
+         	CAS 3
+         		Ouvre(FEN_Magasinier)
+         	AUTRE CAS
+         		Info("Rôle ID non reconnu : " + role_user.role_id)
+         FIN
+         
+         
+         // Fermer la fenêtre de connexion
          Ferme()
         type : 18
       -
