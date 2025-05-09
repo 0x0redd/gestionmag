@@ -30,19 +30,19 @@ project :
    -
      name : FEN_Fiche_people
      identifier : 0x4816bfae01163c86
-     internal_properties : HgAAAB4AAAC0kpyYJxwUFyR+7cB+ngvrbk2lTYbeiyWyMgXO/DxQ4NDCgEzZKAaFkbchn2eZYVehoQ==
+     internal_properties : HgAAAB4AAAB00lxYZ9xUV2S+LYC+3kurrg3ljUYQxDt2JYKAvHyQoBCCwIyZaEZFUffh36dZIZdh4Q==
      physical_name : .\FEN_Fiche_people.wdw
      type : 2
    -
      name : MDLC_Ruban
      identifier : 0x481739230154af43
-     internal_properties : HgAAAB4AAAAZdcHF4l/X2PsiFG6hNx+ZsZL8/Nvz0FR24bATFQOLTbN5qPduU6CxxHpkXCTcpBT8BA==
+     internal_properties : HgAAAB4AAABEwqyIN2xEZ3TPMY8yYGZwGHtXjzRuk9SuY65kpJR4uBziAS4l5D/OIQfxz1eJcWdR0Q==
      physical_name : .\MDLC_Ruban.wdt
      type : 20
    -
      name : FEN_Onglet
      identifier : 0x48173923015caf63
-     internal_properties : HgAAAB4AAAB716PnxIGpsrEMKmBbASnfQ9x+jkXdSo6uw9LxW90xh71z0u18Taa33kS+Ovr2gnZe5g==
+     internal_properties : HgAAAB4AAAAnIw8TkM1lBtWQjsTPVX2b5/CCYmkj3yBS+jPfT8nNI9kXDiFIuQobcqgS7rYq1soyMg==
      physical_name : .\FEN_Onglet.wdw
      type : 2
    -
@@ -54,49 +54,49 @@ project :
    -
      name : FEN_Ajout_stock
      identifier : 0x4817524c075df837
-     internal_properties : HgAAAB4AAAAiGBoOverC3f4lLAqY8T+sUDOfR3wk6X9SuplqLBxwsBTafQtR9vawx31nUdEP690nLw==
+     internal_properties : HgAAAB4AAAAXc3+jAH01NoUAd3G3GBT1iYqEVGMVeEeCng09/StjpWuxRDQ6zc+L4lhCvka6RroCAg==
      physical_name : .\FEN_Ajout_stock.wdw
      type : 2
    -
      name : FEN_Fiche_items
      identifier : 0x481739cb0303407d
-     internal_properties : HgAAAB4AAACJhfGVEk/niKsSBObbpoCfdWIo2PN7sJBOj8LJd7HlO80HlCzQa5Ch9CqUbDSsVESMlA==
+     internal_properties : HgAAAB4AAAArJxN3tPG54uE8GpjdqPqFL0yKYm0v+aJKqHlJxUNLna9hfjLeZZanznRuSsoG8uYuNg==
      physical_name : .\FEN_Fiche_items.wdw
      type : 2
    -
      name : FEN_Popup_Combo_Selection_Multiple
      identifier : 0x48174042062f801d
-     internal_properties : HgAAAB4AAADudMba6ZaeURKpPlTXc+XsqjuhKQR0nQeuYyyfc6X38dsbAg4sklDUO+HbJe3jnxH7ew==
+     internal_properties : HgAAAB4AAABcOrTg34Ssvwy3kKr1Ebu+mImXPwpsyhFKSEf7hbPh3ynpULCOcDI2Wc/JN//xiX9JyQ==
      physical_name : .\FEN_Popup_Combo_Selection_Multiple.wdw
      type : 2
    -
      name : FEN_StocK_location
      identifier : 0x48173a9c039b6dd8
-     internal_properties : HgAAAB4AAAA0EhwYp5yUl6T/4iRGEb533K8rg0g7rumrEUnxgJh8bECeemNLsGz+ETehH+cZ4dchIQ==
+     internal_properties : HgAAAB4AAABTr4ufLBkRyulUQ4XnshlWPwgKuhGb47Sy0jPXJ8FVS6F/WwKqEctftmxWomKeWk62vg==
      physical_name : .\FEN_StocK_location.wdw
      type : 2
    -
      name : FEN_connexion
      identifier : 0x48178e0c00b12143
-     internal_properties : HgAAAB4AAAAvKwcbqNVdDt1oyxFo7Hu7X9hqCsGBTgKOezJZI+Ux/z3zsn83ySMTeqAa5q4i3tI6Og==
+     internal_properties : HgAAAB4AAABPy6f7SHU9bn3IK/GIDFsbP7jKqiFjOn5Sakf7g4WRX51TEp8XKYPzGgD6xk6CfnJa2g==
      physical_name : .\FEN_connexion.wdw
      type : 2
    -
      name : WIN_ajout_utilisateur
      identifier : 0x48178f580122300f
-     internal_properties : HgAAAB4AAADzTyt/zLnxKgm0+AWn20Q9vdrgMBuLsNlW7eYli20p1xEj6rZ9TMw/Vsw2ggL++u7WXg==
+     internal_properties : HgAAAB4AAAA/GxcLuOXN3u04XJnL74iZAb7kNA9BxzWKmH+Dn3kl022HRupJuDCjynBqVt4S7uIqKg==
      physical_name : .\WIN_ajout_utilisateur.wdw
      type : 2
    -
      name : FEN_Liste_user
      identifier : 0x4817b237013d69b8
-     internal_properties : HgAAAB4AAAC4luA8C7D4IyB7NvvYd7AJtht1ZVwEtYyus8bNzXsR1z2BF9J6R5BqjbMtiwvFvTOdpQ==
+     internal_properties : HgAAAB4AAAAQ7khUUwggO5gD7hOAz9jB3kPNLZTOWBhywssHBTPZH+UpTyoS7ziS5VtFs3NtFYt1/Q==
      physical_name : .\FEN_Liste_user.wdw
      type : 2
    -
      name : FEN_Fiche_supplier
      identifier : 0x481904210195a6b7
-     internal_properties : HgAAAB4AAACzj+s/DHkxaknG2b5hgOSvX95mft9PGJWqkO/cIBj6xn62509b7vMJFgz2wkK+ui6Wng==
+     internal_properties : HgAAAB4AAABYNgAcq9BYA8AtlOk8q9mUUNFv90IUDbeKNN8rZaNxv3mp0lRAwcBUrZMN66sl3dM9xQ==
      physical_name : .\FEN_Fiche_supplier.wdw
      type : 2
    -
@@ -150,7 +150,7 @@ project :
    -
      name : WIN_modifier_utilisateur
      identifier : 0x481b56af01218184
-     internal_properties : HgAAAB4AAAADf3uvHEnh+lmoZ8jVEF84LWgktIHpGfiyUkNIQOiipqq26BkF/EPTJhyGcjKuSr4GDg==
+     internal_properties : HgAAAB4AAADIRjDs24Cos7AfUltAY+BFRgtFlSwWXpqC3ivf3UvBR81Rc46Sb7C+3UO9O/v1jQPNVQ==
      physical_name : .\WIN_modifier_utilisateur.wdw
      type : 2
    -
@@ -174,7 +174,7 @@ project :
    -
      name : REQ_Ajout_ItemQuantities
      identifier : 0x481b9a2c0221c950
-     internal_properties : HgAAAB4AAABGzK7yMW5GaUrFWPY3IXYrJFHzGyo5OZN2JfhaUyX30X+j6WC8RkYAEwnzzVWLd2lT0w==
+     internal_properties : HgAAAB4AAABKwLJWVRIaxYbh1GKDzeKvoM1/l5a15olO57ze36lrRfMfbewg2tKM71VPqWlnE4VP1w==
      physical_name : .\REQ_Ajout_ItemQuantities.WDR
      type : 5
    -
@@ -189,10 +189,35 @@ project :
      internal_properties : HgAAAB4AAACQbsjU04iguxhoqTJy0twHzkMdHST06JKqYOIhie8tmxn1TZSxSMAXZdvFM/PtlQv1fQ==
      physical_name : .\REQ_select_receiving.WDR
      type : 5
+   -
+     name : REQ_Soustraire_Stock
+     identifier : 0x481ce9e4026c3271
+     internal_properties : HgAAAB4AAAAtKQUZppObRBezWvHKDzR9g+DehjHx2MSKVGqHlRODjWdZGhhR6QsyQObQKOgY4NA4OA==
+     physical_name : .\REQ_Soustraire_Stock.WDR
+     type : 5
+   -
+     name : FEN_fen_ventes_
+     identifier : 0x481d12b401029b77
+     internal_properties : HgAAAB4AAADVsT1hXjtzrL/MxRvfK2VDD7yKAq3O/D5WrcYUCR//2WONhJd4SSvzCD64AIBwCPjAQA==
+     physical_name : .\FEN_fen_ventes_.wdw
+     type : 2
+   -
+     name : FEN_Fiche_customers
+     identifier : 0x481d1e6a02155d07
+     internal_properties : HgAAAB4AAAAVcX2hHnszbH+MgRmYDr2p6ea8fEdJ3CSihm+b9xGNe3VPthf/w+czSP74wECwSLgAAA==
+     physical_name : .\FEN_Fiche_customers.wdw
+     type : 2
+   -
+     name : REQ_Ajout_Sale
+     identifier : 0x481d227702822d3e
+     internal_properties : HgAAAB4AAADHQy9zsO3F5vVGe1DaBSH0SwpCGjuU2J2OP80VmAAKDg4WZkckJpGJkohyTtYK9urSUg==
+     physical_name : .\REQ_Ajout_Sale.WDR
+     type : 5
   other_elements : []
   array_of_analysis :
    -
      analysis : .\gestion_magasin_v3.ana\gestion_magasin_v3.wda
+  uml_model : ..\..\Modèle gestion_magasin_v3.pdf
   net_assemblies : []
   uwp_api : []
   external_components : []
