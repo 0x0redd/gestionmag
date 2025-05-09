@@ -12,10 +12,10 @@ window :
  identifier : 0x281b56af07a28156
  internal_properties : HgAAAB4AAAB71ZW8yWJq30rZ01v0IeUSh55rtjh/x/+7ZR690AdY3PVAHZKbFNhmbT3rMtRc6r9ODbBXbfo5ZRzr2ObnxzhfH6OGBjtj20l+661vfT4fMO7el469qmREWK1lLpR4CiEeM+u+J2B8Lk8pB4yH3p/X8Y0HghaJg8BEIVuNuIpg7TWCVgKNWhvc1/yQaTGPUloamrMW6XNfGXiU59u1GoQz/kXO/wpUSksLQ7G+0PtUkuqgESpbST7jXHQAwQLDCVAJqiPRZqm+6Pi9ddmgYIjX9jdA6s1XCj27fG/5pbvdV2Y0eSHuU9LIKsfAiUNe49FAnL8sC24S63TMf+/h0B/g8MYMi2b+/X+UzGMcDJQ27Xia8jkvFzr3qcULB1vMM7bF3Cmv8d6XpLj1IVmk2lTbisd7819kKNaojZ8TuBkVjrfu2BZaGSn4H2amBobft8APlm8ZIcDQd9lNiCHWlDL1Vp2d5G3Im0IGeppOfaR2s7os/N+SBV7qwSCiEEgWpUFPQhECxwHdTHlL813RSKJGTf5raGB0YobSi61lTjyndiN6PZDtLaxRYpcG3Bivx0TPcqBxf61+zwOb0/Aft3KTQxw469X0XAGkNcwOYaTafheO7eEe/DmlefiHxbXjbmEkr/0qZT/NNfxyU9eVs6dJtPB2skrWtVz0g2+SDXnTS/fYoXd81PsF8t2LjCdnqmAgvqJoEoOuYD3X68nyI6bO/XkJ3b39qf+t0+MPto7f8p8qZZhZoxLT
  properties :
-  width : 634
-  height : 537
-  widthClient : 632
-  heightClient : 505
+  width : 782
+  height : 640
+  widthClient : 780
+  heightClient : 608
  controls :
   -
     name : EDT_Nom
@@ -270,14 +270,22 @@ window :
          	people.city			= EDT_Ville
          	people.country		= EDT_Pays
          	people.email		= SAI_Email
-         	HModifie(people)
+         	SI HModifie(people) = Faux ALORS
+         		Info("Erreur lors de la modification de la table people : " + HErreurInfo())
+         		RETOUR
+         	FIN
+         
          FIN
          
          // Modification de users
          SI HLitRecherche(users, id, Glo_idUser) ALORS
          	users.email	= SAI_Email
          	users.name	= EDT_Prenom + " " + EDT_Nom
-         	HModifie(users)
+         	SI HModifie(people) = Faux ALORS
+         		Info("Erreur lors de la modification de la table people : " + HErreurInfo())
+         		RETOUR
+         	FIN
+         
          FIN
          roleId est un entier
          SI COMBO_Role..ValeurAffichée = "SuperAdmin" ALORS
@@ -298,13 +306,20 @@ window :
          
          SI HLitRecherche(role_user, user_id, Glo_idUser) ALORS
          	role_user.role_id = roleId
-         	HModifie(role_user)
+         	SI HModifie(people) = Faux ALORS
+         		Info("Erreur lors de la modification de la table people : " + HErreurInfo())
+         		RETOUR
+         	FIN
+         
          FIN
          
          Info("Modification réussie !")
          Glo_modificationFaite = Vrai
          // Si tu veux que la table se recharge dans le dashboard
-         FEN_Liste_user.ChargerUtilisateurs()
+         FEN_SuperAdmin.ChargerUtilisateurs()
+         MaValeurRetour est un booléen = Faux
+         
+         
          Ferme()
          
         type : 18
@@ -327,7 +342,6 @@ window :
       -
         code : |1+
          Ferme()
-         Ouvre(FEN_connexion)
          
         type : 18
       -
@@ -417,6 +431,7 @@ window :
       Glo_idUser		est un entier
       Glo_idPerson	est un entier
       Glo_modificationFaite est un booléen = Faux
+      MaValeurRetour est un booléen = Faux
    -
      code : |1+
       

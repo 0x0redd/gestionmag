@@ -12,10 +12,10 @@ window :
  identifier : 0x2817af7e07ce029c
  internal_properties : HgAAAB4AAADonrK0MMZSIoydLcMSQ3F2Hrc6ypydAQQd91qwcw6w6Uvkz6UcTztLVJyk2cn0/G74YQCccxvE2P7Ih3VGFW9lR0Ijpm2BXSeTlJ22AF3dGDST1nWyieO84lbfI3JzxRZBPISHvBp0xEMNIeH0Yce/opwDd3Fi2UIIB9htajmdxlFw1MgM27Nh0+VW3vUxYkfBvipPmB3IQFXfZzMpWIQqscbK4/a3IjwSvngfpkiZXgO32/ULeFLjb5f2QSlFFOxEGNXkC2oqDk9qO1drp6cwv4zqXFIaR3INVOvPDpikAjEv5JTsZzyIfQfFB2r3+K/dDS/WtPERYterX4ez7giLWeYVO6lXCNfGBWrJ8IYC2lKlmMiEjLSPnj+GZExeFAEZRa4bJKE2cCT8+0esXP/4KZy3GRZhLeHVRnyetYyvfRotCM/T1UeTMkcu1FOtuxEiRR4KYuYGPyWEla5syeped9vAZFTjxmDmpv/J5BWu9MLJ+Lk80Sg4N/RooK1hZ+dj8IorzvZP05WHj23W10iyuwqd5rW2JYEQ46u4vqSlQ2v6WLwOgYJT36JdjvtylYWNsnmgfbB7Q1+LcRHwwXbsZzJleOmr/O1ZnXvsm95aNs54stQ5LQ5IHopHm00eCAjBEP3ZAS7YsXeyPqTdsbM5oWqbzw2Td2XPTg8FQOnTdA2VUC4DJ5Yp8fa6yZeP0iajkPHsd+OosTWe3PbjjckUvUoxGwhhyO698ENRWzw=
  properties :
-  width : 634
-  height : 537
-  widthClient : 632
-  heightClient : 505
+  width : 782
+  height : 640
+  widthClient : 780
+  heightClient : 608
  controls :
   -
     name : EDT_Nom
@@ -373,7 +373,7 @@ window :
       -
         code : |1+
          Ferme()
-         Ouvre(FEN_connexion)
+         
          
         type : 18
       -
