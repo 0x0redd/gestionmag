@@ -555,7 +555,7 @@ window :
          
         type : 14
       -
-        code : |1-
+        code : |1+
          // 1. Récupérer les valeurs des combos
          nItemID		est un entier	= COMBO_Article
          nLocationID	est un entier	= COMBO_Stock
@@ -593,12 +593,12 @@ window :
          sDate est une chaîne = DateVersChaîne(DateSys(), "AAAA-MM-JJ HH:MM:SS")
          
          // 4. Ajout dans item_quantities
-         REQ_Ajout_ItemQuantities.pItem_id		= nItemID
-         REQ_Ajout_ItemQuantities.pLocation_id	= nLocationID
-         REQ_Ajout_ItemQuantities.pQuantity		= nQuantite
-         REQ_Ajout_ItemQuantities.pCreated_at	= sDate
+         REQ_Ajout_Items_Quantites.Paramitem_id		= nItemID
+         REQ_Ajout_Items_Quantites.Paramlocation_id	= nLocationID
+         REQ_Ajout_Items_Quantites.Paramquantity		= nQuantite
+         REQ_Ajout_Items_Quantites.Paramcreated_at	= sDate
          
-         SI HExécuteRequête(REQ_Ajout_ItemQuantities) = Faux ALORS
+         SI HExécuteRequête(REQ_Ajout_Items_Quantites) = Faux ALORS
          	Erreur("Erreur item_quantities : " + HErreurInfo())
          	RETOUR
          FIN
@@ -610,24 +610,50 @@ window :
          Total_paiement								= total_achat_cal
          
          // 6. Insertion dans receivings
-         REQ_Ajout_Receiving.receiving_time			= DateSys()
-         REQ_Ajout_Receiving.supplier_id				= nSupplierID
-         REQ_Ajout_Receiving.user_id					= 1
-         REQ_Ajout_Receiving.comment					= EDT_Commentaire
-         REQ_Ajout_Receiving.reference				= reference
-         REQ_Ajout_Receiving.receiving_type			= selecteur..Valeur
-         REQ_Ajout_Receiving.receivingpayment_statut	= "non défini"
-         REQ_Ajout_Receiving.created_at				= sDate
+         REQ_Ajout_receivings.Paramreceiving_time			= DateSys()
+         REQ_Ajout_receivings.Paramsupplier_id				= nSupplierID
+         REQ_Ajout_receivings.Paramuser_id					= 1
+         REQ_Ajout_receivings.Paramcomment					= EDT_Commentaire
+         REQ_Ajout_receivings.Paramreference					= reference
+         REQ_Ajout_receivings.Paramreceiving_type			= selecteur..Valeur
+         REQ_Ajout_receivings.ParamreceivingPayment_status	= "non défini"
+         REQ_Ajout_receivings.Paramcreated_at				= sDate
          
-         SI HExécuteRequête(REQ_Ajout_Receiving) = Faux ALORS
-         	Erreur("Erreur receivings : " + HErreurInfo())
-         	RETOUR
-         FIN
-         
-         SI HExécuteRequête(REQ_Ajout_Receiving) = Faux ALORS
+         // Exécuter une seule fois la requête
+         SI HExécuteRequête(REQ_Ajout_receivings) = Faux ALORS
          	Erreur("Erreur lors de l'insertion de la réception : " + HErreurInfo())
          	RETOUR
          FIN
+         
+         // --- Récupérer l'ID du receiving à utiliser ---
+         SI PAS HExécuteRequête(REQ_select_max_id_receivings) ALORS
+         	Erreur("Erreur lors de l'exécution de la requête : " + HErreurInfo())
+         	RETOUR
+         FIN
+         
+         SI HLitPremier(REQ_select_max_id_receivings) = Faux ALORS
+         	Erreur("Aucun ID de receiving trouvé.")
+         	RETOUR
+         FIN
+         
+         nReceiving_ID est un entier = REQ_select_max_id_receivings.le_maximum_id // Remplace 'id' par le nom réel de la colonne dans ta requête
+         
+         // --- Insérer dans receiving_items ---
+         REQ_Insert_Receiving_Item.pReceivingID			= nReceiving_ID
+         REQ_Insert_Receiving_Item.pItemID				= nItemID
+         REQ_Insert_Receiving_Item.pDescription			= Produit_name
+         REQ_Insert_Receiving_Item.pQuantityPurchased	= Quantitée
+         REQ_Insert_Receiving_Item.pItemCostPrice		= prix_produit
+         REQ_Insert_Receiving_Item.pItemUnitPrice		= prix_produit
+         REQ_Insert_Receiving_Item.pItemLocation			= nLocationID
+         REQ_Insert_Receiving_Item.pReceivingQuantity	= Quantitée
+         REQ_Insert_Receiving_Item.pCreatedAt			= DateSys()
+         
+         SI HExécuteRequête(REQ_Insert_Receiving_Item) = Faux ALORS
+         	Erreur("Erreur lors de l'insertion dans receiving_items : " + HErreurInfo())
+         	RETOUR
+         FIN
+         
         type : 18
       -
         type : 161
@@ -799,25 +825,21 @@ window :
          // --- Récupérer l'ID du receiving à utiliser ---
          nItemID		est un entier	= COMBO_Article
          
-         SI HExécuteRequête(REQ_select_receiving) = Faux ALORS
-         	Erreur("Erreur lors de la récupération de la réception : " + HErreurInfo())
+         // --- Récupérer l'ID du receiving à utiliser ---
+         SI PAS HExécuteRequête(REQ_select_max_id_receivings) ALORS
+         	Erreur("Erreur lors de l'exécution de la requête : " + HErreurInfo())
          	RETOUR
          FIN
          
-         SI HExécuteRequête(REQ_Select_Last_ReceivingID) = Faux ALORS
-         	Erreur("Erreur récupération dernier ID : " + HErreurInfo())
+         SI HLitPremier(REQ_select_max_id_receivings) = Faux ALORS
+         	Erreur("Aucun ID de receiving trouvé.")
          	RETOUR
          FIN
          
-         HLitPremier(REQ_Select_Last_ReceivingID) // Assure-toi de lire la ligne
-         
-         gnReceivingID est un entier
-         
-         gnReceivingID = REQ_Select_Last_ReceivingID.last_id
-         // Utilise l'ID récupéré
+         nReceiving_ID est un entier = REQ_select_max_id_receivings.le_maximum_id // Remplace 'id' par le nom réel de la colonne dans ta requête
          
          // --- Insérer dans receiving_items ---
-         REQ_Insert_Receiving_Item.pReceivingID			= gnReceivingID
+         REQ_Insert_Receiving_Item.pReceivingID			= nReceiving_ID
          REQ_Insert_Receiving_Item.pItemID				= nItemID
          REQ_Insert_Receiving_Item.pDescription			= Produit_name
          REQ_Insert_Receiving_Item.pQuantityPurchased	= Quantitée
@@ -832,26 +854,12 @@ window :
          	RETOUR
          FIN
          
-         // --- Insertion dans payment_type selon le mode de paiement ---
-         SI espece_saisie <> "" ALORS
-         	// Paiement en espèce
-         	REQ_Insert_Payment_Type.pPaymentType		= "Espèce"
-         	REQ_Insert_Payment_Type.pPaymentAmount		= espece_saisie
-         	REQ_Insert_Payment_Type.pReceivingID		= gnReceivingID
-         	REQ_Insert_Payment_Type.pDateCheque			= Null
-         	REQ_Insert_Payment_Type.pCreatedAt			= DateSys()
-         
-         	SI HExécuteRequête(REQ_Insert_Payment_Type) = Faux ALORS
-         		Erreur("Erreur lors du paiement en espèce : " + HErreurInfo())
-         		RETOUR
-         	FIN
-         FIN
          
          SI cheque_saisie <> "" ALORS
          	// Paiement par chèque
          	REQ_Insert_Payment_Type.pPaymentType		= "Chèque"
          	REQ_Insert_Payment_Type.pPaymentAmount		= cheque_saisie
-         	REQ_Insert_Payment_Type.pReceivingID		= gnReceivingID
+         	REQ_Insert_Payment_Type.pReceivingID		= nReceiving_ID
          	REQ_Insert_Payment_Type.pDateCheque			= SAI_Date_cheque
          	REQ_Insert_Payment_Type.pCreatedAt			= DateSys()
          
@@ -865,7 +873,7 @@ window :
          	// Paiement par carte
          	REQ_Insert_Payment_Type.pPaymentType		= "Carte"
          	REQ_Insert_Payment_Type.pPaymentAmount		= carte_saisie
-         	REQ_Insert_Payment_Type.pReceivingID		= gnReceivingID
+         	REQ_Insert_Payment_Type.pReceivingID		= nReceiving_ID
          	REQ_Insert_Payment_Type.pDateCheque			= Null
          	REQ_Insert_Payment_Type.pCreatedAt			= DateSys()
          
@@ -893,6 +901,12 @@ window :
     code_elements :
      type_code : 4
      p_codes :
+      -
+        code : |1+
+         espece_saisie	= " "
+         cheque_saisie	= " "
+         carte_saisie	= " " 
+        type : 18
       -
         type : 161
         enabled : false
