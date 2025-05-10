@@ -412,50 +412,79 @@ window :
          sCommentaire		est une chaîne	= EDT_Commentaire
          sInvoiceNumber		est une chaîne	= "FACT-" + NumériqueVersChaîne(HeureSys(), "0")
          sDate				est une chaîne	= DateVersChaîne(DateSys(), "AAAA-MM-JJ HH:MM:SS")
-         nUserID				est un entier	= 1	// Adaptable
+         nUserID				est un entier	= 1	// à adapter
          
-         // Affectation des paramètres à la requête
-         REQ_Ajout_Sale.pCustomer_id			= nCustomerID
-         REQ_Ajout_Sale.pComment				= sCommentaire
-         REQ_Ajout_Sale.pInvoice_number		= sInvoiceNumber
-         REQ_Ajout_Sale.pSale_statuts		= "en cours"
-         REQ_Ajout_Sale.pLocation_id			= nLocationID
-         REQ_Ajout_Sale.pSalePayment_statuts	= "non payé"
-         REQ_Ajout_Sale.pCreated_at			= sDate
-         REQ_Ajout_Sale.pUser_id				= nUserID
+         // Insertion de la vente (une seule fois !)
+         REQ_ajout_sale_insert.Paramcustomer_id			= nCustomerID
+         REQ_ajout_sale_insert.Paramcommentaire			= sCommentaire
+         REQ_ajout_sale_insert.Paraminvoice_number		= sInvoiceNumber
+         REQ_ajout_sale_insert.Paramsale_status			= "en cours"
+         REQ_ajout_sale_insert.Paramlocation_id			= nLocationID
+         REQ_ajout_sale_insert.ParamsalePayment_status	= "non payé"
+         REQ_ajout_sale_insert.Paramcreated_at			= sDate
+         REQ_ajout_sale_insert.Paramuser_id				= nUserID
          
-         // Exécution de la requête
-         SI PAS HExécuteRequête(REQ_Ajout_Sale) ALORS
+         SI PAS HExécuteRequête(REQ_ajout_sale_insert) ALORS
          	Erreur("Erreur lors de l'ajout de la vente : " + HErreurInfo())
          	RETOUR
          FIN
          
-         SI PAS HExécuteRequête(REQ_Ajout_Sale) ALORS
-         	Info("ID Client sélectionné : " + nCustomerID)
-         	Erreur("Erreur lors de l'ajout de la vente : " + HErreurInfo())
+         // Récupération de l'ID de la vente créée
+         SI PAS HExécuteRequête(REQ_select_max_id_sales) ALORS
+         	Erreur("Impossible de récupérer l'ID de la vente : " + HErreurInfo())
+         	RETOUR
+         FIN
+         
+         SI HLitPremier(REQ_select_max_id_sales) = Faux ALORS
+         	Erreur("Aucune vente trouvée.")
+         	RETOUR
+         FIN
+         
+         nSaleID est un entier = REQ_select_max_id_sales.le_maximum_id
+         
+         // Récupération des prix
+         REQ_select_prices.Paramid = nItemID
+         SI PAS HExécuteRequête(REQ_select_prices) ALORS
+         	Erreur("Impossible de récupérer les prix de l'article : " + HErreurInfo())
+         	RETOUR
+         FIN
+         
+         HLitPremier(REQ_select_prices)
+         nCostPrice	est un réel	= REQ_select_prices.cost_price
+         nUnitPrice	est un réel	= REQ_select_prices.unit_price
+         
+         // Insertion dans sales_items
+         REQ_Ajout_sales_items.Paramsale_id				= nSaleID
+         REQ_Ajout_sales_items.Paramitem_id				= nItemID
+         REQ_Ajout_sales_items.Paramdescription			= "Article vendu"
+         REQ_Ajout_sales_items.Paramserialnumber			= ""
+         REQ_Ajout_sales_items.Paramquantity_purchased	= nQuantite
+         REQ_Ajout_sales_items.Paramitem_cost_price		= nCostPrice
+         REQ_Ajout_sales_items.Paramitem_unit_price		= nUnitPrice
+         REQ_Ajout_sales_items.Paramitem_location		= nLocationID
+         REQ_Ajout_sales_items.Paramcreated_at			= sDate
+         
+         SI PAS HExécuteRequête(REQ_Ajout_sales_items) ALORS
+         	Erreur("Erreur lors de l'ajout des articles : " + HErreurInfo())
+         	RETOUR
+         FIN
+         Total_paiement = total_achat_cal
+         
+         // --- Mise à jour de la quantité restante dans item_quantities ---
+         REQ_UPDATE_item_quantities_cd.Paramitem_id		= nItemID
+         REQ_UPDATE_item_quantities_cd.Paramlocation_id	= nLocationID
+         REQ_UPDATE_item_quantities_cd.Paramquantity		= nQuantite
+         REQ_UPDATE_item_quantities_cd.Paramcreated_at	= sDate
+         
+         SI PAS HExécuteRequête(REQ_UPDATE_item_quantities_cd) ALORS
+         	Erreur("Erreur lors de la mise à jour des quantités : " + HErreurInfo())
          	RETOUR
          FIN
          
          
-         // Mise à jour du stock
-         SI PAS HLitRecherche(item_quantities, "item_id_location_id", nItemID + nLocationID) ALORS
-         	Erreur("Article ou stock introuvable dans item_quantities.")
-         	RETOUR
-         FIN
+         Info("Vente et article enregistrés avec succès.")
          
-         SI item_quantities.quantity < nQuantite ALORS
-         	Erreur("Stock insuffisant. Disponible : " + item_quantities.quantity)
-         	RETOUR
-         FIN
          
-         item_quantities.quantity -= nQuantite
-         
-         SI PAS HModifie(item_quantities) ALORS
-         	Erreur("Erreur mise à jour du stock : " + HErreurInfo())
-         	RETOUR
-         FIN
-         
-         Info("Vente enregistrée avec succès.")
         type : 18
       -
         type : 161
@@ -581,7 +610,7 @@ window :
   -
     name : espece_saisie
     identifier : 0x281d15ea04102780
-    internal_properties : HgAAAB4AAACVK19kNZZ7k8KJCYPlrBpVM4s/ZwbCmkLR5aG3AmCYsKBCL/AMWWofLxfmIET8REEuOK2EFnqJ0OWCsIg31VDdwdzUlQc1qJEDqFcQE8XpmAFVl/wtVH1AMXAHOSSi9tFWpbykL6VZ2KPB8o/RZCvhipNlUD9USdjk5KKLKjdmVjnTpVz2nU/BiJxM20R9Dipz8qO8D+iHt3h2+xTvdaOsqoc3T4ZZDoFIDjdMqSt2a5gG1LtIDw5GBgcI/CIBj1ErlLOaWDm0sXHNoy+ZFGgunc4pzeRoB0s5siyjDlNFh5QjwXWaC0liuuaG7a/Mam03mzpV4OO4VunHDjeX3IgM99Aw72YuymjEpdJufFfpZdWTPu1ddtoMHDsDrRPnk4RTtqvbeU3pWcNobxUIMivtkygWyKmpNP5Mu8bdMD5NFZ15qrLV79YWTJwOVumEF9laYAxoisr9LxcCgyUtnFsukkkrv5+kc1e3aFdy27tdG4Yp0MnF5jYMYt8gNohBmZfO6bnhvNO1ueQfcSygW8WLFzrUpWY1lg6siSOwtfawEq7Bj5YR0DZTbnxR4muqqvUyHzyvA7RC4DXOMikIffQ1jtXK/XGLI1QCKPI+C0MEU50/tqv6NXEvMnjfZosFtbsCduM59+IrUvm//DrxbUuqc5G2maA1+Nj4A6qGhR1nkHk6p3fthJCXbFh0TwvKEGxJf7MyoTtyygOh5Nmz9XtzKZQOK7PfYmKL/DoIyhcni+5ByzTTUXtN9gW/GgYPr+fZPbbSQYCC1+e/s/ntVBf6fIctCBrJVotXlOOdOxltUnVdrGo3YVR0tve+j97DJES3rx8/XrIWhscNtdrgVLpMa3y1w5MhysVTlwCpYWjtLwW9GSDfcD+5MS/RSEzmnRmAfH3PHfHM48NXBouf1KClb0VgTAt8hTAjEDchpMq1Luh2MxBRJk4GP64kPbch13l0twSx60DFj0w1H7V8GyWll9/T9WxsoIBFBTGHFm+SeE2MDDyOUS2IBMqWqGB78K/E6nMb85aKe5JLRXuoqs/WBy+dSUUvrO7RClt4KhkjAwb0MsyJlueBvL+EMswHbwOxAsk2QCDaNp0ONN+kRQozoyyUKGnYUbgK0nFucXM9JXiqzBQ9GDt677Ha/+4QQq9AyEEmPyWv39Qzjuw25HA9NYNkHjPmEzqlH9989OA337pAJ0MQD1i/6k01RtLm/3BpsQocgTktzbs=
+    internal_properties : HgAAAB4AAADSRKPY8f3XSeNDrDsLjEh3SU59MUKl04fINqh93kfOY6EdY+LPe0hDROb0h1tJ2KyIftAUs5rg8kjkslsxfbTfrQmTsdXXW7CV92gI6n39UGX/1Xz0pyK5Jm96+O2Thqnim2PK5bCuE38G1EZ38xowc8E6PGRDrVIsUNiICjyMvFQftAH0W0nV1px3irjqcdbhZ2sdHdXDDzZPsEF+TYvkis5Ou0t5AxQtEVC/jRyP/olH4tRsPh8QHWm81keL03Cl6CLolI0AtJqUCyIuhZG8LPhSYmlqjzDiabDox06atQ83VMvyP/tlYIEjHBzrQVerCdt7HflfXL6gMGKjeOlcNlOA4RnOPTT6g6VFJGrdNdOO1LL1HFa9uLBWZtyZvvzUdZianp2tW4P3hncnrwumh92miXK8O/yWS5MtfjUBZDqBf/nQbibVxROE8agjsy5Z8joIhfLs+trHGM7YaNqRZq3b0MginEOX2jhzq4qcYrxAsa359VGCyptHU8W8J01KLZQDvyPbiO6B1DZag1CH93v0wpSfbTEI+9aIT5y1S1oWYC6LUQEKni/pihCiO67mdO8FcWtlFIaQgP1WsTIxhlC+YSwIg7y2Ee65NJUmz3Fe+oO26iHTdB2FiS++DTHXV738s77cupjD5CXT+1gXUf/kbghKkHdJ9qhZonkjHj2tRVtWE2ZImyjyr8/8rynQcFO0fDP4hjrcPwHhNcgxC21zcIuKdXr2Z5tO/UAjZwEjb1Ef10034FagUSDpDtt5mN2r3yxiSv75InwWWs6IA5waIXOLpauXtWA93upuVe6g9+lbqHHVBl4zZs5718up9w7s1SKuZWXQ4wJoQsliDukHG/ptpzxvcm8iHuxuWrqfLSbSktfWxT4dLj+uPNXuoPLU0+Gc7MakSh7/ruY66jtSTCfWqZLbzpras3PMIE6IQ+c1RpiuQ+ykjJ+eHfrnPrjKW5jQFxZGv2Pqy+O16jXHL7pUuHiKwzfuGKeWELXesJ9C+KhyOUhemvvzs7irrs3uCkONj2pzOxBXJ6KZcPtxRjsWGj6l71URLigY53NgYQfu+boBQsb34azHaLKGRHqIPOXoflm3MKKMSKaox168vii1dGzXt1cW6lfHzc9y9R6w8NQO2bsFSPq5MZEw5pVJKBZkV/4JVmWgtHdez0+uJB4+o9nrhcmzgAjeq9p2xmReDLwZ738CbqeFQ776jk22ICRO39t9P6RpWCs4/mB6nlktO1bVj4eKhQm1t4vgzO8wd6mLcsJE1C4uS991wcC+A7CDfHtMGFr7xh0jtRvfEokc1YQEMA0UCDLPo6oovZJbAGLKXRb8Us560fXvzJW2WZz9CsbOpD6nLFvzdEWbq56NrEyaKJougeOKQiajlxSANlodCnEB6r43AuZd451oeSSwBicHxBm4mgyd7v/nCX8u0j0IZDOFkqfKOJVUHwdz+WDefOs6YKpQriboeMrxhXd49cpH19DTLzp+au1mY03NuWj7am4jdlAZrfgx9ExVm5baZZ+p99G2J89ooFAIVwDqqw9t9MtKBHv41QCMIo8HNdeTm8NW+aQUeN0XLwVhOWK/alMSL7Y7AAvhKQVS0sjV1TXcKwgoNe0hjGSKBiXkTCBdisoscwW5qyNfAHhyy8UoyXzePcnYtmjY1DI/iEINxd24wEFl2qaqmjWeFxOelbJgA7r4SZW67cUvJ1tO7ETVdUKiZE1eTzbylNad+eMrs1TYUg==
     properties :
      x : 1010
      y : 202
@@ -757,51 +786,19 @@ window :
       -
         code : |1+
          // --- Récupérer l'ID du receiving à utiliser ---
-         nItemID		est un entier	= COMBO_Article
+         nItemID est un entier = COMBO_article
+         sale_id est un entier =  HExécuteRequête(REQ_select_max_id_sales)
          
-         SI HExécuteRequête(REQ_select_receiving) = Faux ALORS
-         	Erreur("Erreur lors de la récupération de la réception : " + HErreurInfo())
-         	RETOUR
-         FIN
-         
-         SI HExécuteRequête(REQ_Select_Last_ReceivingID) = Faux ALORS
-         	Erreur("Erreur récupération dernier ID : " + HErreurInfo())
-         	RETOUR
-         FIN
-         
-         HLitPremier(REQ_Select_Last_ReceivingID) // Assure-toi de lire la ligne
-         
-         gnReceivingID est un entier
-         
-         gnReceivingID = REQ_Select_Last_ReceivingID.last_id
-         // Utilise l'ID récupéré
-         
-         // --- Insérer dans receiving_items ---
-         REQ_Insert_Receiving_Item.pReceivingID			= gnReceivingID
-         REQ_Insert_Receiving_Item.pItemID				= nItemID
-         REQ_Insert_Receiving_Item.pDescription			= Produit_name
-         REQ_Insert_Receiving_Item.pQuantityPurchased	= Quantitée
-         REQ_Insert_Receiving_Item.pItemCostPrice		= prix_produit
-         REQ_Insert_Receiving_Item.pItemUnitPrice		= prix_produit
-         REQ_Insert_Receiving_Item.pItemLocation			= nLocationID
-         REQ_Insert_Receiving_Item.pReceivingQuantity	= Quantitée
-         REQ_Insert_Receiving_Item.pCreatedAt			= DateSys()
-         
-         SI HExécuteRequête(REQ_Insert_Receiving_Item) = Faux ALORS
-         	Erreur("Erreur lors de l'insertion dans receiving_items : " + HErreurInfo())
-         	RETOUR
-         FIN
-         
-         // --- Insertion dans payment_type selon le mode de paiement ---
+         // --- Insertion dans sales_payments selon le mode de paiement ---
          SI espece_saisie <> "" ALORS
          	// Paiement en espèce
-         	REQ_Insert_Payment_Type.pPaymentType		= "Espèce"
-         	REQ_Insert_Payment_Type.pPaymentAmount		= espece_saisie
-         	REQ_Insert_Payment_Type.pReceivingID		= gnReceivingID
-         	REQ_Insert_Payment_Type.pDateCheque			= Null
-         	REQ_Insert_Payment_Type.pCreatedAt			= DateSys()
+         	REQ_sales_payments.Parampayment_type		= "Espèce"
+         	REQ_sales_payments.Parampayment_amount	= espece_saisie
+         	REQ_sales_payments.Paramsale_id		= sale_id
+         	REQ_sales_payments.Paramdate_cheque		= Null
+         	REQ_sales_payments.Paramcreated_at		= DateSys()
          
-         	SI HExécuteRequête(REQ_Insert_Payment_Type) = Faux ALORS
+         	SI HExécuteRequête(REQ_sales_payments) = Faux ALORS
          		Erreur("Erreur lors du paiement en espèce : " + HErreurInfo())
          		RETOUR
          	FIN
@@ -809,13 +806,13 @@ window :
          
          SI cheque_saisie <> "" ALORS
          	// Paiement par chèque
-         	REQ_Insert_Payment_Type.pPaymentType		= "Chèque"
-         	REQ_Insert_Payment_Type.pPaymentAmount		= cheque_saisie
-         	REQ_Insert_Payment_Type.pReceivingID		= gnReceivingID
-         	REQ_Insert_Payment_Type.pDateCheque			= SAI_Date_cheque
-         	REQ_Insert_Payment_Type.pCreatedAt			= DateSys()
+         	REQ_sales_payments.Parampayment_type		= "Chèque"
+         	REQ_sales_payments.Parampayment_amount	= cheque_saisie
+         	REQ_sales_payments.Paramsale_id		= HExécuteRequête(REQ_select_max_id_sales)
+         	REQ_sales_payments.Paramdate_cheque		= SAI_Date_cheque
+         	REQ_sales_payments.Paramcreated_at		= DateSys()
          
-         	SI HExécuteRequête(REQ_Insert_Payment_Type) = Faux ALORS
+         	SI HExécuteRequête(REQ_sales_payments) = Faux ALORS
          		Erreur("Erreur lors du paiement par chèque : " + HErreurInfo())
          		RETOUR
          	FIN
@@ -823,13 +820,13 @@ window :
          
          SI carte_saisie <> "" ALORS
          	// Paiement par carte
-         	REQ_Insert_Payment_Type.pPaymentType		= "Carte"
-         	REQ_Insert_Payment_Type.pPaymentAmount		= carte_saisie
-         	REQ_Insert_Payment_Type.pReceivingID		= gnReceivingID
-         	REQ_Insert_Payment_Type.pDateCheque			= Null
-         	REQ_Insert_Payment_Type.pCreatedAt			= DateSys()
+         	REQ_sales_payments.Parampayment_type		= "Carte"
+         	REQ_sales_payments.Parampayment_amount	= carte_saisie
+         	REQ_sales_payments.Paramsale_id		= sale_id
+         	REQ_sales_payments.Paramdate_cheque		= Null
+         	REQ_sales_payments.Paramcreated_at		= DateSys()
          
-         	SI HExécuteRequête(REQ_Insert_Payment_Type) = Faux ALORS
+         	SI HExécuteRequête(REQ_sales_payments) = Faux ALORS
          		Erreur("Erreur lors du paiement par carte : " + HErreurInfo())
          		RETOUR
          	FIN
@@ -853,6 +850,12 @@ window :
     code_elements :
      type_code : 4
      p_codes :
+      -
+        code : |1+
+         espece_saisie =" "
+         cheque_saisie = " "
+         carte_saisie = " " 
+        type : 18
       -
         type : 161
         enabled : false
@@ -927,4 +930,4 @@ embedded_elements :
  elements :
   -
     name : FEN_fen_ventes__1$Requête
-    internal_properties : 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
+    internal_properties : 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
