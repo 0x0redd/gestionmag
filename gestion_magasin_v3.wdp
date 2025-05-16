@@ -94,6 +94,12 @@ project :
      physical_name : .\FEN_Fiche_supplier.wdw
      type : 2
    -
+     name : FI_stocl_location_vf
+     identifier : 0x48261d5801ee8da7
+     internal_properties : HgAAAB4AAADWvD5iQT52edpQSWzM3FoKKk3pyfbwuXxKDBsCEuauUvYkR8Yr3opjo5kD/YV7B/nDQw==
+     physical_name : .\FI_stocl_location_vf.wdw
+     type : 8
+   -
      name : FEN_Responsable
      identifier : 0x481cf32205009b47
      internal_properties : HgAAAB4AAAA/GxcLuOXN3u0N6tFaoVut7cg0JJHYYOdOD3ArdLRm8s7CR8Q9j0OoynBqVt4S7uIqKg==
@@ -368,6 +374,18 @@ project :
      identifier : 0x48260e0300fba828
      internal_properties : HgAAAB4AAACB8z9rtBHGBCD+33JdMIdyZnMG3MfvCTkzI+8lsxGSCKtH0ULvGXTZo90vSGuPKJOE
      physical_name : .\REQ_select_seuil_critique.WDR
+     type : 5
+   -
+     name : FI_liste_Entrés_Stock
+     identifier : 0x4826224f0290f454
+     internal_properties : HgAAAB4AAAC/m5eLOGVNXm23hfZuxxIQQRBIgDlbeiRK7Ha09iLwKNBQxq7XK/Q6SvDq1l6SbmKqqg==
+     physical_name : .\FI_liste_Entrés_Stock.wdw
+     type : 8
+   -
+     name : REQ_SELECT_rec
+     identifier : 0x48264eef013e2a2e
+     internal_properties : HgAAAB4AAAArJxN3tPG54uELRWL5GeJ807wuPnUfiM+i1hc3T3kloxHfUVnmG9S+znRuSsoG8uYuNg==
+     physical_name : .\REQ_SELECT_rec.WDR
      type : 5
   other_elements : []
   array_of_analysis :
