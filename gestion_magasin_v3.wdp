@@ -387,6 +387,12 @@ project :
      internal_properties : HgAAAB4AAAArJxN3tPG54uELRWL5GeJ807wuPnUfiM+i1hc3T3kloxHfUVnmG9S+znRuSsoG8uYuNg==
      physical_name : .\REQ_SELECT_rec.WDR
      type : 5
+   -
+     name : REQ_selection_entr_stock
+     identifier : 0x4828deb00117b8d8
+     internal_properties : HgAAAB4AAAD3U9/D4F3V1uUxxUN1Rj40pTKoOIN//qB24ZVB+63p59ETy+0v0j68wnhiXibaphriYg==
+     physical_name : .\REQ_selection_entr_stock.WDR
+     type : 5
   other_elements : []
   array_of_analysis :
    -
