@@ -35,6 +35,25 @@ window :
      code : |1+
       PROCEDURE MaFenêtre()
    -
+     code : |1+
+      
+      nRoleID est un entier
+      
+      // Lire le rôle de l'utilisateur connecté
+      SI HLitRecherche(role_user, user_id, Glo_idUtilisateurConnecte) ALORS
+      	nRoleID = role_user.role_id
+      FIN
+      
+      // Exemples : cacher certains boutons si l'utilisateur n'a pas le droit
+      SI NON PossèdePermission(nRoleID, "ajouter_utilisateur") ALORS
+      	Bouton_Ajouter..Visible = Faux
+      FIN
+      
+      SI NON PossèdePermission(nRoleID, "supprimer_utilisateur") ALORS
+      	Bouton_Supprimer..Visible = Faux
+      FIN
+     type : 34
+   -
      type : 180
      enabled : false
    -
