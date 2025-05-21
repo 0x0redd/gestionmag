@@ -14,8 +14,6 @@ window :
  properties :
   width : 1392
   height : 603
-  widthMin : 1507
-  heightMin : 602
  controls :
   -
     name : FI_liste_Entrés_Stock
