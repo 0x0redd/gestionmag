@@ -169,14 +169,22 @@ window :
          
          // Vérifier que l'article est bien sélectionné
          SI idArticle <> 0 ALORS
-         	
+         
          	// Lire l'enregistrement correspondant dans le fichier 'items'
          	SI HLitRecherche(items, id, idArticle) ALORS
          		price_article							= items.cost_price
+         		// Fonction qui se déclenche lorsque l'utilisateur saisit la quantité
+         		qte				est un entier	= Val(Quantitée)	// Récupérer la quantité saisie
+         		price			est un entier	= price_article		// Prix de l'article
+         		total_achat_cal	est un entier	= qte * price		// Calcul du total
+         
+         		// Afficher le total dans un libellé ou champ spécifique
+         		total_achat = total_achat_cal
+         
          	SINON
          		Info("Article introuvable dans le fichier 'items'")
          	FIN
-         	
+         
          SINON
          	Info("Aucun article sélectionné.")
          FIN
@@ -279,7 +287,7 @@ window :
   -
     name : total_achat
     identifier : 0x282e4b490c400361
-    internal_properties : HgAAAB4AAAAbvjUZPmMRTo9F4P/b2Oy4qBjIqDzdPPK/BniIVHGd67cv52nFZ7gKsOTR7cXkkFWpWbAEfPHkPZg9GtlKvY2GHHBiUjxF3tXatoV23lBXyJNpZlei05wb25VS1j4hhqC8TDto5fM9kxLww2siQfWRyQmOOQw/Xmjrs7goaxhc4mXe90CBrjinEQpt1Rl3XcoKr+rF8Q7K0245UkeNe2wXVsKK0Pn2e+opF1JjjulxhlvHgwhyAvoqY5o3VwNVkfjhuFR1l7yHWv4oaNMVDnecOWNe/UP5lQ7YaQ0SsdSwszQ2fr8MUgXOLfFN8KdZqBBJuUsvIF7RGf+xm5ZL7bU/nsY5r3g3obUf0vXLdHarErmRHTXAay6r+bOyN+MKbRmYgU+4yoRujQsbQQKnGthrYWzGZ2BTYmCxiRDaHahM06sfEha4ijFYp6hOThD5FvS+P3MGKAartrudkDlRHflS1rrFZ9SGx5yuC9r1/575QVpRqQu8tJn4cg6UeKjI9Lud2SX9220zJUJFeXM7HOKWyEIo+faAlukMnr50b0kSBRPipbAvejiApJJ3Z4hnR91H8k/4jafh3VRHJfdEt1J66QbyIltKzwTtA06PV0xPZ+6eZuHfJ1PH7lo4+ei8UDV46v94G1NozzNDGN+hGilfaDNfelBe7EVqTgEtbagIp3aeT+M6Fn1i6J7ZQIltdGDhoOkL9Cw2pU50cPQHJxkVQ6s2sRAfQFuFV7oEjzFi31mfX1UNeVCtY2d0nNkW7A51QR/KSOX2CPppeoESk3aZ9N5V853K5jwW7S/WHfO/VnE0XMPICP79GxH56ffmr2h1Njs22/K38x2O0bcuA9mXlt62v2fcfkh8PxuxgsSpGJFfdmi3iy1du1I3rVDmbfc+XyeIhhdkw1bOEDLRfzvUuzeC3UkoV/gfJKRX6A5Gr8Si4nZfXGTZ71tu8IjDhLFol4Ucw0pJmC886FKUMBvkVxYT2mGcrvV5IKsOsMvaHjP0MX8FOo7s1pd2K/LNOyorGaBW+ideHO9bXh/pv9xAgYJ9Fpob1pdVrYigt3Ab4I8iOrkEFWInkRULMQpeOCyy7pHKQxfigW4VxS0qYiSCtNMBgqQTYJTDYWBugYuaF+9ZdQOmu1WZ8Ec3N7e26rgW7UOdBj9J3zVUkepEhrqbZ+h0YIdeMbXwwANmBFV5UZWvP5rO8caqOQXiTzWCq3QIH7Fa1iJoDKekjkdCWD4CNiZtvB1iAYed1jPlFthAlIuBL+x/x2irTOfWctBwR2Vs1xehVOoiA8OmQ1iDl4IE+mFaLmBDFRDPtE+NoA+6u8pV0UVOINbgd+L+MjuKNCCWOd9Dfac//FnHcZ0HFuceH5mmBi0bv0Un/yeNom34Cw==
+    internal_properties : HgAAAB4AAABK05NrPZ+nSaD5oeMGzLC+cAqXQ4J/Cm6xl7TFlQouBa9QPI1dNWZFu9a+CyaH1xfCZUNE0HJf5dgUephRnt8j+VSwbBhLNSWFtDfMeGX5tNI5Bd4Wx0y2XdQsqzRXkqdENnyOM63UzUW7c72iXBndioIR2bnFkIrIGerMl6viNEp/lLrxGO3Jy5JpJV7NYRTPKgFubJoTZaAAhfIwRbxTuGCblTYyjraiFU+yLtHLA/wSz6LETr8gRX87ig7xae2fNiqwsaAYeWFZobk4GASOCsDX1y0FocUIlBrB8EMKxRi1bUScwRkD8cn66IlYV6DdeQrwHmBbuEU/YWY7LNdI39619xbIWKtwz60D3hTGU0L6AefbYXVpK4++pkjHgIvHKgrj+DA98D3YNjW+gD/AgpF4HqAW/bF7Mq9PygkL615n3hPCwnG9/vo8vUZAA0/qWKIW2gYxp1p8Ip5CnJXFY7ZsHBe7+XJ3GgIwZPNtemdTOsEPkdZmy/iV16towkGc7JcvBWxjw6LHoyV8AvgwBVlVjWZYQG1oNdhlloC/oR0ZK3iHeQ6neOmKFY8DaM0xNqCSBeUfVmu/wjsY2W159N/Q6RmbCC6SOl9ZK14VlskYfbHb1bfIsoZJrL8Kz3D3Kpg25LHWsI5meYbFc9dE3PSGsxZL/3nXqH7vkPwQA8CJb23+0/XQIeE7IwiJ776mV+Z4+wEwMrSzYX0q8tn1ghb+sCrJc1SFmXxbSBdxxFzkdN9qUHacLvn8Hl0Iasx87/kVlh5zw9ZgvrQCaUFuCIzK7KjyDvJa9U+wHC9sdM7J95L5VgYOEiBm1EYrAF0CoyCP+niZKitG3AnsDhUgUUcoC/JF+01Sr8SHmxfWJY0ZGZw8Xzo2kfphDpziHp/5NdAzeEWfULlOHN2Eqk9C5LHQ5+WB5vaOwITBvnlDr03K1N2lJP/hdjyD5/0MbKCMbH0XpBdznmth0l2YW2DvYt8MoHWVtVQ4Mh71exZwTvEhnx/WhHFtp+yw9Fi735M6aJ7HMSiSsxYNBBlwrZAgOD5RaXGEC22v67iZKIK/3AHJ8l+5ux/Ywit86vxqsRRmHCy9PqFC7Kug5AKd3dzmbBVkg8rwrXuUZvsriY8NQP8e2bO2AqGbN1eRi4cQztKXGqMDqkqG3mKbrcZYBdB/lTThsRzp7+rNUmKdZv8/7/pJCgu9KA7xcVIo+JVDnJDfKyl6DDz+sHYLsRfRCChVsNXXBvmBdHozBURHD/bJNg/PFuEyuEejlQYqVIoAvqVUB3eXrGbNH34cK6jCcKEAnQoXA0sVlGpQKkMYDlAmUzwRm9+flYP9f0q1giHubttFA4eNhqQgKgVXDsxb1Qzxmdn3Gb0HG1pWGAUqLIxGckogH7QlLuFvvNBeyS6wrUdzj+jcYchBOBno/S6FiIr5vm6qZoRPBEXzQMVlo8hAkoPU10zS+k85dU27coVh5QNJJ6va5M5EJZFBmSHBBh/iGRTNy91R3rStZmmaD8JkEWDQFhgul0bmpHyGwertzVmlDpQ/jF1qaJiEAhGtol3gprS906eNsGXA5RvVJ/zK9f2ZmHVXUvqK561ltnnmUFgGfjIAVEaP7kWPue5oefFx/GAD7yTK9brIMvByVuRk6ww81K754e3VNDpOdt3+6McpXY4G0MO7+TY4CUAHu/C9lEdV125x66hvT1o/idae3bvoPOXSQ7ej4rE6BQoGDK9L3wsOhfn89taq3++jTUCPS1gh0Enp1oz9ujghKwEOOa+MDYuyFJSBEohnoLyudPOiUkkJmHt1SVdlXF/JZ0UxbkRHv5GVS2LpoUoDDTF+q1CAVYsEc5/Qt/3r6I9HvQ==
     properties :
      x : 12
      y : 295
@@ -292,6 +300,10 @@ window :
     code_elements :
      type_code : 3
      p_codes :
+      -
+        code : |1-
+         
+        type : 14
       -
         type : 276
         enabled : false
