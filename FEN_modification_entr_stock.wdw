@@ -147,16 +147,7 @@ window :
      type_code : 23
      p_codes :
       -
-        code : |1+
-         // Récupérer l'ID du produit sélectionné (valeur mémorisée)
-         idArticle est un entier = COMBO_Article
-         
-         	// Aller lire l'article correspondant
-         	SI HLitRecherche(items, id, idArticle) ALORS
-         		price_article = items.cost_price
-         	SINON
-         		Info("Article introuvable")
-         	FIN
+        code : |1-
          
         type : 14
       -
@@ -166,6 +157,29 @@ window :
       -
         code : |1-
          
+        type : 15
+      -
+        code : |1-
+         
+        type : 16
+      -
+        code : |1+
+         // Récupérer l'ID du produit sélectionné dans le ComboBox
+         idArticle est un entier = COMBO_Article
+         
+         // Vérifier que l'article est bien sélectionné
+         SI idArticle <> 0 ALORS
+         	
+         	// Lire l'enregistrement correspondant dans le fichier 'items'
+         	SI HLitRecherche(items, id, idArticle) ALORS
+         		price_article							= items.cost_price
+         	SINON
+         		Info("Article introuvable dans le fichier 'items'")
+         	FIN
+         	
+         SINON
+         	Info("Aucun article sélectionné.")
+         FIN
         type : 33
       -
         type : 17
