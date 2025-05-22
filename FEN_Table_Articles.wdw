@@ -212,9 +212,9 @@ window :
            code : |1+
             ligne est un entier=TableSelect(TABLE_REQ_Tabel_Article)
             SI ligne<>-1 ALORS
-            id est un entier=FEN_Table_Articles.COL_Id
+            pid est un entier=FEN_Table_Articles.COL_Id
             OuiNon("voulez vous de supprimer la ligne "+ligne)
-            REQ_SUpprimerItemsY.Pid=id
+            REQ_SUpprimerItemsY.pid=pid
             HExécuteRequête(REQ_SUpprimerItemsY)
             Info("la ligne "+ligne+" est supprimer")
             TableAffiche(TABLE_REQ_Tabel_Article)
