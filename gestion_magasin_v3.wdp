@@ -580,12 +580,6 @@ project :
      physical_name : .\FEN_modification_entr_stock.wdw
      type : 2
    -
-     name : FEN_Table_Articles
-     identifier : 0x482f38520141bff1
-     internal_properties : HgAAAB4AAAC4luA8C7D4IyCTTI4kb4xIzrM9/cSNXou2MTHWpXMZ/8Up6Ef1zEaCjbMtiwvFvTOdpQ==
-     physical_name : .\FEN_Table_Articles.wdw
-     type : 2
-   -
      name : FEN_table_item_kits
      identifier : 0x482f2e2c01f91cf8
      internal_properties : HgAAAB4AAABCOLru3YqivR69+IIS5atV2o9pGbCazFCKtXkziY+FmxGNa6FX4uooZ93HMfHvi31Hzw==
@@ -621,6 +615,12 @@ project :
      internal_properties : HgAAAB4AAAAoJhAMu+DI05BDv93an0ZQqAnXj0rPM4tWjQmOjQuJlxGB7qG5AC1yvWNdW9sV7eMtNQ==
      physical_name : .\REQ_Tabel_Article.WDR
      type : 5
+   -
+     name : FEN_Table_Articles_Items
+     identifier : 0x482f645c016fc7eb
+     internal_properties : HgAAAB4AAACppZH1Mm9HaEvqnyMf+G1b307Gni9aNT9W/WEDvGymaqpqpxBsVTcZFAr0zFSMdGSstA==
+     physical_name : .\FEN_Table_Articles_Items.wdw
+     type : 2
   other_elements : []
   array_of_analysis :
    -
