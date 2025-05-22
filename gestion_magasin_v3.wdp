@@ -569,14 +569,14 @@ project :
      type : 2
    -
      name : REQ_selection_entr_stock_modif
-     identifier : 0x482e7da3021bb477
-     internal_properties : HgAAAB4AAAA4FmC8izB4o6ASB2m3q1NMuIv3r5Tm/I+CXrtQaAAchGC+mat/g4AJDTOtC4tFPbMdJQ==
+     identifier : 0x482f51d1020786d0
+     internal_properties : HgAAAB4AAAB41qD8S3A4Y2DTpZknp8fXCE/XTwjSUK+qcAFS3rraBj7QwDbMdptCTfPty0uFfXNd5Q==
      physical_name : .\REQ_selection_entr_stock_modif.WDR
      type : 5
    -
      name : FEN_modification_entr_stock
-     identifier : 0x482e7ddb022a8f08
-     internal_properties : HgAAAB4AAABaMAIGpeLK1ZZE9bJRbX2IuDlnf9rs8PuKFM6zHRv5x2GRxrRunG53v2VfWdkX49U/xw==
+     identifier : 0x482f523d021b2e17
+     internal_properties : HgAAAB4AAAD6UCJmRQIqNTaltAMzN+FsfBNb0/yOPvmO++8aZoIKPs5glxcDB6ZQX8U/uXl3A/XfZw==
      physical_name : .\FEN_modification_entr_stock.wdw
      type : 2
    -
