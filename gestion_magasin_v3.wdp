@@ -621,6 +621,48 @@ project :
      internal_properties : HgAAAB4AAACppZH1Mm9HaEvqnyMf+G1b307Gni9aNT9W/WEDvGymaqpqpxBsVTcZFAr0zFSMdGSstA==
      physical_name : .\FEN_Table_Articles_Items.wdw
      type : 2
+   -
+     name : FEN_Ajout_kits_Article
+     identifier : 0x482f8cc90179b28e
+     internal_properties : HgAAAB4AAAAacMLG5aIKFdaFzuc2addRqO/3Lyhz05KiZhFzvlo65h4wfqTQMXgwf6UfmRnXoxX/Bw==
+     physical_name : .\FEN_Ajout_kits_Article.wdw
+     type : 2
+   -
+     name : REQ_ajouter_kits_items_y
+     identifier : 0x482f8fe301d2ce2a
+     internal_properties : HgAAAB4AAADZu/eTbFkJQzYS2Fc/EmXUiOLuQrGpNX1IojiEMnDJ8vVJU0CtFubXdyznkLNX4Mtc
+     physical_name : .\REQ_ajouter_kits_items_y.WDR
+     type : 5
+   -
+     name : FEN_Modifier_kits_Articles
+     identifier : 0x482f9b0c01d86827
+     internal_properties : HgAAAB4AAACxjek9Crf/MDOi/s+Fl/77szwOHpXAuL+us2swH+k1k6FP+u7vEmpRXMI8hAzEvCyUnA==
+     physical_name : .\FEN_Modifier_kits_Articles.wdw
+     type : 2
+   -
+     name : REQ_Modifier_kits_Article_y
+     identifier : 0x482f9bd201dd6ccb
+     internal_properties : HgAAAB4AAACJiydjvAnZEwJaRQSgoEu0IFqAM2gQJX38HqRp3i1avWiClE3BWbpDx/w3QGOHMJuM
+     physical_name : .\REQ_Modifier_kits_Article_y.WDR
+     type : 5
+   -
+     name : REQ_chercher_kits_article_ByID_y
+     identifier : 0x482f9d6e01e8b5ed
+     internal_properties : HgAAAB4AAAA+JBYKuebO4eJRa4TcDkDKOLU3r66xRpyitvOijwkL1RPPwuP0zVG8y3FrVd0T7+ErKw==
+     physical_name : .\REQ_chercher_kits_article_ByID_y.WDR
+     type : 5
+   -
+     name : REQ_SUpprimer_kits_Articles_y
+     identifier : 0x482fa61c011a9c45
+     internal_properties : HgAAAB4AAAA6EGKmBULq9fZlSLqaDof+lPHDGzol/8SOm2Q6dyHrLZNfipJ3QgqQn4V/eTm3Q7UfJw==
+     physical_name : .\REQ_SUpprimer_kits_Articles_y.WDR
+     type : 5
+   -
+     name : ETAT_item_kits_Etats_y
+     identifier : 0x482fa7270144b25a
+     internal_properties : HgAAAB4AAABl4U1RbgsjPI8udt5RH3ZUh/DSMgn0yJWuE8Msk2Uxzz2juYm0FcLN2E5IsHBgGIhw8A==
+     physical_name : .\ETAT_item_kits_Etats_y.wde
+     type : 3
   other_elements : []
   array_of_analysis :
    -
