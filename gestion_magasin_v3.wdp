@@ -693,6 +693,30 @@ project :
      internal_properties : HgAAAB4AAADoZtDM+6AIE9CDBS63lCmGoC2vt/Yx3zxywhqu49W/AccLElzHe7syfaMdmxvVrSPtdQ==
      physical_name : .\REQ_modif_item_quantities2.WDR
      type : 5
+   -
+     name : REQ_supprimer_receiving
+     identifier : 0x483026e3019ed791
+     internal_properties : HgAAAB4AAADZu/eTbFkJQzYSlBo9wN88tFWwMDp4H6FS+MRt1FCnO3qQqjNeMubXdyznkLNX4Mtc
+     physical_name : .\REQ_supprimer_receiving.WDR
+     type : 5
+   -
+     name : REQ_supprime_recieving_items
+     identifier : 0x483027a201a6c14b
+     internal_properties : HgAAAB4AAABp5VG1ci+HqIsrhHuhQcXpZQIoCDMviT12qeoFXyntEzXfqgeoEVHa1Eq0DJRMNKRs9A==
+     physical_name : .\REQ_supprime_recieving_items.WDR
+     type : 5
+   -
+     name : REQ_supprime_payment
+     identifier : 0x4830281c01b19ca2
+     internal_properties : HgAAAB4AAACsqoSQL1Tcj1zwmv5Ym2OnSm0JKRYSAqZ2pVTc8oaOslaEIno2i1HfKR+ZZy+hWU+5uQ==
+     physical_name : .\REQ_supprime_payment.WDR
+     type : 5
+   -
+     name : REQ_supprime_items_quantities
+     identifier : 0x4830287801bf023d
+     internal_properties : HgAAAB4AAADbtfGdHqtDiwQAZReS4JdC1uugr5JLkgEqgIHVYs/S8MO/aYpis2b3N2ah3sFZ5s1e
+     physical_name : .\REQ_supprime_items_quantities.WDR
+     type : 5
   other_elements : []
   array_of_analysis :
    -

@@ -427,7 +427,7 @@ window :
      width : 106
      height : 31
      accelerator_key : 65535
-     tab_order : 8
+     tab_order : 9
     style : {}
     type : 4
     code_elements :
@@ -517,6 +517,50 @@ window :
          
          
          Info("Mise à jour réussie !")
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_BOUTON
+    identifier : 0x283025f2074129fa
+    internal_properties : HgAAAB4AAABeGIVT+4W74qjBz+0qUyJnVIDBSh622DGDQRgz1Ij+1XAenai/Mpo2QEsdfmpk9yNllikmcI2dKmk9WCt+c9Ndl15tx/5sCSU/F756PJdh3sg1pMOESFsAYzmaSeygOjxfnha9YhLhKgOmC8QoOAygy192P6DCRl/yMnaDPasGBJIt2BR9Wq+Xz14jzzwSSqaXqbyiOxBbxhR9o5b+z9lLM3kVDFdFPjci+tyFpY8fxbF/4cy2L8jLp4f/XfxUYTX2MLY5rdEZT/gz4e7mhC0hRZWADoFs/MOzlp8SEjCmVauQU04pLTRTTELxdeGu6VOe+ZuGR943y40Cst4E1HgHgiC1WAr2IEvQ6OTM5ralbQyv9rK9IrznmMJxq0zWtUGbI1lvDmlTbjyWLe6Qh5ChmmmmNDlUFPysLH9XFJcHHGKJKtV5Ddcm82y3rD2nkCZX6CLh0iYAM0nRX9nGPb94TFiRebdfZmcZy1wrTRQms7qTRh+d6vPMKUqwNUtsS/vIEPlWqtAIDfbMeEaA6VrPLwOLUkLjkoMJjS3dlw4nUq3dFujac1d/gIJ0SbnZ5An6OOgfS152RluFKLFKDQ6O1W82LwFcleB8aW8rKAXNbW4X+kfd/7n/BeYMwo0/Tgnp6QZNIA9wtyk4vxNObAA1jjaakyiwfvixack4u1hwdjPCImc7ZhfmN2EetNjHh7DskepmFa8LTPvGHo4fAiySOsqthsADRRa7B+iiXHNX3uYZy6yWPxXmwLaeFiALIDK86oi2HWNbvHrsHiiay3P0HVpQv+q7XZfRELiwfh+vEVIDNJ/IIWCv3qSqASpifLny8OPYfri/OVnnkCUbU2ucvpnLkumDz2axKr8YNMa0tkCwfV7D2jzeWNbQYOfsJR+TSOFAcEUjYkyXqUvjdJkkNN+fBEWPl5KMqH/H90VzWiAaDzbkIRCq/3WtyT0=
+    properties :
+     x : 334
+     y : 370
+     width : 106
+     height : 32
+     accelerator_key : 65535
+     tab_order : 8
+    style : {}
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1-
+         nReceivingID	est un entier		= Receiving_id		
+         nItemID			est un entier		= COMBO_Article
+         nStockID		est un entier		= COMBO_Stock
+        type : 14
+      -
+        code : |1+
+         REQ_supprimer_receiving.Paramid					= nReceivingID
+         
+         // Suppression dans la table "receiving_items"
+         REQ_supprime_recieving_items.Paramreceivings_id	= nReceivingID
+         
+         // Suppression dans la table "payment_type"
+         REQ_supprime_payment.Paramreceivings_id			= nReceivingID
+         
+         // Suppression dans la table "item_quantities"
+         REQ_supprime_items_quantities.Paramitem_id		= nItemID
+         REQ_supprime_items_quantities.Paramlocation_id	= nStockID
+         
+         SI HExécuteRequête(REQ_supprimer_receiving) = Faux ALORS
+         	Erreur("Erreur suppression receiving : " + HErreurInfo())
+         	RETOUR
+         FIN
         type : 18
       -
         type : 161
