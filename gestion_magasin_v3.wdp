@@ -575,8 +575,8 @@ project :
      type : 5
    -
      name : FEN_modification_entr_stock
-     identifier : 0x482f523d021b2e17
-     internal_properties : HgAAAB4AAAD6UCJmRQIqNTaltAMzN+FsfBNb0/yOPvmO++8aZoIKPs5glxcDB6ZQX8U/uXl3A/XfZw==
+     identifier : 0x482fc1f002427ece
+     internal_properties : HgAAAB4AAACehPaqGUbugULxv25loANp/E/L4+jymvl26Rko4DhcTKB+sM53S+XcKxGLdT2zT0GLiw==
      physical_name : .\FEN_modification_entr_stock.wdw
      type : 2
    -
@@ -663,6 +663,36 @@ project :
      internal_properties : HgAAAB4AAABl4U1RbgsjPI8udt5RH3ZUh/DSMgn0yJWuE8Msk2Uxzz2juYm0FcLN2E5IsHBgGIhw8A==
      physical_name : .\ETAT_item_kits_Etats_y.wde
      type : 3
+   -
+     name : REQ_modif_payment_type
+     identifier : 0x482fc1c6022cddbc
+     internal_properties : HgAAAB4AAABMyqTwT3Q8b3zfEdqziCRlSjuRGTTXabaKOAm2/5lzZVev7WDLf8c+Sf/5x0+BeW9Z2Q==
+     physical_name : .\REQ_modif_payment_type.WDR
+     type : 5
+   -
+     name : REQ_modif_receiving_item
+     identifier : 0x482fc1c6022eddcc
+     internal_properties : HgAAAB4AAACC+Pouncpifd59y3BpUIbj2FXXj85RNJ22lfGCr+kr9TPv2QQVNXFop50H8bEvyz2Hjw==
+     physical_name : .\REQ_modif_receiving_item.WDR
+     type : 5
+   -
+     name : REQ_modif_receivings
+     identifier : 0x482fc1c60230ddeb
+     internal_properties : HgAAAB4AAADwTih0s+jA2/hbrdaP6EDAWAvXD7RHvPJKDGBh2NDMVFBOncBvk9PKxXtlU9MN9evVXQ==
+     physical_name : .\REQ_modif_receivings.WDR
+     type : 5
+   -
+     name : REQ_modif_item_quantities
+     identifier : 0x482fc1c60232de1a
+     internal_properties : HgAAAB4AAACV8f0hnvuz7P9ekKU+Seocu+i2nqlc+IyqcO6KhTPjHScp0xsAAkS9yH54QMAwyDiAgA==
+     physical_name : .\REQ_modif_item_quantities.WDR
+     type : 5
+   -
+     name : REQ_modif_item_quantities2
+     identifier : 0x482fc1c60234de39
+     internal_properties : HgAAAB4AAADoZtDM+6AIE9CDBS63lCmGoC2vt/Yx3zxywhqu49W/AccLElzHe7syfaMdmxvVrSPtdQ==
+     physical_name : .\REQ_modif_item_quantities2.WDR
+     type : 5
   other_elements : []
   array_of_analysis :
    -
