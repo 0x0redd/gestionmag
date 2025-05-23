@@ -1,2 +1,2 @@
 //MO017-018.TXT ANA00017 TO ANA00018
-items	pictures	CNW	Mémo binaire$Mémo texte Unicode	la rubrique pictures a pour nouveau type Mémo image
+Connexion		CNX		
