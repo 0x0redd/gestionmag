@@ -91,6 +91,7 @@ window :
          -
            code : |1-
             ligne est un entier=TableSelect(TABLE_REQ_Tabel_Article)
+            
             si ligne<>-1 alors
             id est un entier=FEN_Table_Articles_Items.COL_Id
             Ouvre(FEN_Modifier_Articles,id )
@@ -177,8 +178,8 @@ window :
        identifier : 0x282f64a204b1dad2
        internal_properties : HgAAAB4AAADWQC7cc5OVu3hfF9n6SetsXNm65g0F9Fu0PYFl9I0d5nkgz4UaKnpNY5idzvfM0772BmnDy6bTKeHpTI9Xr/AI9Jd21d/a51yC8ECateszYnarNY0naCBK5CYMwhAI0k6wXoJYCuXyq3rB952GwNKLu2RJQgw9JYdhx9kSivM94Hn7lr0Di19iQ3gLQdEOojB2va8OIQZb7gv9TvZujV7r6x2uRr/MFaZxfFLczNsfn/0MuiBwr1drTT2UoGydaA8rqd/mjzyV0HffdVJFiRfGBaEp6kAXwBlUV3MzU8ykYGp9ZZvjsp1qGiQ6TvXHWJxfs6ilss4Uu/mS4hgeHl1JLllN+mWaYW1Ju82mNz8UwHDxHOSNu+3XNSLnKQ2NvF1wuR0DuC7gL5uAVpatHTww+m4fiE6LlBbF1nfgeYNDzdAFar+XK1T9ihWf5wENQSmC75QvMjzSlBY+l+Vz8HdlnYqQaxrIJ2Dk8d++zlWlR4xNccdjbP0h8jpR3GnXtckc1fvwB+xmTedOBGHF0EYYJNgmYIDRuyULprvd85ZsJrrEJERo5GmoeuSGp1RCOHHTOLJlZmaE/mKCGrRypiZ+Cs9fEXm+hsQdq7hRNhnaOvLwsIPTbyq+h/0kX9X+xRdXyKQwymCKcRn0OKOKH0bfBaMmEs4HC6xnnghmG7vfMMQa+g1RP/1uF0IRgvvwP/dNh1SOQf+/Y5u8oS4k2hutWnGvu8DnBA+MMXZWsF+SKXGaz3nUf4HP1+lA/0jsfP+6br3b/YiGkf2zOmLWHO+f4DEAtTQ05fe1KJAegVOo8ytcWrpB1wDmV7RXcMqZ9RxUFf/blm3PVPLFEI8=
        properties :
-        x : 1010
-        y : 322
+        x : 997
+        y : 317
         width : 106
         height : 32
         anchor : 4
@@ -412,7 +413,7 @@ window :
         -
           name : COL_Name
           identifier : 0x282f65a00941b95c
-          internal_properties : HgAAAB4AAAA3CSFpKcsq4qY4YDesITPQ90AhF/EGesqhiqRmbJDwao55nIUlBI6aQaR53c3unLM8T59jzyouMI89OO3aUCRCfuPNEz4g3XSwTowu5uHNA2AocArOUIijx/l85OX9Em6gTcr8qExMCyK8rAsvR3d+aQ8/Shtk676QolZ6CWQlFME7mysED6e3ddMv/ixTifRkm46HZuc/kGgrZHjyyfDyAf8lpy2dSaPiPAniEaF7Rb8IJA==
+          internal_properties : HgAAAB4AAAC3iaHpqUuqYia44LcsobNQd8Chl3GG+kohCiTm7BBw6g75HAWlhA4awST5XU1uHDO8zx/jT6qusA+9uG1a0KTC/mNNk76gXfQwzgyuZmFNg+DocIrO0AijRzk8JCU9Uq5gzUp8KMzMi6I8LIuvx/f+6Y+/ypvkaz4QItb6ieSllEG7G6uEjyc39VOvfqzTCXTkGw4H5me/EOir5PhySXBygX+lJ60dySNivIlikSH7xT+IpA==
           properties : {}
           style : {}
           type : 2
@@ -540,7 +541,7 @@ window :
         -
           name : COL_Unit_price
           identifier : 0x282f65a10966bcb8
-          internal_properties : HgAAAB4AAACOmmZ7b5RHJQhQNJZgY6AwVwZEvii9R2QqG0iDbDUTNhztlGZzeJk/sEWH6Du/KP8W69o0Y8FSxq7HQo0UFxY3suBqz0V1tV2NU9kSZKLFShD0xXMP+haatEq6YFNNzhPj9DlB8lfKMZmsIvYuXLjyvIhDWMz0PHQsXgyRD4b/bGzc2PURRPspQMiFWMNQtU9POczBNxqYSTCghkTOxE0l5kD+AJo3RiFXjwiZoCV0Bh7XZcxorGydjE2COQ==
+          internal_properties : HgAAAB4AAABOWiY7L9QH5ciQ9NYgI+Dwl0aE/mh9h6Rq24hDrHXTdtytVCYzuFn/cIVHKPt/aL9WKxp0o4GSBu6Hgk1UV9Z3cqAqjwW1dR1Nk5lSJGIFClA0BbNPulba9AoaYFPNLjNDtHmBspcK8Vns4jZuHHgyfMgDGAy0/LRsHkxRz8Y/LKycGDXRhDvpAAhFmAMQdY8PeYyBd9pYiXBgxgSOBI3lJgA+QFp3huEXz8jZ4OU0Rt4XJYyobCzdzA3C+Q==
           properties : {}
           style : {}
           type : 2
@@ -735,13 +736,26 @@ window :
         type_code : 9
         p_codes :
          -
-           code : |1+
-            TableAffiche(TABLE_REQ_Tabel_Article)
            type : 14
+           enabled : false
          -
-           code : |1-
-            
            type : 35
+           enabled : false
+         -
+           type : 15
+           enabled : false
+         -
+           type : 16
+           enabled : false
+         -
+           type : 19
+           enabled : false
+         -
+           type : 20
+           enabled : false
+         -
+           type : 21
+           enabled : false
          -
            type : 22
            enabled : false
@@ -753,6 +767,9 @@ window :
            enabled : false
          -
            type : 25
+           enabled : false
+         -
+           type : 33
            enabled : false
          -
            type : 230
@@ -778,6 +795,12 @@ window :
          -
            type : 224
            enabled : false
+         -
+           code : |1-
+            
+           type : 66051
+         -
+           type : 66054
      -
        name : BTN_BOUTON1
        identifier : 0x2830a52e04ff3963
@@ -804,8 +827,44 @@ window :
            type : 14
          -
            code : |1-
-            si TableSelect(TABLE_REQ_Tabel_Article)=-1 alors retour
-            Ouvre(FEN_Détails_Articles)
+            nLinge est un entier =TableSelect(TABLE_REQ_Tabel_Article)
+            SI nLinge<>-1 ALORS
+            	id est un entier=TABLE_REQ_Tabel_Article.COL_Id
+            	Ouvre(FEN_Détails_Articles,id)
+            
+            FIN
+           type : 18
+         -
+           type : 161
+           enabled : false
+     -
+       name : BTN_Fermer
+       identifier : 0x2830fad054fba064
+       internal_properties : HgAAAB4AAADPHmaqWlf2KxdWU3XUaDmYnAbUUgbMAqijuGW8MgJidGdHkW8i1wyuSBe350x0gajbMVbrFqHDw3As8iH3x6BDmd+DKtfIBztlL6sy3qcDDdliJqwyGE0btbFCsQnQOkJvw0F9eR7/PL8T+ebQeVkk5R5n4929/QSq/oznAcw7Sz1Ny4rNoPnZaOOZEx4c1f38qc2F4gAtom+ahodM0vhuuQAMZkDHyb/njBwfHlyP6X7RP/JPsXW17Kon1sAyLiVapG0p5CXfBAfMtPhGLeRus6N4IXlAwcNPbbMNkb6lH1QCNJi2c6S5T4r2ylDV/elhVBG+zU1N/+rd5kKVC+L6L6INBoVAOX5ZwzKYiPY4eCnZPbFFoj4r/lJd0WxQjkel/j9EZ4aTc5FA2SqYAsdHe4ALOrGaAkF4q9Ia58EdhCRVagF457gsSJ+WwGYaGpW++aFbafauPptWBljirJlaM/NHpc6DhEtAApwIXEaW5+erTsKRKQLqt0ccfjmxGGO11RxHd6JBwgvmu4ceKb1q1yhBaJPZc03Jf7p+JXzCL5pKzO6NSi8y3O0u7YqIRmsxiXpC4ByVL/RJUiU8Kp5iyOiTHlVQKHVIuOq2+Q6X9s1/iwXctzFV1o0jk0Fdpto0xVriuFKo8/JQBpKoG2cS+Tl97WbsaYUoHuxFsoIWNR2LhDz5SUPWz4Iip/aqMVnxo0Iyq+PWP+jRLMce2IrQwJ+B9q06ppNDZLgO6e41nYNpqUROJZh6zSrubJQ1KKSaNqD3WcjYGT1P3Y7RKuB50EwkGcHCGNqrOvl4rpR5vbszZ2M4PiAJ8XpwdMsb0PinXVEf+M9+h4sT6jDKdZoeQPv7Da0VjDvq3olPqzTm0cBQ4M0B+BwlmrwfaGUPMtcTVSIMLaMsOXNb6ijEujA=
+       properties :
+        x : 997
+        y : 363
+        width : 109
+        height : 32
+        anchor : 4
+        take_focus : 0
+        accelerator_key : 65535
+        tab_order : 8
+       style : {}
+       type : 4
+       code_elements :
+        type_code : 4
+        p_codes :
+         -
+           code : |1+
+            // Version 1
+            // Description 
+            // Bouton permettant de fermer la fenêtre
+            
+            
+           type : 14
+         -
+           internal_properties : HgAAAB4AAACU3O7Eq74PyLk6iB+zg+KMkSvtSKMoEeTDEPwtnZfYQnLRszEV6VLHKfdegi6CFBzU/TAaTu04zsznvf+z/LJknBYEvDAsjIhWrHtqmYAfAEbhz+N+aalFUf24vjaf
            type : 18
          -
            type : 161
