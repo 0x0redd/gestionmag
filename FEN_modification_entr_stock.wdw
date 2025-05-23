@@ -538,24 +538,22 @@ window :
      type_code : 4
      p_codes :
       -
-        code : |1-
-         nReceivingID	est un entier		= Receiving_id		
-         nItemID			est un entier		= COMBO_Article
-         nStockID		est un entier		= COMBO_Stock
+        code : |1+
+         ReceivingID	est un entier		= Receiving_id
         type : 14
       -
         code : |1+
-         REQ_supprimer_receiving.Paramid					= nReceivingID
+         REQ_supprimer_receiving.Paramid					= Receiving_id
          
          // Suppression dans la table "receiving_items"
-         REQ_supprime_recieving_items.Paramreceivings_id	= nReceivingID
+         REQ_supprime_recieving_items.Paramreceivings_id	= Receiving_id
          
          // Suppression dans la table "payment_type"
-         REQ_supprime_payment.Paramreceivings_id			= nReceivingID
+         REQ_supprime_payment.Paramreceivings_id			= Receiving_id
          
          // Suppression dans la table "item_quantities"
-         REQ_supprime_items_quantities.Paramitem_id		= nItemID
-         REQ_supprime_items_quantities.Paramlocation_id	= nStockID
+         REQ_supprime_items_quantities.Paramitem_id		= ItemID
+         REQ_supprime_items_quantities.Paramlocation_id	= StockID
          
          SI HExécuteRequête(REQ_supprimer_receiving) = Faux ALORS
          	Erreur("Erreur suppression receiving : " + HErreurInfo())
@@ -585,6 +583,8 @@ window :
      code : |1-
       PROCÉDURE FEN_modification_entr_stock(id_param est un entier)
       Receiving_id est un entier= id_param
+      ItemID			est un entier		= COMBO_Article
+      StockID			est un entier		= COMBO_Stock
    -
      code : |1+
       REQ_selection_entr_stock_modif.paramid = Receiving_id
