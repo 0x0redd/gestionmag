@@ -524,7 +524,7 @@ window :
      -
        name : SAI_Recherche
        identifier : 0x282f8c78050b772f
-       internal_properties : HgAAAB4AAAD+H34lZ+6BsY052Zj7xwj/7MNdICaxvEXXRk8FjtdNEWxLM2sMFhz3nS9fqbi6uTzoOG2HcYFDGNV/cB2vVtZuYJPWKSBLlvlhWZLl1r7yjomUij9rNcBZlqwIle/UZfHHsOHVvk9gttMlfbCtoEH6WQhMUDiuef7Neml+aMMqik2nLV5TcPTtplxNvsKx3179Ilo1b47xRg/4Ds6Rz/WHEwU5/riLTDhkablnC+QERo3qSCv/CAGErisq7x1l20WaWYwKbwUE99fhwwGeOR76oCrCaTYmoSwZ6kN7Vr/2QNDqfZgvTXyrqW3ZN3g1frvXPkiyftsDRPZHhZnIPy1gFtYGPBzfAJz43brifAnz6o3BWtSvGWOVmv2AxNDMKHFos+mp+AkNHbkb9fIKq3gF6H6KpEjcNqMqJ9cVSwGK6aqUNfVZH/PNiGKKv99HYOVFaZAa3CjW+6Lho68KvkgLECSF7G6eFCfVNGTIvSJ5E0saDjsNlHh9Kg8Dx+VlpDTDcs4ZQdJbVij4y0AQl5f5jUzs87jnL/2sFE6rZ1aBYrgs0scjYqistOO9sd+SuYoYHrqlKLls66CQmHNGT/Q7BqIaNKth9xIawRl8J+RHfV2LvphcmiASK0V56jS3ypVmQdYI2jZuTUPhrxtHNLBSeWhp7gN59wq6jBZP6vvUbWZUZxVatSPtNVQOh6rxdrC1eCmjmm4TiGQc18KTFy1bHJo7NjOxfFCP0D2OW4LUo247aRNZKyfqsl7nFU5XoKfUKly8WkyYxT9ZkwdaUKLVccopfKsIAvCVmnLocAI0jG38N+G1HfW5hLaNFoyhTDepmxf5RQGOZ8tGqUQw994el772ShL0AulrFy9JSn7kEBPgYdealhonqm2nZK96Qk1k4kC7u6oJA/fIXtRhcQIDOCG/MpIlpbzWshbwkBNdfChbHW50icUnh09MKFjcMxHgpj+Vr4cof/FQiae92b+I3dZOmrs8hrDy796g/6smDgWlQUQ69iQwW/owSnyp3NAFjLnWGCfAwJ28nAu5kUATAkTTOoYgCAnU/12EUT7BEHMlN1dCAOqlA1klfxHv5Gr3OgFgZvdP9ZqUOxqyONdR7jTj4HOokzNCtjhDma4xiYGmITStA+7ZrTGGfqFDfIowWd0l24z6B7aYbAjL+Dnw54qh074nWoOU6Sm/Tg+80WvyamqW+rJTDLTLNjLBSn+NZcDCSrhoGY51PkY6J+mmXJQ9gBmrWAqeAtSJt/OoS5GOBm6Gxnml3WQJlDcBvMpyUFOOwuHtjwMeLxC6F1OOJPT84qvEeW/TRjfrJVEWDSNKy3S/9sLOdn+1wLcE+rC/2qwIz8PUQJ28XvEgZrb46Inup+D3PFnufF3S3CzVPU3qUBhOpNGv9yLQMUU7HN4ozF+BYUagktqH99l7D3dqLlBooL7J+AlmJsTVdt6FixhTSufT7QsBfuToPNetgYdeNS877+RjuEAGibPech0l6EbumuM322o=
+       internal_properties : HgAAAB4AAAD+1VrIqHRO+e5jLrhTuHUmd/avfqM57PMx1B2SPHGKawHYcm25spH3puyipF8puF300eT4qVK6ADnAALW7hdouIlvl3t8918Ze0eXdikRFAWJul26Z+t2NMsfyJWLSaKLtDBF0oIGp4VjylE+x3i1bxw6sttugXJ9kuNJZJymep8arktYqqTNv4YSRRTTtqAZNqHIyR2l8IdKtb5Z4GmNnlOyNLpybSK61iHLzAk/2GGhbXqdbJ+9ZvBshsDyJ8e7Frqnl0ETtX+o8fVwgMu7RJusRvy34AH+OAKbdIORb6f8lpOKUe5XmOgXL0nIjIL1ybalG3mCN95hDfA2EI+0dmxEdy4qBzi0nlfsF49A9L8z0AyOcFdwpI2TXSjnsV0dYQmi5+VBQnODUIL0UH3JFyntMVjHxvnRsLCWTY1uMuMRe/112ezFIXXoYq+kq/947DKz165zVb8g41uwBzkSlZju1ECy8IXvbOdxzGC2vRAaT0CWzIQv7MyjmXwBnDcQ5TK2pwgtuvHSfM6RK+E6yzBwGUPe/c4XQC5nTjy8koWrz54R7lk+n2IsGmLixZoUFkas9g+84SPwNClcUd6bGH47LbNzRwybFDotQRjwRIpj9iTuix0zVblXTl1eBe3sHhXTlVyoV152NBrRkejUgKZB0Igngg5rm17sOBvyNaY/OxNrCHT8EPSiMc3HXn9IR1bpHX/oRJF99Dzp3zuW7AmQC6Qu1oS6KRyP2cpEEpRL+PsCb/796+TNbESo9rcbhlUvqyZTI7/dMRYuptG8V0k3i9R9d0tnIgOliWwe5oVYOWUbLgrG8sIvE1rQw8sUlRk7yrOeM35FVFFlDj7M8zrhsREYHD7lqCCGRAWMeGUBirkPbjr0hkzhtdktNIYzh8zhThF0n7PYmwR2ALeKc8fxHk+scZmD73PCffn/A6E94ElSzluOn8rkr5slQ/zL880OJ/ThFYeXDvDga0reYLzMqCzZGPZ5RTa+3AS4/BBziR/YB9W/8shxbpTiFnL9uQ77QKwpHtR1aUnUyGrJ2pGYy2fyTPQonurwllPXjACzeDpekM1CZEZar7dvUAeAilQSyWw8NmsFbiGKL4TsxDlIOcvx11kDs7K5yosBsSySvieCwszI6GKznR1GGlL7sRMM3nwow/WoqiX9wAHDF6fSet1ZD2ohox0OG5iBQvbcWHCnz2UWBeIDaAloOllPcNwTFNR2Y62mKvJS1A13ZH9lNALADO836/dH4dZWcog219AVl3ysHlsCRXzwJPPZ+XAUl3nBlD9vWmWYCvFbmUpqvDUjRGt1cSX3GafbxkZToHfQYoMeT76XXode0JJouMqaUH/NTYqxHTRUWufAYBKzk0+YzW4u69BlOhoMaqlUoC1/8i94HB7TELiI4xzo9hpTRiHF5KEl/ab1siJ7XZHV1zzI09UxI75IyPolMY3ILUU0KpyL9BQpkpbrEJHGYa4YjmXAOCGoAQKQAgLtJLkQzL44zzumFgD7NIZlf00TvCc7s+UsWyvnljE2H8Q261mE2aJe2VifL33Phe8epueT5+JBOd26fNHUSH1LLPpZlRRmJXOV39ROFYmYsYmK/3yo6Btv6kO6rnP0qyymN0BFo9u7wtA8blWLiFuyzEpJxYsT7t3XPlO7u+HOXy+P2y3IxagKrISXwCoCwfhm4fe4hGF/aQJJjdpzNBzXjP8RRVu95xDOi2Z9dQdwEAvbHjzH+dkFcbxiUNehfuwi6k9ybEThJmsX27yJmc29vB0Q8JO/syNKeOdBcKIJsWVReXxD64ML7hTuIE7LgWa5lgDr30um++DaWAGjXHf4Mqm5v/qg6dLfRjhLToGbND30zwjrAJepbl6y3Oidtx3mtgygYXz+A9q+m/XPNwAj9E+LPj59733nfyWUV1eHEj9GO48ZpIn9V+5c5GbhrSA==
        properties :
         width : 286
         height : 47
@@ -536,40 +536,16 @@ window :
         type_code : 3
         p_codes :
          -
-           code : |1+
-            // Largeur la plus petite définie à la largeur nécessaire pour voir le texte d'indication, centrée entre les retraits
-            SAI_Recherche..Titrenote = SAI_Recherche..RetraitGauche +  TexteLargeur(SAI_Recherche,SAI_Recherche..indication,tMonoligne) + SAI_Recherche..RetraitGauche
+           code : |1-
             
-            // Applique la largeur initiale
-            SAI_Recherche..largeur = SAI_Recherche..TitreNote
-            
-            //Procédure d'adaptation de la largeur du champ
-            procédure interne MajLargeur()
-            	// Adapte la largeur de la zone de saisie à la frappe, sans dépasser le superchamp
-            	soit nLargeurTexte = TexteLargeur(SAI_Recherche,SAI_Recherche,tMonoligne)
-            	// Centre entre les retraits
-            	soit nTailleMinPourTexte = SAI_Recherche..RetraitGauche + nLargeurTexte + SAI_Recherche..RetraitGauche
-            	SAI_Recherche..Largeur = Min(Max(SAI_Recherche..LargeurInitiale,nTailleMinPourTexte),SC_Recherche..Largeur)
-            fin
-            
-            // Met à jour la largeur à chaque frappe
-            MaFenêtre..Traitement[trtModification] += MajLargeur
-            // Met à jour la largeur au redimensionnement de la fenêtre 
-            mafenetre..Traitement[trtChangeTaille] += MajLargeur
            type : 14
          -
            code : |1-
-            // Agrandit la zone de saisie si elle est vide
-            SI MoiMême = "" ALORS	
-            	AnimationJoueSurPropriétéChamp(MoiMême,<§R182f8c790043775e¤fr-FR¤Largeur¤en-GB¤Width¤es-ES¤Ancho¤0§>,MoiMême..Largeur,MoiMême..LargeurInitiale,150 ms)
-            fin
+            
            type : 15
          -
            code : |1+
             // Rétrécit la zone de saisie si elle est vide
-            si moimeme = "" ALORS	
-            	AnimationJoueSurPropriétéChamp(MoiMême,<§R182f8c790044775e¤fr-FR¤Largeur¤en-GB¤Width¤es-ES¤Ancho¤0§>,MoiMême..Largeur,val(MoiMême..TitreNote),150 ms)
-            FIN
            type : 16
          -
            type : 276
@@ -587,55 +563,10 @@ window :
            type : 339
            enabled : false
          -
-           code : |1+
+           code : |1-
             
-            //Pas de valeur => pas de recherche
-            SI moimeme = "" ALORS	
-            	// Raz des pictos
-            	IMG_Chargement..Visible=Faux
-            	IMG_Loupe..Visible=Vrai	
-            	// Annule la recherche précédente
-            	SAI_Recherche..Note = ""
-            	RETOUR
-            FIN
-            
-            // Indique avec un picto que la recherche va être exécutée
-            IMG_Chargement..Visible=vrai
-            IMG_Loupe..Visible=Faux
-            
-            // Diffère la recherche
-            _RecherchePlusTard()
-            
-            // Lance la vérification à chaque frappe, dans un délai de 300ms relancé à chaque frappe
-            PROCÉDURE INTERNE _RecherchePlusTard <délai = 300 ms, rappel = relancer>			
-            	
-            	// Marque l'identifiant de la recherche pour ne traiter que la dernière
-            	SAI_Recherche..note = DonneIdentifiant()
-            	
-            	// Démarre la recherche en arrière plan maintenant
-            	_LanceRecherche(SAI_Recherche..Note,SAI_Recherche)	
-            	procedure interne _LanceRecherche (id,sValeur) <thread sécurisé>		
-            		// Lance la recherche				
-            		// Et envoie le résultat de la recherche à la procédure d'affichage
-            		_AfficheRésultat(id,LanceRecherche(sValeur))
-            	FIN
-            	
-            	// Procédure d'affichage du résultat, appelé en fin d'exécution de la recherche
-            	procedure interne _AfficheRésultat(id,sRésultat) <thread principal>	
-            		// Ne traite que la dernière recherche
-            		si SAI_Recherche..note <> id ALORS
-            			retour	
-            		FIN
-            		
-            		// Raz des pictos
-            		IMG_Chargement..Visible=Faux
-            		IMG_Loupe..Visible=Vrai	
-            		
-            		// Affiche le résultat
-            		AfficheResultat(sRésultat)		
-            	FIN
-            FIN	
-            
+            TableDésactiveFiltre(TABLE_REQ_table_item_kits_y)
+            TableActiveFiltre(TABLE_REQ_table_item_kits_y.COL_Name,filtreContient,SAI_Recherche)
            type : 17
          -
            code : |1+
