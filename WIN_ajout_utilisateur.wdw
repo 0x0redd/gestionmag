@@ -296,109 +296,99 @@ window :
         type : 14
       -
         code : |1+
-         // 1. Vérifier si l'email existe déjà
-         REQ_Email_Existe.Paramemail = SAI_Email
-         
-         SI HExécuteRequête(REQ_Email_Existe) = Faux ALORS
-         	Erreur("Erreur lors de la vérification de l'e-mail : " + HErreurInfo())
-         	RETOUR
-         FIN
-         
-         SI HNbEnr(REQ_Email_Existe) > 0 ALORS
+         // 🔍 Vérifier si l'e-mail existe déjà dans USERS
+         HAnnuleRecherche(users)
+         HRAZ(users)
+         SI HLitRecherche(users, users.email, SAI_Email) ALORS
          	Info("Un utilisateur avec cet e-mail existe déjà.")
          	RETOUR
          FIN
          
-         // 2. Ajout dans la table people
-         REQ_Ajouter_Personne.Paramfirst_name	= EDT_Prenom
-         REQ_Ajouter_Personne.Paramlast_name		= EDT_Nom
-         REQ_Ajouter_Personne.Paramgender		= SAI_Gender
-         REQ_Ajouter_Personne.Paramphone_number	= EDT_Telephone
-         REQ_Ajouter_Personne.Paramaddress_1		= EDT_Adresse
-         REQ_Ajouter_Personne.Paramcity			= EDT_Ville
-         REQ_Ajouter_Personne.Paramcountry		= EDT_Pays
-         REQ_Ajouter_Personne.Paramemail			= SAI_Email
-         REQ_Ajouter_Personne.Paramcreated_at	= DateSys()
+         // 🧼 Insertion dans la table people
+         HReset(people)
+         people.first_name	= EDT_Prenom
+         people.last_name	= EDT_Nom
+         people.gender		= SAI_Gender
+         people.phone_number	= EDT_Telephone
+         people.email		= SAI_Email
+         people.address_1	= EDT_Adresse
+         people.city			= EDT_Ville
+         people.country		= EDT_Pays
+         people.created_at	= DateSys()
          
-         SI HExécuteRequête(REQ_Ajouter_Personne) = Faux ALORS
-         	Erreur("Erreur ajout personne : " + HErreurInfo())
+         SI HAjoute(people) = Faux ALORS
+         	Info("Erreur lors de l’ajout dans la table people.")
          	RETOUR
          FIN
          
-         // 3. Valider l'insertion et récupérer le dernier ID inséré
+         // 🔁 Récupération de l'ID de la personne ajoutée
          SI HLitDernier(people) = Faux ALORS
-         	Erreur("Impossible de récupérer l’ID de la personne.")
+         	Info("Impossible de récupérer l’ID de la personne.")
          	RETOUR
          FIN
          
-         idPersonne est un entier = people.id
-         
-         // 4. Insérer dans users
-         REQ_Ajout_Utilisateur.Paramperson_id			= idPersonne
-         REQ_Ajout_Utilisateur.Paramname				= EDT_Prenom + " " + EDT_Nom
-         REQ_Ajout_Utilisateur.Paramemail				= SAI_Email
-         REQ_Ajout_Utilisateur.Parampassword			= EDT_Password
-         REQ_Ajout_Utilisateur.Paramcreated_at			= DateSys()
-         
-         SI HExécuteRequête(REQ_Ajout_Utilisateur) = Faux ALORS
-         	Erreur("Erreur ajout utilisateur : " + HErreurInfo())
-         
-         	// Nettoyage : supprimer la personne si l'ajout utilisateur échoue
-         	SI HLitRecherche(people, id, idPersonne) ALORS
-         		HSupprime(people)
-         	FIN
-         
+         // 🔒 Vérification mot de passe
+         SI EDT_Password = "" ALORS
+         	Info("Veuillez saisir un mot de passe.")
          	RETOUR
          FIN
          
-         // 5. Valider l'insertion et récupérer l'ID de l'utilisateur
-         SI HLitDernier(users) = Faux ALORS
-         	Erreur("Impossible de récupérer l’ID de l’utilisateur.")
+         // Ajout dans la table users
+         HReset(users)
+         users.name			= EDT_Prenom + " " + EDT_Nom
+         users.email			= SAI_Email
+         users.password		= EDT_Password
+         users.created_at	= DateSys()
+         users.person_id		= people.id
+         
+         SI HAjoute(users) = Faux ALORS
+         	Info("Erreur lors de l’ajout dans la table users.")
          	RETOUR
          FIN
          
-         idUtilisateur	est un entier	= users.id
+         // ✅ Récupération fiable de l’ID utilisateur
+         idUser	est un entier	= users.id
          
-         // Identifier le rôle sélectionné
-         roleId			est un entier	= 0
-         
-         SELON COMBO_Role..ValeurAffichée
-         	CAS "SuperAdmin"
-         		roleId = 1
-         	CAS "Responsable"
-         		roleId = 2
-         	CAS "Magasinier"
-         		roleId = 3
-         	AUTRE CAS
-         		Info("Rôle invalide sélectionné.")
-         		RETOUR
-         FIN
-         
-         // Vérifier s'il y a déjà un rôle existant pour cet utilisateur
-         SI HLitRecherche(role_user, user_id, idUtilisateur) ALORS
-         	HSupprime(role_user)
-         FIN
-         
-         // Insérer dans role_user
-         REQ_Attribuer_Role.Paramuser_id	= idUtilisateur
-         REQ_Attribuer_Role.Paramrole_id	= roleId
-         
-         SI HExécuteRequête(REQ_Attribuer_Role) = Faux ALORS
-         	Erreur("Erreur lors de l'attribution du rôle : " + HErreurInfo())
-         	
-         	// Nettoyage : supprimer l'utilisateur et la personne si rôle échoue
-         	SI HLitRecherche(users, id, idUtilisateur) ALORS
-         		HSupprime(users)
-         	FIN
-         	SI HLitRecherche(people, id, idPersonne) ALORS
-         		HSupprime(people)
-         	FIN
+         // ✅ Déterminer l'ID du rôle sélectionné
+         roleId	est un entier
+         SI COMBO_Role..ValeurAffichée = "SuperAdmin" ALORS
+         	roleId = 1
+         SINON SI COMBO_Role..ValeurAffichée = "Responsable" ALORS
+         	roleId = 2
+         SINON SI COMBO_Role..ValeurAffichée = "Magasinier" ALORS
+         	roleId = 3
+         SINON
+         	Info("Rôle invalide sélectionné.")
          	RETOUR
          FIN
          
-         // 8. Fin
+         // 🔍 Vérifier que le rôle existe
+         SI PAS HLitRecherche(roles, roles.id, roleId) ALORS
+         	Info("Ce rôle n'existe pas.")
+         	RETOUR
+         FIN
+         
+         // ❌ Vérifier si ce user a déjà un rôle
+         SI HLitRecherche(role_user, "user_id", idUser) ALORS
+         	Info("Ce compte a déjà un rôle attribué.")
+         	RETOUR
+         FIN
+         
+         // ✅ Insertion dans role_user
+         HReset(role_user)
+         role_user.user_id	= idUser
+         role_user.role_id	= roleId
+         
+         SI HAjoute(role_user) = Faux ALORS
+         	Info("Erreur lors de l’attribution du rôle.")
+         	RETOUR
+         FIN
+         
+         // 🎉 Succès
          Info("Utilisateur ajouté avec succès.")
          Ferme()
+         
+         
         type : 18
       -
         type : 161
