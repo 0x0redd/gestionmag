@@ -349,7 +349,7 @@ window :
          sFichier est une chaîne = fSélecteur(SysRep(srMesImages), "", "Sélectionnez une image...", fFiltreImage(), "", fselOuvre + fselExiste)
          
          SI sFichier <> "" ALORS
-         	SAI_Image		= sFichier
+         	IMG		= sFichier
          	gsCheminPhoto	= sFichier
          FIN
          
