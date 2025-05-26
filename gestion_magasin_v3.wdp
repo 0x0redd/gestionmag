@@ -1407,6 +1407,18 @@ project :
      internal_properties : HgAAAB4AAACgnpiEIxgQy+hwj/9YvLoD6Punv4QclNWjTBx2KOC8BCDeuhNk53Z/tWtVo2OdZVulrQ==
      physical_name : .\WIN_fournisseur.wdw
      type : 2
+   -
+     name : REQ_modifier_items_quantities
+     identifier : 0x483496cc0ab10579
+     internal_properties : HgAAAB4AAADtacXZ5lPbhFcLF52UlrPtR3YuZsc/qxJxKYLU8LjaNt4GcYQ6kEwKACaQaCjYoBD4eA==
+     physical_name : .\REQ_modifier_items_quantities.WDR
+     type : 5
+   -
+     name : REQ_select_items_quantites_md
+     identifier : 0x483497830ab3ccc7
+     internal_properties : HgAAAB4AAAAhE5+LVHEmqHrEQzRQ4ieRuAzI7yg9cf2Qegx0Eyytquus9k3ROfRT170PqItvyDMk
+     physical_name : .\REQ_select_items_quantites_md.WDR
+     type : 5
   other_elements : []
   array_of_analysis :
    -
