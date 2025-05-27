@@ -325,6 +325,18 @@ window :
          	RETOUR
          FIN
          
+         // 3. Modifier le mot de passe si un nouveau est saisi
+         SI EDT_Password <> "" ALORS
+         	REQ__modifier_password.Parampassword	= EDT_Password
+         	REQ__modifier_password.Paramid			= Glo_idUser
+         
+         	SI HExécuteRequête(REQ__modifier_password) = Faux ALORS
+         		Info("Erreur lors de la modification du mot de passe : " + HErreurInfo())
+         		RETOUR
+         	FIN
+         FIN
+         
+         
          // 3. Modifier role_user
          roleId est un entier
          
@@ -352,7 +364,6 @@ window :
          Info("Utilisateur modifié avec succès.")
          MaValeurRetour = Vrai
          Ferme()
-         
         type : 18
       -
         type : 161
@@ -385,7 +396,7 @@ window :
   -
     name : COMBO_Role
     identifier : 0x282cb3bf4cfd6b8c
-    internal_properties : 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
+    internal_properties : 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
     properties :
      x : 44
      y : 275
@@ -395,7 +406,7 @@ window :
      tab_order : 9
     style : {}
     dropdown :
-     internal_properties : HgAAAB4AAAA0zzkx1dQ7nhH2BxmuXMSDEcwPgnGtplN4neb7oF84iSGiv6T0WhPfv0Y2t7qPIlZ3AHsk6rZid0NuMqjEyCA8xcZOc2y60iLAOIOvPsGajZVIsEsy3jPMIoljz/A0AVsrbERnK2f94sE1bSgt/Oc7t5QSLIxYrgK2jqzTKpnoJnKlzdmRP8nB+RpKbhgDKCEhGUFUqyceEOfoFilX0nHWAk02Y1C9sYeMc9bJmzFjtGvRXoIzI3E5zUtBqpLaPBkZrAjI83tOReJmOaRATIha4R0DAj7wH1T9Ng6XTmsVbaKvO8conJ4aCcjCrY3aPMe0vNVfCuAi9pI55ogGJFfqir6eRDBOuZgQX+Gy9YyMFZdsi0qZZH7oQ/1YCH98dv1K9UIAN14udc67ZxdNU+YlbjAycXQ/GX0fTHVRdB+xWhx8TnPmMZBfXjpqhNN+hZf9CoF77q+9SD8dz5qldT+TT0VARbR0OoOkGDdLDMsEaYH+PYbcthZljTQHkQCWdxWiZfN5ZDwHVugSx+aPLmc3gpSfR/rylvrw5JfwWBxrA8lxTUrxzsim8t54fW659i9Z08pvm90uvuZaIWOr1rlGxH0cyitV2Uzz/aZBnBxK+JWJU/7WhvK2JScOmFOrw/yNreb2BCyIMNseBZAPfTVRvHpBU7bBlmtEYCf0v2HK1V0okrCDkcnOuZ+yeFACGhyP+XkXN/0+3Q3pITAYJxEyYhKQxrMXsfmA1K4RKowI9LT0Q0+KDDxZk1XITq/F7/8o8E5P5sO4Oqi8C4gj4AHkGteUGAv85zwt/Yxgll7du9czQdc6uJ7shAXPj/aNTSEw
+     internal_properties : HgAAAB4AAAAL1yZOIedimqxeSgnxEQv/X0qms3mWemBENISOty5P4oXGBUviYf9hSL17VBx6DjuGF+m/WPoZxQ3WOS1F1iFpy+EpPj3wtBXRVRtHsrG8E0OZ0xESFPXkIhBXEQHkP6iMXhL4tHeUPMaZo893Nwc7BdgAN6/rtBsJCYPSKoOpJwo7DWEOBTip4og2Q6YDjwu+qW4djkLLP+8cF3vgpqsIvbiSFPnRCbaL6CFPi7CvLmXjShAxblTyX8NqKIETN7+Mezm1STKnBhrhYq4EAEMMs+s2osXE8NxNlT9BqX+nWgdhER6z27X560wUK5XWJEKhGZl7/iP/zDJ/6iEJd1iCcwo6geMHQ5diK6f6izbkX7oI44BzxsuvukySCycg0ngAP2Sg6g9Cm/1c2q56WJJ37d33as5Qf6CtKz4ESyb+PBEKG9P7yEelWAgv+D6m8kArJICpWTAe7tFhEuo2LySUY6+3DWkLvekYyPCJV9UdFgt0gIBBbVFvQ45m1fN+JgSCXUzNe2lomg40rERymAxo6K6YkQVbt/zS3Cy2a96OGjfNupoerc8mqkZDiVOBuVp3mRnvoHQxTBIMoleU2L6nnjs1buxIWLQv8QPbl6x7velD4jwLfY1ipaHBeBwt+JnXa8F4IUs3wJcOKuDKZ+C0SKZOGUf0+Q/+7obAnFdFSAdUj4YOuvo0ERlv3jOanZcnBdD9tKT1Ex8jQGSFHbKrjM4DkFiWbE/oLC1zCZjvy4iufsVv07MRcZOJjYWyYbO1WczpGUpvgk6sbWdGoKcsYvItaLqIYAiex/wfTu5s1vbUOomA84UwCTp8S9UCX/I7WZNHEDWVCIVYvrW3cJ8EBhI=
      properties :
       width : 132
      style :
@@ -406,14 +417,9 @@ window :
      type_code : 23
      p_codes :
       -
-        code : |1+
-         ListeAjoute(COMBO_Role, "SuperAdmin")
-         ListeAjoute(COMBO_Role, "Responsable")
-         ListeAjoute(COMBO_Role, "Magasinier")
-        type : 14
-      -
+        code : |1-
+         
         type : 35
-        enabled : false
       -
         type : 17
         enabled : false
@@ -475,14 +481,14 @@ window :
   p_codes :
    -
      code : |1-
-      PROCEDURE MaFenêtre(idUserParam est un entier)
+      PROCÉDURE MaFenêtre(idUserParam est un entier)
       Glo_idUser				est un entier	= idUserParam
       Glo_idPerson			est un entier
       Glo_modificationFaite	est un booléen	= Faux
       MaValeurRetour			est un booléen	= Faux
       SI HLitRecherche(users, id, Glo_idUser) ALORS
       	Glo_idPerson = users.person_id
-      
+      	
       	SI HLitRecherche(people, id, Glo_idPerson) ALORS
       		EDT_Prenom		= people.first_name
       		EDT_Nom			= people.last_name
@@ -495,26 +501,18 @@ window :
       	FIN
       FIN
    -
-     code : |1-
+     code : |1+
       
       
+      
+      // Stocker l'ID utilisateur passé en paramètre
       Glo_idUser = idUserParam
       
-      SI HLitRecherche(users, id, Glo_idUser) ALORS
-      	Glo_idPerson = users.person_id
-      	
-      	// Charger les données depuis la table people
-      	SI HLitRecherche(people, id, Glo_idPerson) ALORS
-      		EDT_Prenom		= people.first_name
-      		EDT_Nom			= people.last_name
-      		SAI_Gender		= people.gender
-      		EDT_Telephone	= people.phone_number
-      		EDT_Adresse		= people.address_1
-      		EDT_Ville		= people.city
-      		EDT_Pays		= people.country
-      		SAI_Email		= people.email
-      	FIN
-      FIN
+      // 1. Charger les rôles dans le ComboBox
+      RemplirComboRoles()
+      
+      // 2. Charger les données de l'utilisateur et sélectionner son rôle
+      InitModification(Glo_idUser)
      type : 34
    -
      code : |1+
@@ -534,8 +532,22 @@ window :
      type : 2
   procedures :
    -
+     name : RemplirComboRoles
+     procedure_id : 1744547090690484020
+     type_code : 14
+     code : |1+
+      PROCÉDURE RemplirComboRoles()
+      SI HExécuteRequête(REQ_Liste_Roles) = Faux ALORS
+      	Info("Erreur : " + HErreurInfo())
+      	RETOUR
+      FIN
+      
+      
+      
+     type : 458752
+   -
      name : InitModification
-     procedure_id : 1742009877413468926
+     procedure_id : 1744547584613869598
      type_code : 14
      code : |1+
       PROCÉDURE InitModification(idUser)
@@ -559,12 +571,15 @@ window :
       EDT_Pays		= people.country
       SAI_Gender		= people.gender
       
-      // Sélection du rôle dans le combo
-      COMBO_Role		= roles.name
+      // 🟢 Sélection du rôle dans le ComboBox APRÈS qu'il soit rempli
+      COMBO_Role = role_user.role_id
+      
       
       // Stocker l'ID pour modification
       Glo_idUser		= users.id
       Glo_idPerson	= people.id
+      
+      
      type : 458752
   procedure_templates : []
   property_templates : []
