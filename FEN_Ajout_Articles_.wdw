@@ -29,7 +29,7 @@ window :
      height : 26
      anchor : 4
      accelerator_key : 65535
-     tab_order : 6
+     tab_order : 7
     style : {}
     type : 4
     code_elements :
@@ -109,7 +109,7 @@ window :
      width : 489
      height : 85
      accelerator_key : 65535
-     tab_order : 4
+     tab_order : 5
     style : {}
     type : 2
     code_elements :
@@ -146,7 +146,7 @@ window :
      width : 501
      height : 30
      accelerator_key : 65535
-     tab_order : 3
+     tab_order : 4
     style : {}
     type : 2
     code_elements :
@@ -206,7 +206,7 @@ window :
      height : 32
      anchor : 4
      accelerator_key : 65535
-     tab_order : 5
+     tab_order : 6
     style : {}
     type : 4
     code_elements :
@@ -239,34 +239,39 @@ window :
          	RETOUR
          FIN
          
+         SI EDT_seuilCritique <= 0 ALORS
+         	Erreur("Veuillez saisir un prix de vente valide.")
+         	RETOUR
+         FIN
+         
          SI EDT_Description = "" ALORS
          	Erreur("Veuillez saisir une description.")
          	RETOUR
          FIN
          
          // Affectation des paramètres de la requête d'insertion
-         REQ_Ajout_Articles.Paramid				= Null // Auto-incrémenté
-         REQ_Ajout_Articles.Paramitem_number	= "ART-" + NumériqueVersChaîne(HeureSys(), "000000")
-         REQ_Ajout_Articles.Paramname			= EDT_NomArticle
-         REQ_Ajout_Articles.Paramcategory		= SAI_categorie
-         REQ_Ajout_Articles.Paramcost_price		= EDT_PrixAchat
-         REQ_Ajout_Articles.Paramunit_price		= EDT_PrixVente
-         REQ_Ajout_Articles.Paramdescription	= EDT_Description
-         REQ_Ajout_Articles.Paramstock_type		= null
-         REQ_Ajout_Articles.Paramcreated_at		= DateSys()
+         REQ_Ajout_Articles3.Paramid				= Null // Auto-incrémenté
+         REQ_Ajout_Articles3.Paramitem_number	= "ART-" + NumériqueVersChaîne(HeureSys(), "000000")
+         REQ_Ajout_Articles3.Paramname			= EDT_NomArticle
+         REQ_Ajout_Articles3.Paramcategory		= SAI_categorie
+         REQ_Ajout_Articles3.Paramcost_price		= EDT_PrixAchat
+         REQ_Ajout_Articles3.Paramunit_price		= EDT_PrixVente
+         REQ_Ajout_Articles3.Paramdescription	= EDT_Description
+         REQ_Ajout_Articles3.Paramstock_type		= null
+         REQ_Ajout_Articles3.Paramcreated_at		= DateSys()
+         REQ_Ajout_Articles3.Paramseuil_critique = EDT_seuilCritique
          
          
          
          // Traitement de la photo - NOUVELLE APPROCHE: stocker le chemin plutôt que l'image
          SI gsCheminPhoto <> "" ALORS
          	// Stocker directement le chemin de l'image
-         	REQ_Ajout_Articles.Parampictures = gsCheminPhoto
+         	REQ_Ajout_Articles3.Parampictures = gsCheminPhoto
          SINON
-         	REQ_Ajout_Articles.Parampictures = Null
+         	REQ_Ajout_Articles3.Parampictures = Null
          FIN
          
-         // Exécution de la requête d'insertion
-         SI HExécuteRequête(REQ_Ajout_Articles) = Faux ALORS
+         SI HExécuteRequête(REQ_Ajout_Articles3) = Faux ALORS
          	Erreur("Erreur lors de l'ajout de l'article : " + HErreurInfo())
          	RETOUR
          FIN
@@ -297,7 +302,7 @@ window :
      width : 496
      height : 30
      accelerator_key : 65535
-     tab_order : 1
+     tab_order : 2
     style : {}
     type : 2
     code_elements :
@@ -365,7 +370,7 @@ window :
      width : 501
      height : 30
      accelerator_key : 65535
-     tab_order : 2
+     tab_order : 3
     style : {}
     type : 2
     code_elements :
@@ -403,7 +408,7 @@ window :
      height : 32
      take_focus : 0
      accelerator_key : 65535
-     tab_order : 7
+     tab_order : 8
     style : {}
     type : 4
     code_elements :
@@ -421,6 +426,37 @@ window :
         type : 18
       -
         type : 161
+        enabled : false
+  -
+    name : EDT_seuilCritique
+    identifier : 0x283722a327e742b1
+    internal_properties : HgAAAB4AAADkC0WpdB11ezSfu5T5mgWXYJYr8pESpi1A0dCiANWz/qD8kKIE7Vq5dkzlhhTlFnqn3MS2uPsKJpwP7StF26C479w2W8yX8Q2H0mez+9MsGQiIlLpqylMpkDVZSEEU0fTHxnzd53agfNEMm7bjNhICrSGVn2r5sLwQ9pbKTkwf+kgCRCd6/h2rhzCBqMktG6ansuVSFK2rcIIMZAJIXOhDK1+dDmjeufHB7Ynj5tflGszZYfdl3MRJpgAW4PJ+LGh4FNPKl5IgsBYy36DhbGWYAerAZRuL8itMrc5jleBtpX0Hd/hQcqRbs2MaSyW2rciLlkydIbEza8O6igiK5M9ZYZVMzVvGE3D5VoPxDKsfhhD1uXadLHMQ+EHfLelp/1O50SfPcSpA0hX4M0fDHX723rOZjHR5RNXmyjNABwwmzvTX2rIqr3X+Iq5F9wEXLUmY/KHQnD3wyJGs0P8zP3Uvtnkkd3e9rA7KlvpI232kYosOpIcfj13rLToqaib3BSf5OhdZ2P3xNbyB9z+gdKzSHECJlGEDUsVTwLz/ChA3+qZa6ckS8v41e1M5aKXV33IbxodHMOxC5fBWNF6Uw8elaiukfLr40WqQ/EFb73nL+Du0M561S9SmEpSWHZRQ3Oup0MebeDsc0w77DsDwh+LM+bdD+NrgtchKuhZcTH/W/vibZHbp6kdt0vVGUJnhDTSFVG/Hx4xy5SzY1UnMxZ+VH5YciVGIT3xbLYLGgFZIfZmVj+ycoKiY75FGcKJQ8n8SQrNLrUwO6a/TV9j55m1TS9MSEiy3vo7Z9H/keWe5fOhOFwe1ZzdwoQa7kggWEjcPCd6j5BgC/pA8wknXXqzvakv5s5BzVavI3FSGXQJkOZgavCXEyE98fOSbushNvTM81Ep/my+cRp5DBR+Suf66bVlWnoP6qNQ6B1NmUkNj9bLw/Nf8zaiJ+IfRsLH/5nTXxVikzfnGIQt+7rXbz/IeedlwrhGbKS9573+hdlCFme4hI0JmFVqQsCUxJYMW4CGyN3YYv7gi2BqgXSM6sea/Kn1xEB3LN9yfN5h1Tlt0N5popl5ce3PO9hK9Rjjy+/macjnnsIn/+fDEzrG89w4Y1oBgyEPQWwJXg/t/obSZqQ0xdaZjVq171QQNoHy5fY6sSs5ZMTwZjXcgSXHP+rryyeRqrIATRCIXtm3BZrtDkT+LKHIUVZlE8earr5D2mIHNPNSZUD7XDVYYiT4R+l2hbE151bY3wlFP6Yb891+bGoKhBtlIymF6JEsTxkgbrJowDUXWmazhS7P94wR+yehqZ/pmf2BjhZO0jCU2CG2KojIAHokp6BirBce9jBCCSxUrPyPkHYWdsm057Ec2DnQghPGbpVN4p+ryD27T955P2NBPykojmwfsjSXPrQugkmAPf3x/sK0WM/tiPc6BUKWBqA4TSpYuJuP4QJMxGJVic/DWQbQnUvT6ka85WM8iqFlpKWQRbnAG1lNsxL4nvGGwXMnAC074rBFXqjSxswUyFGLYgsblc/XtGGwC2172HCjrvKff7rTy1R6VAgn5EPck4PoUdX7hWWmQOFsLnlm19nRmheMs8Pve5m6SBvUIlgeKMZS7kcvWHQPtJS6l3iFaSeYdGGlO2H5o7lBHw16ElH5QHTP4NV0/I/6M3D/bHZfUaSK9MJgqUpuEXYsvhzLKBXVUpRU5tqsZywjBPdHBhj2f8VfawPVhHi6W45zc8iiJ+SWX37vVoDqjAopRw39fEyGH3FVwPS6U8RyZVEmXFVtPVboaTiP+MIfNDO3IgchG2XjQ3wRa4voMz7akBxDnahshIIHdOaOl4mp62qgWqhlkJAcdkW84jo+GO2oaL+T10x1VmHsyoySEo5ZYeFk0paoksbJy/q9WTvSZ8r6dtVQ=
+    properties :
+     x : 737
+     y : 120
+     width : 262
+     height : 30
+     accelerator_key : 65535
+     tab_order : 1
+    style : {}
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+      -
+        type : 338
+        enabled : false
+      -
+        type : 339
         enabled : false
  menu :
   name : _Menu
