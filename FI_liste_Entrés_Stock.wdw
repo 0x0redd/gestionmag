@@ -394,6 +394,59 @@ window :
          -
            type : 161
            enabled : false
+     -
+       name : BTN_facture
+       identifier : 0x283c96cb2b8cfa53
+       internal_properties : HgAAAB4AAADgeSb6QSUYx4S69r0s3hS0KUh+1fKyoFwkvQ0KEQ0kzm+eR8jjCcvtoLjHleq9XBoZHNS8GKSCQDkpC1bMxP8n7Dd3plpzK1k7eR1DbC+Gahuvl/MwkKmeImfFidqh28oOPlRfBOxrACRONQLy9gVwjVUTwcV9RoMXZ/GtuLegG8Q0iF09VPli3Jq0L/5IKh+MZoj9KN3pI4047FJwWudH55YouZ0X5Wz6UcQEsw2i+8ChVYo9R0E4vxF+7MNNkozN8nRHodBmRJCKt+d6bKHmUjFju/wnai2R4KpkE9sd9rP7fGAU1hEpZ61898QY6owHSgEc+zpYmt/1157bxA8F3cxwKFPQd/DJrKnCkc+JLU/U5EaHP1M9BvMY1OJnIeRNUYKaNzyEmEBXkV83wNqF/BCTkQXcI3BVOaPMqY8eO0E1VGDJy8sQvA4rb5YktGybqt+K/Xdnf7C53TiMO9+9VTd6Q7Qk6UF7Kv2O+glwQ4gV7Oqh+XCwv8bqnCV0Rz+mMoUEXlX4klgsh+0yQ0Thm+NURnHxd5LnGiQDAbvYKF6lPg0hm0nbJSB733TVLljprv7MkgJerKdUCwzv2q10gFalUUxqWOZmwB4ZrsMJI25pkVzT4cpByoSEUAcr/KTr3e5yjEj50CA7JVrgAxPBRd6pyedXclufdh0wkNk3r3hv8lxWSkK2MpkEsdb9ctb2+QdejiOicmE/8vz3R+WMXAkna3RTiW/5FP6Gx55wNkScpwEAkbPJ2xUdDymh2i5hsVE67LHFMulchiJo6hauNXJRlcXb8aWFO+w2b8Ny+lYUU5lgswbwft5ABQYeFgptCn3/BYyU+LbtCJNC+yqtyA+8b4qu0+vmhdUqhamqdZOnmWE/hOqPq0LzovCJEGWDadKAk9T1Z1u3Ja/KTooCzi/e+MmromPFc3AaW0w=
+       properties :
+        x : 1219
+        y : 110
+        width : 148
+        height : 32
+        accelerator_key : 65535
+        tab_order : 2
+       style : {}
+       type : 4
+       code_elements :
+        type_code : 4
+        p_codes :
+         -
+           code : |1-
+            
+           type : 14
+         -
+           code : |1+
+            // Nom du fichier PDF avec date/heure
+            sNomFichier		est une chaîne	= "Facture_" + DateVersChaîne(DateSys(), "AAAAMMJJ_HHMMSS") + "_" + Hasard(1000, 9999) + ".pdf"
+            
+            
+            sCheminFichier	est une chaîne	= fRepDonnées() + "\" + sNomFichier
+            
+            // Définir la destination : PDF
+            iDestination(iPDF, sCheminFichier)
+            
+            // Bloc d’exception pour capturer les erreurs d’impression
+            QUAND EXCEPTION DANS
+            	iImprimeEtat("ETAT_FAC_ENTR_Stock") // mets le nom exact de ton état
+            FAIRE
+            	Info("Erreur lors de l'impression de l'état : " + ExceptionInfo())
+            	RETOUR
+            FIN
+            
+            // Attendre un peu (pour laisser le temps au fichier de se générer)
+            Temporisation(200)
+            
+            // Vérifier si le fichier a bien été généré
+            SI fFichierExiste(sCheminFichier) ALORS
+            	Info("Facture générée : " + sCheminFichier)
+            	fOuvre(sCheminFichier)
+            SINON
+            	Info("La facture n'a pas pu être générée.")
+            FIN
+           type : 18
+         -
+           type : 161
+           enabled : false
     type : 32
     code_elements :
      type_code : 70
@@ -404,10 +457,10 @@ window :
          // Exécution de la requête SQL définie dans l'éditeur de requêtes
          
          SI HExécuteRequête(REQ_selection_entr_stock) ALORS
-         	
+         
          	// Vider la table visuelle avant de la remplir
          	TableSupprimeTout(TABLE_Liste_Art)
-         	
+         
          	// Boucle pour ajouter chaque ligne de la requête à la table
          	POUR TOUT REQ_selection_entr_stock
          		// Gestion des valeurs nulles avec opérateur "??" (valeur par défaut)
@@ -421,7 +474,7 @@ window :
          		REQ_selection_entr_stock.payment_type??"Inconnu",                                   // COL_Type_De_paiement
          		REQ_selection_entr_stock.payment_amount??0.0)                                       // COL_Total
          	FIN
-         	
+         
          SINON
          	Info("Erreur lors de l'exécution de la requête SQL : " + HErreurInfo())
          FIN

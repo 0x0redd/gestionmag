@@ -220,12 +220,6 @@ project :
      physical_name : .\REQ_Ajout_receivings.WDR
      type : 5
    -
-     name : REQ_Ajout_Articles
-     identifier : 0x481f5da603a2ae35
-     internal_properties : HgAAAB4AAABaMAIGpeLK1ZY1/yDKTNX2EGM/51yPCVdCrtRJcAiUfHhW/y9i4dVgv2VfWdkX49U/xw==
-     physical_name : .\REQ_Ajout_Articles.WDR
-     type : 5
-   -
      name : FEN_Modifier_Articles
      identifier : 0x482f307302120165
      internal_properties : HgAAAB4AAAB92VVJdiOLlKcW1y40H++Z34hqmjENfDq2mdXp11HFW1FPcBH+BM8VEDagGJhIMKBo6A==
@@ -412,11 +406,11 @@ project :
      physical_name : .\REQ_SansNom_gestion_magasin_v31.bkR
      type : 5
    -
-     name : REQ_select_seuil_critique2
-     identifier : 0x482df73f0221bec2
-     internal_properties : HgAAAB4AAABg3lhEY9hQCyiJR1uTFPs19IVDy+YgUqOKdCvnQVfFIy3V+TX+xKtAdasV46NdJZtl7Q==
-     physical_name : .\REQ_select_seuil_critique2.WDR
-     type : 5
+     name : ETAT_FAC_ENTR_Stock
+     identifier : 0x483caffc07d05f3a
+     internal_properties : HgAAAB4AAABWPL7iwb72+Vr2v1TumoShYME/pxJyGLhN7h6JtXOhrwn5fdIJBrbxIxmDfQX7h3lDww==
+     physical_name : .\ETAT_FAC_ENTR_Stock.wde
+     type : 3
    -
      name : REQ_selection_entr_stock
      identifier : 0x482df73f0224bee1
@@ -574,12 +568,6 @@ project :
      physical_name : .\REQ_selection_entr_stock_modif.WDR
      type : 5
    -
-     name : FEN_modification_entr_stock
-     identifier : 0x482f523d021b2e17
-     internal_properties : HgAAAB4AAADxTSl9yve/8PNidUz84IirP1wakj1d68OnVg1vpUPLfY+hUO46yGWRnIJ8RMwE/OzUXA==
-     physical_name : .\FEN_modification_entr_stock.wdw
-     type : 2
-   -
      name : FEN_table_item_kits
      identifier : 0x482f2e2c01f91cf8
      internal_properties : HgAAAB4AAABCOLru3YqivR69+IIS5atV2o9pGbCazFCKtXkziY+FmxGNa6FX4uooZ93HMfHvi31Hzw==
@@ -704,12 +692,6 @@ project :
      identifier : 0x4817524c075df837
      internal_properties : HgAAAB4AAACd+fWpFkPr9Efe2adVvvrnH3haGqHMjDK1XNJ4P+kt89knMsaUq6HdMBaAeDioUECIiA==
      physical_name : .\FEN_Ajout_stock.wdw
-     type : 2
-   -
-     name : FEN_Fiche_items
-     identifier : 0x481739cb0303407d
-     internal_properties : HgAAAB4AAABIxrBsWwAoMzCLrQOwi5+icGcvx/B7wSxD79Kvaq7mOsoEmRf7ACs6XcM9u3t1DYNN1Q==
-     physical_name : .\FEN_Fiche_items.wdw
      type : 2
    -
      name : FEN_Popup_Combo_Selection_Multiple
@@ -1020,7 +1002,7 @@ project :
    -
      name : FI_liste_Entrés_Stock
      identifier : 0x482e7ef1036dcc3d
-     internal_properties : HgAAAB4AAAAWfH6iAX42OZo4utkARX92xKsT+zSEinKI/ig8EuY20jqkmaPZYh+r41lDvUW7R7kDAw==
+     internal_properties : HgAAAB4AAACjn5uPPGlBWnnb3fxr2KAzCXZsPPfhlCKuAyf73yl1k31n1Ph2jURORvzm0lKOal6mrg==
      physical_name : .\FI_liste_Entrés_Stock.wdw
      type : 8
    -
@@ -1422,7 +1404,7 @@ project :
    -
      name : FI_liste_entrés_Ventes_Y
      identifier : 0x483840ce04e68e2c
-     internal_properties : HgAAAB4AAADtacXZ5lPbhFcP2Q8q78zEaXYMXFcXlcd8Ieux71lFQ41X2zOgZEoOACaQaCjYoBD4eA==
+     internal_properties : HgAAAB4AAACzj+s/DHkxakkV6z04FRqu/+z6Ut1Vrlqw0Carad8/uQPNQV2KclwgFgz2wkK+ui6Wng==
      physical_name : .\FI_liste_entrés_Ventes_Y.wdw
      type : 8
    -
@@ -1537,7 +1519,6 @@ project :
   p_codes :
    -
      code : |1+
-      // Procédure globale pour générer une référence unique
       PROCÉDURE GLOBALE GénérerReferenceReceiving() : chaîne
       sDateHeure est une chaîne = DateVersChaîne(DateSys(), "AAAAMMJJ") + "-" + HeureVersChaîne(HeureSys(), "HHMMSS")
       RENVOYER "REC-" + sDateHeure
