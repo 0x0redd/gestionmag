@@ -408,7 +408,7 @@ project :
    -
      name : ETAT_FAC_ENTR_Stock
      identifier : 0x483caffc07d05f3a
-     internal_properties : HgAAAB4AAADtacXZ5lPbhFcTUOlT7xu8h+beBjcZnO9Jh+AG2FBCziaemjWUs1kSACaQaCjYoBD4eA==
+     internal_properties : HgAAAB4AAACZ9UFFYt9XWHvXFC0Xs++Ya0qSyost0H+ImhEyDAwOGpICdungbx1WRPrk3KRcJJR8hA==
      physical_name : .\ETAT_FAC_ENTR_Stock.wde
      type : 3
    -
@@ -654,7 +654,7 @@ project :
    -
      name : FEN_Détails_Articles
      identifier : 0x48307af501820d26
-     internal_properties : HgAAAB4AAAA2HB4CoZ6WmboaAjk+qlTfEndBEajy7K6kP3OjuW+la1GdqeStVAEFAzmjHeUb59kjIw==
+     internal_properties : HgAAAB4AAAB41qD8S3A4Y2DUwHvofB41fFk7oxJkS6hwoApxT/kT1TuHg5r7Br9DTfPty0uFfXNd5Q==
      physical_name : .\FEN_Détails_Articles.wdw
      type : 2
    -
@@ -726,13 +726,13 @@ project :
    -
      name : FI_stocl_location_vf
      identifier : 0x48261d5801ee8da7
-     internal_properties : HgAAAB4AAACb90NHZCGJklH7BF+PV+8nz+iKKpEbvB91rOd/v0nNc5lHYjugoVeu/iSeGppWIpZ+hg==
+     internal_properties : HgAAAB4AAAD2XN7C4V7W2fowKcxs/Lpqii1J6dYoEWJw4MG68gaOslaEJ+YLPurDw3ljXSXbpxnjYw==
      physical_name : .\FI_stocl_location_vf.wdw
      type : 8
    -
      name : FEN_Responsable
      identifier : 0x481cf32205009b47
-     internal_properties : HgAAAB4AAACjn5uPPGlBWnmJZk0mXecxacQgMJ3vVSu0U/wagLha5sI+y0CxE880Rvzm0lKOal6mrg==
+     internal_properties : HgAAAB4AAADva8fb6JWdTh29mmEKMeu9ndgkNIEjhxhcqS3WRMRW4t7SVzTNP/PYOuDaJu7inhL6eg==
      physical_name : .\FEN_Responsable.wdw
      type : 2
    -
@@ -750,25 +750,25 @@ project :
    -
      name : FEN_Magasinier
      identifier : 0x481cf349056a35b2
-     internal_properties : HgAAAB4AAAD2XN7C4V7W2fo24zmsXBC/csWREb4gGj68UQTaQqZuYla0wmP2z0qxw3ljXSXbpxnjYw==
+     internal_properties : HgAAAB4AAADKQDLW1ZKaRQZiT+X4eGwjriENvSpMJFekr91u3jrSxjqQJo/aI6YNb9XPKennkwXPVw==
      physical_name : .\FEN_Magasinier.wdw
      type : 2
    -
      name : FEN_Fiche_people
      identifier : 0x4816bfae01163c86
-     internal_properties : HgAAAB4AAADhXdnN+qcPICN52FPpIeywq/h2ftm7XT+owomdMfcfMYN9y/Emm3NwjLIslBzUrBzkbA==
+     internal_properties : HgAAAB4AAAC1kZ2BPhsTzJ8F5P9FnQjk97QC6mXXt3RwAIKB3VuzRbcpf03aLw+M6F5YoGCQaFigoA==
      physical_name : .\FEN_Fiche_people.wdw
      type : 2
    -
      name : MDLC_Ruban
      identifier : 0x481739230154af43
-     internal_properties : HgAAAB4AAACa8EJGZSKKlVbtC0VIzoSC7vHdHbr8q9GgnIhW9iLqLpJYj5DHOomY/yWfGZlXI5V/hw==
+     internal_properties : HgAAAB4AAABi2FpOfSqCnb7l061g9tzqZmlldUIUbvGghAU+nooCxgrQd7ivEmHwBz2nEZFPK51n7w==
      physical_name : .\MDLC_Ruban.wdt
      type : 20
    -
      name : FEN_Onglet
      identifier : 0x48173923015caf63
-     internal_properties : HgAAAB4AAAAhHRkNuufP4OM6HHZZBzfRqTp09FNFbnpwoKGFVdM7jaNZyOd2S5ipzHJsVNwU7NwkLA==
+     internal_properties : HgAAAB4AAAD9WdXJ9qMLFCd+YNrte2udnY5IOJcJEJtIJoLBiY+HWe8tFCsyl+x9kLYgmBjIsCDoaA==
      physical_name : .\FEN_Onglet.wdw
      type : 2
    -
@@ -780,7 +780,7 @@ project :
    -
      name : FEN_Ajout_stock
      identifier : 0x4817524c075df837
-     internal_properties : HgAAAB4AAAAUcny4B3w0N4QfGmSK+zmyUjWhMY7QyR90y5xCGg4Gyg7cfwlX6OSe8VdBv0e5QbcBAQ==
+     internal_properties : HgAAAB4AAADQLggUk8hge9hDTijODw3+homFVWI026x8QW3e/ipipmqwSz0jJBhSpZsF87Mt1cs1PQ==
      physical_name : .\FEN_Ajout_stock.wdw
      type : 2
    -
@@ -792,31 +792,31 @@ project :
    -
      name : FEN_Popup_Combo_Selection_Multiple
      identifier : 0x48174042062f801d
-     internal_properties : HgAAAB4AAADva8fb6JWdTh2oPVfCToYRx1buZsfJ3rqshcheQOgqpm62petBhU3TOuDaJu7inhL6eg==
+     internal_properties : HgAAAB4AAABDP7vv3ImhuhmE+ZOOOrK14/LqYsPV6JO0E/ESPOwuqhLSSbd1SQkPZtzGMvLuin5Gzg==
      physical_name : .\FEN_Popup_Combo_Selection_Multiple.wdw
      type : 2
    -
      name : FEN_StocK_location
      identifier : 0x48173a9c039b6dd8
-     internal_properties : HgAAAB4AAAA5FWGlAn83OJsCdctVCE8ATT64CEd50SuINh3BaY8H+c8tiVREv32R5FpEvES8RLQcJA==
+     internal_properties : HgAAAB4AAADNSSV5RjN7pLcOcddRROskaVo09NPFq9CgdBY15QOLfXNJrbD4w3mN4EawCIh4APDYWA==
      physical_name : .\FEN_StocK_location.wdw
      type : 2
    -
      name : FEN_connexion
      identifier : 0x48178e0c00b12143
-     internal_properties : HgAAAB4AAABu9EZaaRYe0ZIpjFYtsc72YgUhsZ4oLqukBzguHhp6RuIYbzKChuZUu2FbpW1jH5F7+w==
+     internal_properties : HgAAAB4AAADxTSl9yve/8PNKoWsShs3xYXIM7OvFqiqgTBphSc/PGdcVbDWNswl5nIJ8RMwE/OzUXA==
      physical_name : .\FEN_connexion.wdw
      type : 2
    -
      name : WIN_ajout_utilisateur
      identifier : 0x48178f580122300f
-     internal_properties : HgAAAB4AAAAhHRkNuufP4OM6UpPN6YqfG7jmPhnz0YhwiM0RjWsr1W+BSOhPsjapzHJsVNwU7NwkLA==
+     internal_properties : HgAAAB4AAAAUcny4B3w0N4QfR+TG8q22ImF5oaoMkR984cOAPNy4YJiqYc9Wqy2e8VdBv0e5QbcBAQ==
      physical_name : .\WIN_ajout_utilisateur.wdw
      type : 2
    -
      name : FEN_Fiche_supplier
      identifier : 0x481904210195a6b7
-     internal_properties : HgAAAB4AAADcujRgXwQsP4wZAEVY18X4DK3bA74gor+gNH9f8TflM80FtnAkJSzA2U9Jt39xCf/JSQ==
+     internal_properties : HgAAAB4AAAAXc3+jAH01NoUSVSrtPFAjK0rSCsst3rq8sfFS7CzuOvIiW9vPcn+V4lhCvka6RroCAg==
      physical_name : .\FEN_Fiche_supplier.wdw
      type : 2
    -
@@ -852,7 +852,7 @@ project :
    -
      name : FEN_Modifier_Articles
      identifier : 0x482f307302120165
-     internal_properties : HgAAAB4AAACD//svnMlhetl8uRzKtU17hdYgQI8xZzqgFB05AQePoReVzrNY4qFnppwG8rIuyj6Gjg==
+     internal_properties : HgAAAB4AAAAOFGa6iTZ+sbIhHvVzThxKdCeT2/BaL5GMnXPQmJAEFOjmn2KvSwjM20G7BY1DP7EbGw==
      physical_name : .\FEN_Modifier_Articles.wdw
      type : 2
    -
@@ -882,7 +882,7 @@ project :
    -
      name : FEN_Affiche_Article
      identifier : 0x481f6137044e9bc2
-     internal_properties : HgAAAB4AAAA2HB4CoZ6WmbrJF+3HVIoHRiWdxX7QNjeslZqMoJiEjGReYMtyir30AzmjHeUb59kjIw==
+     internal_properties : HgAAAB4AAADasIKGJWJKVRa1A/nz4GbLguHZAUpsYIy0s9NwTMzIUKgapHfGfqngP+Xf2VmXY1W/Rw==
      physical_name : .\FEN_Affiche_Article.wdw
      type : 2
    -
@@ -900,19 +900,19 @@ project :
    -
      name : FEN_Fiche_customers
      identifier : 0x481d1e6a02155d07
-     internal_properties : HgAAAB4AAADLRzPX1JGZQgFi43+O3BsTXzyqck13NZSgBCk98ReHcUulHLFRsckVbtTOKurmkgbOVg==
+     internal_properties : HgAAAB4AAACX8/8jgP21tgWW53OCoB8PQ8CeBrHbF4VIKnrJRaNzXVepGLVdrc0ZYtjCPsY6xjqCgg==
      physical_name : .\FEN_Fiche_customers.wdw
      type : 2
    -
      name : FEN_fen_ventes_
      identifier : 0x481d12b401029b77
-     internal_properties : HgAAAB4AAAC0kpyYJxwUFyRFbgA0WEi+MkH5EaraYZFNrkB21CTwyHCSgaprXkaMkbchn2eZYVehoQ==
+     internal_properties : HgAAAB4AAAA2HB4CoZ6Wmbr33BImImJEDLOLA6z2ggas5YXGCh7+2mKMi5BxUDT6AzmjHeUb59kjIw==
      physical_name : .\FEN_fen_ventes_.wdw
      type : 2
    -
      name : FEN_liste_entre_stock_
      identifier : 0x481e73f6011fd3f6
-     internal_properties : HgAAAB4AAADWvD5iQT52edoon0JgMYi9wIPPlyy2zOlcCWK8nIyAgISKrJeLtvBbo5kD/YV7B/nDQw==
+     internal_properties : HgAAAB4AAACsqoSQL1Tcj1yuGciehy5vFrnVhTJEWIh8QVXuznqSlrpA2vkVLGrVKR+ZZy+hWU+5uQ==
      physical_name : .\FEN_liste_entre_stock_.wdw
      type : 2
    -
@@ -924,7 +924,7 @@ project :
    -
      name : FEN_SuperAdmin
      identifier : 0x481e4561019ae259
-     internal_properties : HgAAAB4AAABMyqTwT3Q8b3yOyxN67kvYAmXRwX4A5SyhlZRCeo6Gaq4cOan8DVQ1Sf/5x0+BeW9Z2Q==
+     internal_properties : HgAAAB4AAACZ9UFFYt9XWHuJxo7VSYT9v/j6ugFL91lw4JTvL/kdg0m3XPahoOFARPrk3KRcJJR8hA==
      physical_name : .\FEN_SuperAdmin.wdw
      type : 2
    -
@@ -936,13 +936,13 @@ project :
    -
      name : FEN_listes_stocks
      identifier : 0x481f8b2003100aae
-     internal_properties : HgAAAB4AAACvq4ebKFXdjl3w6Nk1FeYQM6bSmjepuouhjfokKu4k9AjEiAIf7ASb+iCaZi6iXlK6ug==
+     internal_properties : HgAAAB4AAACY9kBcaxAYw4Dj3yAsFP+5UM0P59bI6Kyg9P4Fy01Hma9jL+sg4/2S7VNNq2tlHZN9hQ==
      physical_name : .\FEN_listes_stocks.wdw
      type : 2
    -
      name : FEN_affiche_article_2_test
      identifier : 0x4822231e038fb10c
-     internal_properties : HgAAAB4AAACW/P4igf62uRqc54oK0WZHFAsTy/Tue2ahPchWaq7uOvIswGEp0twfY9nDPcU7xzmDgw==
+     internal_properties : HgAAAB4AAAAbd8PH5KEJEtFn8oVljBOE2VbsjDdZFaOwOGibt3Gte7Vvgy5e5ekqfqQemhrWohb+Bg==
      physical_name : .\FEN_affiche_article_2_test.wdw
      type : 2
    -
@@ -960,37 +960,37 @@ project :
    -
      name : FI_popup
      identifier : 0x4824a36002de2043
-     internal_properties : HgAAAB4AAACB/fktmsdvAMNXIGHK0fbPH7zqMg33RimN/gkdkXcn0WuF+DirXxFWrJIM9Lw0zDyEjA==
+     internal_properties : HgAAAB4AAACD//svnMlhetlRJhvM0/A9ES605F+xgSKsBahTzyn1I9136japWRdcppwG8rIuyj6Gjg==
      physical_name : .\FI_popup.wdw
      type : 8
    -
      name : FEN_Dashboard
      identifier : 0x4824ab9107e41ff9
-     internal_properties : HgAAAB4AAACno4+TEE3lhlXtmlA9Ha83TRy0LBWnII2xGSo85lI4ONhY47w51iuo8iiSbjaqVkqysg==
+     internal_properties : HgAAAB4AAAD8WtTA/6QMHyxkBd+0ZMS4woPJEawuNs5wIE71X8lDxUfPaiXCTaQjea8plx/RqR/paQ==
      physical_name : .\FEN_Dashboard.wdw
      type : 2
    -
      name : FI_TDB_Widget_Info
      identifier : 0x4824aba3085868aa
-     internal_properties : HgAAAB4AAAAiGBoOverC3f4yr4+7hnH9HB8rs5gqgU6p83qsnJz4wHyy+HDrZT69x31nUdEP690nLw==
+     internal_properties : HgAAAB4AAADkYszo14ykRxS8LQkFOPMTDqHdnTpU/JuI2ukSOv4e6gbEiu5p57w7QefRL/fpkQfxcQ==
      physical_name : .\FI_TDB_Widget_Info.wdw
      type : 8
    -
      name : FI_TDB_Widget_Valeur
      identifier : 0x4824aba408636908
-     internal_properties : HgAAAB4AAAANCWW5BnM7ZHfbTClkYhNYRQQsBM0vCu1xoULcVrJYiLhIglcJB93aIAbwyEi4QLAYGA==
+     internal_properties : HgAAAB4AAADva8fb6JWdTh2lQiNulBVmV/a+9kexhSawGLFSzCzmGio6jF33EePgOuDaJu7inhL6eg==
      physical_name : .\FI_TDB_Widget_Valeur.wdw
      type : 8
    -
      name : FEN_Fen_popup_
      identifier : 0x4824b0c7091279d0
-     internal_properties : HgAAAB4AAABexLZqWQYuwYIWiOvS1hQNlpe9tYAy6+61lJWJ2103ibtrRbRt5AOR61FLtX1zD4FLyw==
+     internal_properties : HgAAAB4AAAAQ7khUUwggO5gQhuUs+H6L4PGf1+Kca+1wqOSnOf+Va51Vv8pb9hGf5VtFs3NtFYt1/Q==
      physical_name : .\FEN_Fen_popup_.wdw
      type : 2
    -
      name : FEN_stock_location_VF
      identifier : 0x482535e1010669c1
-     internal_properties : HgAAAB4AAABLx7NXVBEZwoHqCiJbu1dF+4i2XmljUJWtYs0J1SNzTfcZSi/EBZyd7lROqmpmEoZO1g==
+     internal_properties : HgAAAB4AAADlYc3R7oujvA+EuPyVjVlD/YqwUGttmBCI1jwP0yVxT/kbRCXSN8pLWM7IMPDgmAjwcA==
      physical_name : .\FEN_stock_location_VF.wdw
      type : 2
    -
@@ -1002,7 +1002,7 @@ project :
    -
      name : FI_liste_Entrés_Stock
      identifier : 0x482e7ef1036dcc3d
-     internal_properties : HgAAAB4AAABQroiUE0jg+1j6cBPKB8FMrh2lbUZIb7BJz1qMUNjEXKQOc1kXLOXxJRuFczOtVUu1vQ==
+     internal_properties : HgAAAB4AAAArJxN3tPG54uFTRUTjIBgb4U60VF9RYPOkv8B7R9HNa1W/vID+BbzGznRuSsoG8uYuNg==
      physical_name : .\FI_liste_Entrés_Stock.wdw
      type : 8
    -
@@ -1086,43 +1086,43 @@ project :
    -
      name : WIN_ajouter_fournisseur
      identifier : 0x482e000b029488b1
-     internal_properties : HgAAAB4AAAABfXmtGkfvgEPxiaw8geT/HR5YWGd5zoeNnq1poXcfwUf1uk5HszjoLBKMdDy0TLwEDA==
+     internal_properties : HgAAAB4AAABj31tPfCmBmrkbr8aWc5YtJ0DSwvnzriKo0pznJ/GlS/EfbBx1Td4OBjymEpJOKp5m7g==
      physical_name : .\WIN_ajouter_fournisseur.wdw
      type : 2
    -
      name : WIN_modifier_client
      identifier : 0x482e008301575b3e
-     internal_properties : HgAAAB4AAAAqIBJ2tfK65eZU6EcOjwbPWjmBmTKk6eypg46IhGSwGJBimMODfhXHz3VvSckH8+UvNw==
+     internal_properties : HgAAAB4AAAAwDmi0cyiAm7gaor3UhXQ5UDev98Dqtcd0I0n6NtLCLoZYhtV9RN8RBTulE5NNNasVHQ==
      physical_name : .\WIN_modifier_client.wdw
      type : 2
    -
      name : WIN_modifier_fourniseur
      identifier : 0x482e008301625b5d
-     internal_properties : HgAAAB4AAAAXc3+jAH01NoUny9qxHZdvLXogIJvdOHlVQC/vU8VRj7m7oDsQ6Xqq4lhCvka6RroCAg==
+     internal_properties : HgAAAB4AAABg3lhEY9hQCyiKUs2EEPjEFkX91d6Q0nJ0iw80mIAc1HyG+1AN9I9BdasV46NdJZtl7Q==
      physical_name : .\WIN_modifier_fourniseur.wdw
      type : 2
    -
      name : WIN_modifier_fourniseur1
      identifier : 0x482e0083016d5b7d
-     internal_properties : HgAAAB4AAADVsT1hXjtzrL8dlYDPJsW5Wx7q8t+pp85JZ8YQvnoYIJwQU5jCP9QECD64AIBwCPjAQA==
+     internal_properties : HgAAAB4AAACW/P4igf62uRq4TFsyaX52/LkL0+KMuQuo0ob9o2U3wT+zjt2PavkrY9nDPcU7xzmDgw==
      physical_name : .\WIN_modifier_fourniseur1.wdw
      type : 2
    -
      name : WIN_ajoute_client
      identifier : 0x482e008301785bea
-     internal_properties : HgAAAB4AAAC+pJaKOWZOYWLQVMOKnPIvgqPJ0ezuMgOtyrllb7nTdZe/K7C3ApFDS/Hr1V2Tb2Grqw==
+     internal_properties : HgAAAB4AAACIhvCsG0Do8/BiOjVcXrx9TH07497YQ56IXkgzPcvBZ+kJ/W71zGeZnYN9ezu1TUONlQ==
      physical_name : .\WIN_ajoute_client.wdw
      type : 2
    -
      name : WIN_ajoute_fournisseur
      identifier : 0x482e008301835c09
-     internal_properties : HgAAAB4AAAB716PnxIGpsrEj53YdGnC/IV50NB/5cG6tQs9PQ6XpH9FjpDg0jSbW3kS+Ovr2gnZe5g==
+     internal_properties : HgAAAB4AAAC4luA8C7D4IyCSKgVM6QFI1nU99V645lNcWbOIhGSoWOh6sylFvFeJjbMtiwvFvTOdpQ==
      physical_name : .\WIN_ajoute_fournisseur.wdw
      type : 2
    -
      name : WIN_client
      identifier : 0x482e008301915c29
-     internal_properties : HgAAAB4AAADtacXZ5lPbhFcFrbjXsi5hu/TGpq3XjWV1TPsbI+WpvzWruBR6R9wMACaQaCjYoBD4eA==
+     internal_properties : HgAAAB4AAAB23F5CYd5WWXrYbPuSbduWTB+b03jSr36kxysYIBj8DODea+GvCplLQ/nj3aVbJ5lj4w==
      physical_name : .\WIN_client.wdw
      type : 2
    -
@@ -1188,7 +1188,7 @@ project :
    -
      name : FEN_modifier_utilisateur
      identifier : 0x482e313b02d297ad
-     internal_properties : HgAAAB4AAABh3VlNeiePoKMR2jhuCS8bGWbM7NfhBoCtdpePU6XpzzGTeB+8RsUIDDKsFJxULJxk7A==
+     internal_properties : HgAAAB4AAABFwa3xTmtDXG/NNpSaVXvvxaKIqBNdYj9wgGjTn2mtE/XfzEuAujH0OO7o0FCAeGhQ0A==
      physical_name : .\FEN_modifier_utilisateur.wdw
      type : 2
    -
@@ -1200,13 +1200,13 @@ project :
    -
      name : FEN_modification_entr_stock1
      identifier : 0x4834750403fe0ef1
-     internal_properties : HgAAAB4AAABm7E5SUQ4myep+ZaS+nAsE+v+J6eDCOy91BA8XhYMR3x3RwF6jWBx5s2lTrXVrF4lz8w==
+     internal_properties : HgAAAB4AAABq4FK2dTJ6paYa8VCKSMe4BhtFlSyOp3KIluhbwUfVI8F9dCrXbCgFDzWvCYlHM6Vv9w==
      physical_name : .\FEN_modification_entr_stock1.wdw
      type : 2
    -
      name : FEN_table_item_kits
      identifier : 0x482f2e2c01f91cf8
-     internal_properties : HgAAAB4AAACsqoSQL1Tcj1z/LlRUd8X79KET2wqsxVGt4pWBz0lD1SunDQ/lHCDeKR+ZZy+hWU+5uQ==
+     internal_properties : HgAAAB4AAAD4ViB8y/C44+BTAqhoC5lHKAX3/14ACbygHJatM/UfMYd7WbNB+ATCzXNtS8sF/fPdZQ==
      physical_name : .\FEN_table_item_kits.wdw
      type : 2
    -
@@ -1218,19 +1218,19 @@ project :
    -
      name : FEN_ajouterKitsArticle
      identifier : 0x482f3099022c974c
-     internal_properties : HgAAAB4AAACppZH1Mm9HaEvq6xAAlX1snazUPHUPcKZJZybw8gYU7BQ8cpWERtMZFAr0zFSMdGSstA==
+     internal_properties : HgAAAB4AAADxTSl9yve/8PNiU5i43bU01WQ81N3nONmsZWuYWq7sxEz0ut1MvkuRnIJ8RMwE/OzUXA==
      physical_name : .\FEN_ajouterKitsArticle.wdw
      type : 2
    -
      name : FEN_Ajout_Articles_
      identifier : 0x482f30a2023db861
-     internal_properties : HgAAAB4AAADasIKGJWJKVRbFMvhXjXVQfjON7dSGX6tVcNsDqW8tO7k1bMxslizwP+Xf2VmXY1W/Rw==
+     internal_properties : HgAAAB4AAADudMba6ZaeURLBPsRTuXFUGl+pSQCiy26oErRXxUPRX11RcMhgmijsO+HbJe3jnxH7ew==
      physical_name : .\FEN_Ajout_Articles_.wdw
      type : 2
    -
      name : ETAT_TableArticle
      identifier : 0x482f30c1024e3419
-     internal_properties : HgAAAB4AAACimJqOPWpCXX7dms939mu+zE3L4+6ICvF1rEPb1TNZT6FxhDAtnYRIR/3n0VGPa12nrw==
+     internal_properties : HgAAAB4AAAAS6EpebdpSDS6Nil/nRvvOfF07c154Svm0U1DrJcPJP7EBFKC9DfQ4d60X4aFfG413/w==
      physical_name : .\ETAT_TableArticle.wde
      type : 3
    -
@@ -1242,13 +1242,13 @@ project :
    -
      name : FEN_Table_Articles_Items
      identifier : 0x482f645c016fc7eb
-     internal_properties : HgAAAB4AAAAZdcHF4l/X2Ptaz/NPCL0rDx527t9Yw9GIViahjLzWGvo690A8hWfJxHpkXCTcpBT8BA==
+     internal_properties : HgAAAB4AAAB+5FZKeSaOoaIR8oaCS/bgcNG/J4Lc9F2wGFQvEQcN0zX9MoX5wJz8CzGrFZ1TL6Fr6w==
      physical_name : .\FEN_Table_Articles_Items.wdw
      type : 2
    -
      name : FEN_Ajout_kits_Article
      identifier : 0x482f8cc90179b28e
-     internal_properties : HgAAAB4AAAAFAW2xjiuDnK8OS2yjxlrcX3wqcs03LEZ1KAHdUbdnkatFCxdjpvOt+C6oEJBAOKgQEA==
+     internal_properties : HgAAAB4AAACb90NHZCGJklEETWKhxGDmdRJI6OPVKUBI5oy/c5UBL8lbERFlpPWv/iSeGppWIpZ+hg==
      physical_name : .\FEN_Ajout_kits_Article.wdw
      type : 2
    -
@@ -1260,7 +1260,7 @@ project :
    -
      name : FEN_Modifier_kits_Articles
      identifier : 0x482f9b0c01d86827
-     internal_properties : HgAAAB4AAAAuNAYaqdZeEdKB2arQgoPwtMcDCzByP1+hxUqcvExIoKxS9ePkZccse6Eb5a0j39E7Ow==
+     internal_properties : HgAAAB4AAADYtoCcK1DYg0DzD3wKDH1mBqnVNXI8mCWk/6Hi+g4O6hbEZ3Fqn/3iLRONayulXVO9RQ==
      physical_name : .\FEN_Modifier_kits_Articles.wdw
      type : 2
    -
@@ -1284,7 +1284,7 @@ project :
    -
      name : ETAT_item_kits_Etats_y
      identifier : 0x482fa7270144b25a
-     internal_properties : HgAAAB4AAAA7F2OnBEHp8vFkSJyXVZxuNQaAAL8pH2x1TCHFZbNj/csxz+NuUwSPnoR+ejq2QrYeJg==
+     internal_properties : HgAAAB4AAADPSyd7yPW97v1gtJiTUagS8bIsfMsFa/ykL0L5Uad3kX9t889yVwCLmoB6Rs4C/vLaWg==
      physical_name : .\ETAT_item_kits_Etats_y.wde
      type : 3
    -
@@ -1356,7 +1356,7 @@ project :
    -
      name : FEN_Détails_Kits_Articles
      identifier : 0x4830f5f80829b6e6
-     internal_properties : HgAAAB4AAADtacXZ5lPbhFcHji0AJGQmodKcLLsduhh1JGH9rUvDdYuhS+sz1ZMGACaQaCjYoBD4eA==
+     internal_properties : HgAAAB4AAABj31tPfCmBmrkdgCMGWkoQD7jaamFLv3KokjzHd5EFO/EPOf0t05UIBjymEpJOKp5m7g==
      physical_name : .\FEN_Détails_Kits_Articles.wdw
      type : 2
    -
@@ -1374,13 +1374,13 @@ project :
    -
      name : FEN_VoirPermissions
      identifier : 0x48320b8f0946d73a
-     internal_properties : HgAAAB4AAAB3019DYN1VVmXLbopP54OUW+imjkmrv9+tgold0TffESM9Pxg/ipVOQvji3qZaJppi4g==
+     internal_properties : HgAAAB4AAAC0kpyYJxwUFySaMfke1kjNALf/NwDylq+kv+0Wim4m2mqE9tFwWWahkbchn2eZYVehoQ==
      physical_name : .\FEN_VoirPermissions.wdw
      type : 2
    -
      name : WIN_fournisseur
      identifier : 0x4834792d037c5d58
-     internal_properties : HgAAAB4AAAAAfnikA3gwa0gQL5+4HNojCBtHnySGwlypc/5gyEDcJMB+2nMEB5YfFQv1w0O9RbsFDQ==
+     internal_properties : HgAAAB4AAACB/fktmsdvAMNn5tZH04PUcWIcXHsVAaywUHKROf+faYdFEUw9zl9mrJIM9Lw0zDyEjA==
      physical_name : .\WIN_fournisseur.wdw
      type : 2
    -
@@ -1398,7 +1398,7 @@ project :
    -
      name : FEN_Modification_entrés_Ventes_Y
      identifier : 0x4838404a04c989d0
-     internal_properties : HgAAAB4AAACppZH1Mm9HaEsT7a8+9uekfTogsBtsXPu2MTqOu32ZpwHzg4Yw3F4iFAr0zFSMdGSstA==
+     internal_properties : HgAAAB4AAACGjO4y8a4GKQrSqPb1taTlOnnheVIEsFGspSvY9DRg6MAyQkdxkxddU8kzjRXLtymTkw==
      physical_name : .\FEN_Modification_entrés_Ventes_Y.wdw
      type : 2
    -
@@ -1464,13 +1464,13 @@ project :
    -
      name : ETAT_FactureVente
      identifier : 0x4838bfd006301e94
-     internal_properties : HgAAAB4AAABaMAIGpeLK1ZZOM2TRXi1lBntV1fzmiHu1VAcXhWMpnxXp6zP8yrZ5v2VfWdkX49U/xw==
+     internal_properties : HgAAAB4AAACqoJL2NXI6ZWbeA1ThDt0VViulBcz2WON0K4THdZN5b0WZGwMsmoZJT/XvyUmHc2Wvtw==
      physical_name : .\ETAT_FactureVente.wde
      type : 3
    -
      name : ETAT_liste_entré_ventes_Y
      identifier : 0x483b4fc6068375cf
-     internal_properties : HgAAAB4AAAAzD2u/jPmx6sl4AOMkNMv7PwJutgNVJ5Cp02bwLvoQ8NQ4VaDgboijlox2QsI+Oq4WHg==
+     internal_properties : HgAAAB4AAAAT70tfbNlRCimYoIMElGsbXyIOFqP1F/iIOnPQzlqwEPTY9QCAjqhDdqwW4qJeGo52/g==
      physical_name : .\ETAT_liste_entré_ventes_Y.wde
      type : 3
    -
@@ -1482,7 +1482,7 @@ project :
    -
      name : ETAT_UneVente
      identifier : 0x483c34c006dbcd1a
-     internal_properties : HgAAAB4AAAAgHhgEo5iQS2jY6kbR6YZJpPtze9SGlH+pw4SSLuoiNoZ44mtzUx0HNevVI+Md5dslLQ==
+     internal_properties : HgAAAB4AAAD8WtTA/6QMHyycngoVPToFyJ8X33jaiN9IpgV+0la+UqIcHq8/j1E7ea8plx/RqR/paQ==
      physical_name : .\ETAT_UneVente.wde
      type : 3
    -
@@ -1497,6 +1497,12 @@ project :
      internal_properties : HgAAAB4AAAC2nJ6CIR4WGTqX6X8DpGRybD1r406XPDuiFjl2WU9Ni7W9ZNXMON2ag7kjnWWbZ1mjow==
      physical_name : .\REQ_Supprimer_Vents_Y.WDR
      type : 5
+   -
+     name : ETAT_une_vente
+     identifier : 0x483e45630608ca30
+     internal_properties : HgAAAB4AAAArJYGNTnszO6CSyM+PTK/y/v/STQDB4p0sDtOJKPfMagkNv2Db9kxT59YRrpFp1j0u
+     physical_name : .\ETAT_une_vente.wde
+     type : 3
   other_elements : []
   array_of_analysis :
    -
