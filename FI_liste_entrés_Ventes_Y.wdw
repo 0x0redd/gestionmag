@@ -13,7 +13,8 @@ window :
  internal_properties : HgAAAB4AAADX/0Kc7zy4wM66uatukP5dcnx2DVCjbobFPbRr5OqTgP/V5FFYFAmg9NgSaMSSCwzbXydd7p3F007gW9bRF6iLlE8CI5T/cK1w8KT+0ZeuvZBQnHyRxLsV9XD/DfdnfndvUDQ+MR/GP2lHVCQbijMJALjQ0ZHCtMIq9XAenFZIQDsG98UDGYAu2JY89z0b4DREMJtKpfZJgrJMcLBkb3rcwxfy2dIdYQO5V7mkjJ4lGXOVoUNffl0JpbXjACQuEzZtkodykdY9QOoLw/xCvSJUgnCzluPPL7ujfhVkaTCU+dkGbwINVPPazhSTAOOjn8mdsIWy60YEEFRgf5opUrsE31fjn+G04KqfVoysOaMGZFSpR61eDuKF69znX99BwN2zra4NVybUDDD6Jpn9MyEnQDUpPY3icAnhvJPOi7ztZGk5g9hKR7LGt9acUre+O8oUatLavv+DKMfLCXN/ZAnSVkswhI3N4NcwRm+nK9Zap8hucU0jmA7p7u9kICBEfZgkotl8acCQVP1OhU1z82Gg9EjkgyghexCrpqOJp9OFXHPRuGCQr0HjnfLs40ycibqFUaUJeYGiChvyOhCq8yfQih0InXCGgP9Nmesz8a/50j4aYT5rMlh/aLWNvNp76uH1iuezTNqpQVaIf86feR3kJtU3VZz+GEfwNVs5f7H64VpM8RBElZP/D5be2BJASjeLQbbb1C2DG4RRwL/z2FWajGJWRh0UnHBU+YT1M1cC1WX7sWlUKgg8Sf7PO0ogyYTSCgxFvk6u78J/XqUNWfB3Ehg9PLJK7pMO85FlDNq5V1zDVSTQ
  properties :
   width : 922
-  height : 436
+  height : 628
+  heightMin : 436
  style : {}
  controls :
   -
@@ -22,7 +23,7 @@ window :
     internal_properties : HgAAAB4AAACUpWfPCPX8ki7qPzlpZJz1a9lprlCfDB2pp/SLEBUdNRyVYxSZt1+a40yZU7sr5RLVVZ897z9Dzy3BWb+sHT7E5hqS6qj49u2netTnIlJyMdozxSkPFsIn2B56YICji07JEmW6V+ud3mVcjoSAOZtCx2jcVpwjkiAEliFVnclAxEdX/0RRMpzWQFpNlAOTAEXlFS36THHE/No6954+gaH2E48RKpzr7ym9kuJqa8b1Qgg3r69Kuf/9PoHhJa6VRHmErULIvFySrXi2l2adweJCZKVvrM0j/OjU2kUHhaztjvOnHrNklyZ5YouMjMyzhM54PtKv2R4uvxBZXMMlcXm8YjoVvPpnCQpAm8dU2+lmPSJ+nAlceAIM+/rHa4rZHxI7cKI09zkWpge0dlvUAPISkSB4BcdpxO6fJQ2xiryPjV26C4ZYvceNu576aK3cKBcd7Jlu
     properties :
      width : 922
-     height : 436
+     height : 628
      tab_order : 0
     style : {}
     controls :
@@ -31,8 +32,8 @@ window :
        identifier : 0x28349b0427700eb3
        internal_properties : HgAAAB4AAABzNQyYskJVGD1RWvq/TnQsSaso5Hq1BCeDl9BDYODtqpeVX6jeXk8YwFlyfL0pwaAP8A5Sj4RXKnP9quc+m5yJxbB37uudVMMnB//n3DoTumoiR5JnuLDfd3CYfOxMsG+s9bkykmCgzpIDDFVcI/nLuLRIQ4XaOXGKMzaQqpQ4R7KiU7znwJm8RIRfX452pJ/0W2RqsZm42YoJVHpf5sRpqwoDUpHxeAuqfw7zeBYoQITQmm9QtY7sArvUcKxYPIm9oNUQiNZG/cB4XHyDSIEFKuK+YwXdzTkSav0PBLLfU1VZUBHCBDUHWeTVOzVbfqHL0eJzJ5bu8DSqBydfODZ0uH+HR5r2ohf8aPfKQPx5xihCzHZqlNxGq+Q08PEIXbHigEYi7I2+HzjKz6XtE6DimJWODOZYQJoTlmwww8CqdNqfFytvfHoXfe4pd2oKoHseWO1eRkz7nXh/W+XlQI7qxjLRF+olOBZL9XkBohh18N6ZtrNTbSKY9e0FQIOCvGE+tXQ0uSDfxySPUv8glVvg4LL4tp/CMQTdV/7EcAH0gVo01k3+YHt0cNi9SQDNwiYomEkmKwkUlMv0LlwBQ1FSRiqHyCi4T2UgzCNsxOYro7Vcugm2l5dvn2xZdrwa28YeylsWatHMUfLAQ8qWIDECa3mZdOZNR43WNya5TCFn3UuCOdWJUKOmD2Hk5xc5OuC3yt16mM2LZ2MXZzQE6GLNoA9kwCZFU0oSPJnCL9rIDGab2EjxGmQvqwybFyccvajg+2uD866Kzcsju3hwZ0BXevvud1s50wt0yHCfyWafKM8AkbEd/XIeSmxFDVLB/we1y2A+SFG7FGRTJeSp264ymHVMwL/fy4QnloiK4ANorjXCv5kFqOW+Na59uavGUOw1cMR7BGGs/dRWugxo
        properties :
-        x : 790
-        y : 53
+        x : 770
+        y : 476
         width : 105
         height : 32
         anchor : 4
@@ -89,11 +90,11 @@ window :
        properties :
         y : 93
         width : 895
-        height : 343
+        height : 368
         context_menu : MENU_SansNom1+
         state : 1
         anchor : 10
-        tab_order : 4
+        tab_order : 2
        style :
         scrollbar : {}
        columns :
@@ -371,8 +372,8 @@ window :
        identifier : 0x28383ce239e93bde
        internal_properties : HgAAAB4AAAC2dnH86PZXcw+fn+IMS35K1u7GftFAHog2bQVFbMw4znIk9Xj2Qx56IZSKRhF07ZUn3j87KHbLDtAktvFdMejBKTFjUrRKSG8HbATLQ8XWkurRs+GL0XV5HGIsERCBCggM5nliPz973xjONUR2Vu9m3DNIKa38qV7L4W73VHTGsnlFvxyRcY7lNj4sSJgyaZj3ZN/T8eEUOTCsO8FPiqQivxdqaRtjz5ietfO0CWZk8X/cNdXOhVPOWP3HKDzLpySHe+ePf84lIbH08x/vcyyuH11Mw9Bl8hMCwXOAxuCfLutoKvdvWl3BJMUyPYmcWDRqMfBEUhkinrLFSCyeEHOR5DKhvQkdLIdxx/RoD3EPXfUF+1+WoSpmFmKq3/N63uelMYd88R9i8PaSzDA6V1fjERfFhEsfwV7aMJ2wCazkBYD3JC7VdmUpPWNPr56aWQoKARrj1oeAklxGrFwkphx+ljQvmHVTVrWmbueH9SVErEHJ51gqhLZplXKnbbB9aqnpEhFCQelORurHnIDPrkLFCQGbBch10ziFWirl1lBXYAT9nFnbULSwL91QUe3xTRWtkya26KEjtEjVoM8J0lePmHbyFcPSUVr0LMbBPupcZl+LQjFZMOxiHM6euYX6L6ikdfxQ2BCVxkRzYsiOecxKny79lDBqa2sI05SZV4P0b9HvRazxvIF9wlzCv6j0swLQbrhVpZ08l9Kii7CEERdGmdeiDU6lB/p84t0nTmhqEa+VHNR2vxb6REXi/ui6yqunjK94A6uOmWQEyA0Krgf/BUlWVjPg4JjHiIyMJThZGBC30hGe5LKzJAt1LdFQfrOgepm+bwxITGxkeOQug8JIk6JMfJi1jhgf2eHaE8GLMOR662Y4GZ1+Fd3wV0bzE+eq80JEQtizJBpGvaIxmvNFZcGYR55SaxK+bedkPiKfH3MKQohSdAcdJCf+BWhx9ky5VM5lDL86SZsiTCVCWKRR93uU52z0rvq9Yu5pD0lV8OWuqsOpit/CQneXHSKJItUZ2LTMRPtG9yUPPN1uDcxir952S1lcmp2wG0jrupn972thGEgQIQcYDK27yrcvoUPjZEj988YhKqkkBhGIdvpyXVy15xb4if9pqEsXBGi73Xcp8z0CpFmOTJZQ5x/NpUjJVeQJ7B6hK0EgEd44LTzOkQuNDkJ9M+nQXzs//e+aTdmydod4RbEIZL0P/8hlD5wLyVGDyURz9JRC8zaRFAqndSq0WsTel9xcohLfU8mZ+hmZE9TOCgvpPTMUC67gQVK8JUHABVblYETF6t6k3Kxhu8ZyxOJzizrIXOqWku6aHvMnJ6HSPY98SrxTCFwE6e0kf8XE//yafbOtUphCnw1RbLJzczXCXSZjpWOPRP8LFmIxAaF4dqr9fIxPIRxYSfWYkgxOSj/xZ9N5+uhtpgzhQ4c=
        properties :
-        x : 360
-        y : 37
+        x : 6
+        y : 45
         width : 221
         height : 47
         accelerator_key : 65535
@@ -415,14 +416,14 @@ window :
      -
        name : BTN_Imprimer_Facture
        identifier : 0x2838c05024cf12c3
-       internal_properties : HgAAAB4AAADL8Zl2UKqPEtXa8Aa/p3bVVPNOBFuLZdXcZyxP7jBWWAUJ1JAo/mSUw8yjODx2TiWIFR7cRppq/YxkN4anvg9IlvZFsQceBRWbzWaV2yX7dvvTB4HsJL+/PpjMK2ZKKtcYpFtu1GikHlb+HJXSyH8GXKxV1GFMv5YtHOnmyQon7i95LDelTcUWBU5VVmwo3f+KeypsYrRG1zdoI6UGOvnSCcqL2c7OVRtFS/TkkhF6KQM4bIz6gjmXz9cGBUNToD4bDmlDx5ZVdqIhmPpMrgnWTQCX+GX6iP6pJJ2iD2Qeeiu4tLAaDAfTD7Ke8QkT10wbEWQUR3HRfdgGQgpkpPD2h+d7CB1M1TIpw62fG3p7/BgW+oeYPVWLA7J1yIWRWRVDIFvP/pwhulnXewmGLV2YVtZdz8NhDFr7s81WIabqU9Wl38cvl+wwXV1JKHuvdvaNQv1WHk+2MoEgKkE5Guc44gmhdK7YburtWVjl5oj4MoUiKZp70rShEELz9Cgt6/cN3lozimPNnUR4qNO5LcTwln6apELMe5fMgmYYH+/WE7pEE0uqatPj4lLoWCZtJjlH0Jr3mV4EfinQ5iSNTvnofSKmBcvBBaVJm8Lr2S5DPeOGuyCthEhX/vqqk2/D4LNf+FszsngMRaVT7MFupXzbE2KPUSHCghl8jWfv/cS14cYN+hpE3+Cm95ubqboaNfzPqD5qKW8F2X62tMwmuFXoRJr33m1ccnhtbm7NzKqNJUJ24vnAV9uEPgizw6I/PPcDfc7X9e+lr4GCivNvYhNh/S1zykHMa3uFWd3iDHIcebxPP5rm+NyedvQa+SiO0xA2t+DXOnaDoisRQ4rKz+avV+Qo
+       internal_properties : HgAAAB4AAACwMKxNARMQTSWGIZz8ajcuMrRvTHprdenqdMRHKMEOxuXGrZuxW5aORZCnGSoP33rya+Qz+VuADYP60FrOphX+xO9u/UOqYox3ycxUzSnAJTnC5VpAn8WC7uhuHHHOTWDHMCPLaDfCaNK/QbeFtMIBj1S6Mvy2/b+hhVpaCnIGeZ19yEqSgYD2536hRwEt4R26+zvr50dYf4W3Tc1S0bAzDc9xpWkqXvMj0DkpDdZiBnuXvAcpcaXQuHR2JhdC6Epqm5dk6LrPxl91Xzv0gEprOrl/QA/ZffmrfeGXPH67S3SH4umYCwpCKMFI+IVG10wJHesWVfEAqa4xMOrQbWzlAMq3b3MzaBgNB4/+2I5sb0r+Fud2btc4OExBJE7befLhwTZPsc0BsK5HtrDznT7xVjSSLexYQ0CucOEotVHwrRwx6BTC2qiKzIPzr6DUbRtAVhg77BHFXpNyHqEFVtFfaK8QXYqggseYJV4JPwa0QiVgCXCWCfZ/S7gr6xwdpXkH8HcxdIknLi9klUZjrcueoHIBqviZvidZLyI7Kn6x/k4NLTr63HRQDZHCQUkykxe0LJcMwJDzpNArVo3bhEK6seAl+Zk2zpNdAQCcSvMwHkpz5ciBHfHkAfPN3spQLkMapCVd+IW/Np+7TCs1hvppKvSPena/Jhi7a3cBhwgxhsojituArQn2gwc4rjsKVtmS13lB8bpQJ/Tt4MLtCCmfwS9mskD7S7ES41uuzTpUp1jflCMl7PIeSZ1OTf+LiodxxABnKep7OgmLRJUjHm8Q8Pikq//7b7cI+XIV03wKAbbV+Vfxld47lTwXUYHtbeoZ293aWsOOPcjUEbcj
        properties :
-        x : 108
-        y : 53
-        width : 106
-        height : 31
+        x : 235
+        y : 45
+        width : 56
+        height : 48
         accelerator_key : 65535
-        tab_order : 2
+        tab_order : 1
        style : {}
        type : 4
        code_elements :
@@ -459,12 +460,12 @@ window :
        identifier : 0x283dae801900f435
        internal_properties : HgAAAB4AAAAdGG2ALssDR2xrQFGx2mjB0TghwbGc3wxq42EvWzw+8bz8HLJyb1RvrZ7MR8jq8p+WH7D2C/hiWNNTm7r/ZTshw1Bte/STvf/qZStsj4ajs5ICkWyg+j2rghDUZ2a+Pe0Tcc2o+gVwkvZMFLy7TqEwiq2XnGqUbR6nQH9xOiWRKbBBllkMK/AIIMtnHp3MVcQEYwm0mtXrjRI3GXvY6eTQe3s19DaOJRPxzd0dAcjLxoVVe4ToLMsja0zFgC5wmgFB+Z+xZ04FNKPSHG/RlA33WPLc9dhuGWeslSni74Vn/ca28szGM0SQHFlk6TFJl48gyvp20Qvs3BGjY/SNrNuGx77SmIKETVONNWnGpyHmOyE/PoJqmYOAKnX2WctU5u4jNWSWYwoz5l7Rzz6U1mt7ET4H4Drxmp5q+Ec2DH4J140iD3gJIokrjG8flRgBYsPrjH0TS1FyDjoDoEgGPufPCGv31BkmizytkAz+7M5K0ODBXaOh3sFZd8hmjUzwM/NAS8opqnfWPAaJ8eotKj+u5MrsCSrR5HygM/SE970iF0KqDr2BOCVU2l2OtJS2r+zJ3Z4FAxhofCbWzlg0lZV486kpybUp5mUOkrUQ53/SHxRPOWPtf/dq0f5uZQlhI/Wk1BlQK6LZmnfFn6xx/AK3G+tnuzPngEAKeVY3s1XFGkjn+XK2ijQj7A+jf8etrENWMUmflfuBg0OTP7uOwMsBLjO5BwbohRJ0snvfAcmDR99WlRtJG9dU7chgqooLFkOR7wLkoC+1MzuuG/ynp6QnuzbXlR4YdyXrJqjbJnJXSS3nhNnkRLiHZYcFPdimOInJvuFP/UNQYRF/s3MNZZeSt553Itg6AtPHlLmHSXHC+efugMFjv/X0EM70tB+HMu+H21OPs81gtWRn5pkcSjZidmnNK+JuDhM=
        properties :
-        x : 618
-        y : 45
-        width : 136
+        x : 770
+        y : 516
+        width : 105
         height : 32
         accelerator_key : 46
-        tab_order : 1
+        tab_order : 4
        style : {}
        type : 4
        code_elements :
